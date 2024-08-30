@@ -1,0 +1,25 @@
+:root {
+  --text-color1: #7c4d43;
+  --text-color2: #1e1e1e;
+  --text-color3: #f5f5f5;
+  --text-color4: #a4b494;
+
+  --fsize1: 3em;
+  --fsize2: 2.18em;
+  --fsize3: 2.1em;
+  --fsize4: 1.3em;
+  --fsize5: 1em;
+
+  /* ROBOTO */
+
+  --RobotoBlack: "Roboto-Black";
+  --RobotoBold: "Roboto-Bold";
+  --RobotoRegular: "Roboto-Regular";
+  --RobotoLight: "Roboto-Light";
+
+  /* PLAYFAIR DISPLAY */
+
+  --PlayBlack: "PlayfairDisplay-Black";
+  --PlayBold: "PlayfairDisplay-Bold";
+  --PlayRegular: "PlayfairDisplay-Regular";
+}
