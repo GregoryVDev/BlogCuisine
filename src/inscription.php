@@ -12,6 +12,13 @@
 
 <body>
     <main>
+        <form method="POST">
+            <h1>Inscription</h1>
+            <div class="container-email">
+                <label for="email"></label>
+                <input type="email" class="form-input" name="email" id="email" placeholder="Email">
+            </div>
+        </form>
     </main>
 
 </body>
