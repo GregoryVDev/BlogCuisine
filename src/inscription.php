@@ -18,6 +18,10 @@
                 <label for="email"></label>
                 <input type="email" class="form-input" name="email" id="email" placeholder="Email">
             </div>
+            <div class="container-password">
+                <label for="pass"></label>
+                <input type="password" class="form-input" name="pass" id="pass" placeholder="Mot de passe">
+            </div>
         </form>
     </main>
 
