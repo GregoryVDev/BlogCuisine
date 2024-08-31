@@ -26,6 +26,7 @@
                 <label for="pass2">Confirmation :</label>
                 <input type="password" class="form-input" name="pass2" id="pass2" placeholder="Mot de passe confirmation">
             </div>
+            <button type="submit" class="connexion-button">S'inscrire</button>
         </form>
     </main>
 
