@@ -15,12 +15,16 @@
         <form method="POST">
             <h1>Inscription</h1>
             <div class="container-email">
-                <label for="email"></label>
+                <label for="email">Email :</label>
                 <input type="email" class="form-input" name="email" id="email" placeholder="Email">
             </div>
             <div class="container-password">
-                <label for="pass"></label>
+                <label for="pass">Mot de passe :</label>
                 <input type="password" class="form-input" name="pass" id="pass" placeholder="Mot de passe">
+            </div>
+            <div class="container-confirm">
+                <label for="pass2">Confirmation :</label>
+                <input type="password" class="form-input" name="pass2" id="pass2" placeholder="Mot de passe confirmation">
             </div>
         </form>
     </main>
