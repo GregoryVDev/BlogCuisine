@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/inscription.css">
     <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Inscription</title>
 </head>
@@ -13,6 +14,7 @@
 <body>
     <main>
         <form method="POST">
+            <img src="./img/logos/gregory-trans.png" alt="Logo du site">
             <h1>Inscription</h1>
             <div class="container-email">
                 <label for="email">Email :</label>
@@ -29,7 +31,6 @@
             <button type="submit" class="connexion-button">S'inscrire</button>
         </form>
     </main>
-
 </body>
 
 </html>

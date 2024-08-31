@@ -1,0 +1,11 @@
+body {
+  background: url("../img/login/pizza.jpg") no-repeat;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
