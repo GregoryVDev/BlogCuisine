@@ -25,3 +25,12 @@ h1 {
   text-align: center;
   color: var(--text-color1);
 }
+
+.container-prenom,
+.container-email,
+.container-password,
+.container-confirm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
