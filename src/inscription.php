@@ -5,6 +5,12 @@ function validateEmail($email)
     return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
 }
 
+if (!empty($_POST)) {
+    if (isset($_POST["prenom"], $_POST["email"], $_POST["pass"], $_POST["pass2"]) && !empty($_POST["prenom"]) && !empty($_POST["email"]) && !empty($_POST["pass"]) && !empty($_POST["pass2"])) {
+
+        $prenom = strip_tags($_POST["prenom"]);
+    }
+}
 
 
 ?>
