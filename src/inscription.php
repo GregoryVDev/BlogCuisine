@@ -28,6 +28,8 @@ if (!empty($_POST)) {
     require_once("./connect.php");
 
     $sql = "INSERT INTO users (prenom, email, pass) VALUES (:prenom, :email,'$pass'";
+
+    $query = $db->prepare($sql);
 }
 
 
