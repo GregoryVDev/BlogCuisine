@@ -33,6 +33,8 @@ if (!empty($_POST)) {
 
     $query->bindValue(":prenom", $prenom);
     $query->bindValue(":email", $email);
+
+    $query->execute();
 }
 
 
