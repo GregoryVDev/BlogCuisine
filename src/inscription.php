@@ -30,6 +30,9 @@ if (!empty($_POST)) {
     $sql = "INSERT INTO users (prenom, email, pass) VALUES (:prenom, :email,'$pass'";
 
     $query = $db->prepare($sql);
+
+    $query->bindValue(":prenom", $prenom);
+    $query->bindValue(":email", $email);
 }
 
 
