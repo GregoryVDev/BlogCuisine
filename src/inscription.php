@@ -16,6 +16,10 @@
         <form method="POST">
             <img src="./img/logos/gregory-trans.png" alt="Logo du site">
             <h1>Inscription</h1>
+            <div class="container-prenom">
+                <label for="prenom">Prénom :</label>
+                <input type="text" class="form-input" name="prenom" id="prenom" placeholder="Prénom">
+            </div>
             <div class="container-email">
                 <label for="email">Email :</label>
                 <input type="email" class="form-input" name="email" id="email" placeholder="Email">
