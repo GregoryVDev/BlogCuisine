@@ -24,6 +24,8 @@ if (!empty($_POST)) {
     } else {
         die("Les mots de passe ne correspondent pas");
     }
+
+    require_once("./connect.php");
 }
 
 
