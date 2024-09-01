@@ -18,7 +18,15 @@ if (!empty($_POST)) {
         $pass = $_POST["pass"];
         $pass2 = $_POST["pass2"];
     }
+
+    if ($pass === $pass2) {
+        $pass = password_hash($_POST["pass"], PASSWORD_ARGON2ID);
+    } else {
+        die("Les mots de passe ne correspondent pas");
+    }
 }
+
+
 
 
 ?>
