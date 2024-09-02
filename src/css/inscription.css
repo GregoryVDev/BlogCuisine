@@ -59,12 +59,12 @@ input {
   border-radius: 5px;
   border: transparent;
   padding: 12px;
-  background-color: #a4b494;
+  background-color: #a7c7a5;
   color: #f5f5f5;
   text-transform: uppercase;
   cursor: pointer;
 }
 
 .connexion-button:hover {
-  background-color: #a7c7a5;
+  background-color: #a4b494;
 }
