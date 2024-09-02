@@ -6,43 +6,44 @@ function validateEmail($email)
 }
 
 if (!empty($_POST)) {
+
+
     if (isset($_POST["prenom"], $_POST["email"], $_POST["pass"], $_POST["pass2"]) && !empty($_POST["prenom"]) && !empty($_POST["email"]) && !empty($_POST["pass"]) && !empty($_POST["pass2"])) {
 
         $prenom = strip_tags($_POST["prenom"]);
 
-        if (!validateEmail($_POST["prenom"]));
-        die("L'adresse email est incorrect");
-    }
+        if (!validateEmail($_POST["email"])) {
+            die("L'adresse email est incorrect");
+        }
 
-    if (isset($_POST["pass"]) && isset($_POST["pass2"])) {
-        $pass = $_POST["pass"];
-        $pass2 = $_POST["pass2"];
-    }
 
-    if ($pass === $pass2) {
-        $pass = password_hash($_POST["pass"], PASSWORD_ARGON2ID);
+        if (isset($_POST["pass"]) && isset($_POST["pass2"])) {
+            $pass = $_POST["pass"];
+            $pass2 = $_POST["pass2"];
+        }
+
+        if ($pass === $pass2) {
+            $pass = password_hash($_POST["pass"], PASSWORD_ARGON2ID);
+        } else {
+            die("Les mots de passe ne correspondent pas");
+        }
+
+        require_once("./connect.php");
+
+        $sql = "INSERT INTO users (prenom, email, pass) VALUES (:prenom, :email,'$pass')";
+
+        $query = $db->prepare($sql);
+
+        $query->bindValue(":prenom", $prenom);
+        $query->bindValue(":email", $_POST["email"]);
+
+        $query->execute();
+
+        header("Location: login.php");
     } else {
-        die("Les mots de passe ne correspondent pas");
+        die("Le formulaire est incomplet");
     }
-
-    require_once("./connect.php");
-
-    $sql = "INSERT INTO users (prenom, email, pass) VALUES (:prenom, :email,'$pass'";
-
-    $query = $db->prepare($sql);
-
-    $query->bindValue(":prenom", $prenom);
-    $query->bindValue(":email", $email);
-
-    $query->execute();
-
-    header("Location: login.php");
-} else {
-    die("Le formulaire est incomplet");
 }
-
-
-
 
 ?>
 
