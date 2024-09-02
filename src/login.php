@@ -1,3 +1,52 @@
+<?php
+session_start();
+
+function validateEmail($email)
+{
+    return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
+}
+
+if (!empty($_POST)) {
+    if (isset($_POST["email"], $_POST["pass"]) && !empty($_POST["email"]) && !empty($_POST["pass"])) {
+        if (!validateEmail($_POST["email"])) {
+            die("L'adresse email est incorrecte");
+        }
+
+        require_once("./connect.php");
+        $sql = "SELECT * FROM users WHERE email = :email";
+
+        $query = $db->prepare($sql);
+
+        $query->bindValue(":email", $_POST["email"]);
+
+        $query->execute();
+
+        $user = $query->fetch();
+
+        if (!$user) {
+            die("L'utilisateur et/ou le mot de passe est incorrect");
+        }
+
+        if (!password_verify($_POST["pass"], $user["pass"])) {
+            die("L'utilisateur et/ou le mot de passe est incorrect");
+        }
+
+        $_SESSION["user_cook"] = [
+            "user_id" => $user["id"],
+            "prenom" => $user["prenom"],
+            "email" => $user["email"]
+        ];
+
+        header("Location: index.php");
+        exit();
+    } else {
+        die("Le formulaire est incomplet");
+    }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
