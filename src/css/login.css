@@ -25,3 +25,25 @@ h1 {
   text-align: center;
   color: var(--text-color1);
 }
+
+.form-input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input {
+  margin-top: 10px;
+}
