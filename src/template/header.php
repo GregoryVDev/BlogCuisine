@@ -10,7 +10,16 @@
 </head>
 
 <body>
-
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </nav>
+    </header>
 </body>
 
 </html>
