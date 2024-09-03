@@ -11,10 +11,16 @@
 
 <body>
     <div class="navbar-top">
-        <img src="" alt="Dashboard">
-        <img src="" alt="Dark mode">
-        <img src="" alt="Connexion">
-        <img src="" alt="Favoris">
+        <div class="container-icons">
+            <a href="#"><img src="../img/logos/dashboard.svg" alt="Dashboard"></a>
+            <div class="dr"></div>
+            <a href="#"><img src="../img/logos/moon.svg" alt="Dark mode"></a>
+            <div class="dr"></div>
+
+            <a href="#"><img src="../img/logos/user.svg" alt="Connexion"> </a>
+            <div class="dr"></div>
+            <a href="#"><img src="../img/logos/heart.svg" alt="Favoris"></a>
+        </div>
     </div>
     <header>
         <nav>
