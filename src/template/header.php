@@ -24,4 +24,12 @@
     <div class="container-img">
         <img src="../img/logos/gregory-trans.png" alt="Logo du site">
     </div>
+    <h1>La cuisine familiale</h1>
+    <h2>Bienvenue dans la famille</h2>
+    <div class="bulle">
+        <p><a href="#">Grég</a></p>
+        <div class="dr"></div>
+        <p><a href="#">Élise</a></p>
+    </div>
+    <input type="search" name="search" id="search">
 </header>

@@ -11,7 +11,9 @@
 
 <body>
     <?php require_once("./template/header.php") ?>
+    <section id="#">
 
+    </section>
     <?php require_once("./template/footer.php") ?>
 </body>
 
