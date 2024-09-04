@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <title>Document</title>
-</head>
-
-<body>
     <footer>
         <div class="footer-top"></div>
         <div class="container-ul">
@@ -46,10 +34,9 @@
         </div>
         <div class="newsletter">
             <label for="newsletter">Newsletter</label>
-            <input type="email" name="newsletter" id="newsletter">
+            <input type="email" name="newsletter" id="newsletter" placeholder="Email">
+            <button type="submit" class="button-newsletter">OK</button>
         </div>
+
+        <p>© 2024 Grégory</p>
     </footer>
-
-</body>
-
-</html>

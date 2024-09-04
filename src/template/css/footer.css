@@ -5,6 +5,7 @@
 
 footer {
   background-color: var(--color2);
+  padding-bottom: 30px;
 }
 
 footer h3 {
@@ -35,12 +36,29 @@ footer h3 {
 }
 
 .newsletter {
-  border: 3px solid blue;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .newsletter label {
   color: var(--color6);
   text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.newsletter input {
+  padding: 2px;
+}
+
+.button-newsletter {
+  padding: 3px;
+  background: var(--color5);
+  border: none;
+}
+
+footer p {
+  color: var(--color6);
+  text-align: center;
+  margin-top: 50px;
 }
