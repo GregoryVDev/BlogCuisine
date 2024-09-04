@@ -14,12 +14,11 @@
         <div class="container-icons">
             <a href="#"><img src="../img/logos/dashboard.svg" alt="Dashboard"></a>
             <div class="dr"></div>
-            <a href="#"><img src="../img/logos/moon.svg" alt="Dark mode"></a>
-            <div class="dr"></div>
-
             <a href="#"><img src="../img/logos/user.svg" alt="Connexion"> </a>
             <div class="dr"></div>
             <a href="#"><img src="../img/logos/heart.svg" alt="Favoris"></a>
+            <div class="dr"></div>
+            <a href="#"><img src="../img/logos/moon.svg" alt="Dark mode"></a>
         </div>
     </div>
     <header>
