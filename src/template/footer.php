@@ -4,9 +4,9 @@
             <div class="container-accueil">
                 <ul>
                     <h3>Accueil</h3>
-                    <li><a href="#">Présentation</a></li>
+                    <li><a href="#">A propos</a></li>
                     <li><a href="#">Catégories</a></li>
-                    <li><a href="#">Derniers articles</a></li>
+                    <li><a href="#">Articles</a></li>
                 </ul>
             </div>
 

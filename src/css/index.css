@@ -61,15 +61,21 @@ nav ul li a:hover {
   text-align: center;
 }
 
+.container-img img {
+  height: 300px;
+}
+
 h1 {
   text-align: center;
   font-size: var(--fsize1);
   margin-bottom: 20px;
+  font-family: var(--RobotoBold);
 }
 
 h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-family: var(--RobotoBold);
 }
 
 .bulle {
@@ -79,7 +85,7 @@ h2 {
   background: var(--color3);
   gap: 20px;
   padding: 10px;
-  width: 50%;
+  width: 250px;
   margin: auto;
 }
 
@@ -116,8 +122,9 @@ header a:hover {
 #search {
   margin: 50px auto;
   border-radius: 50px;
-  padding: 8px 8px 8px 40px;
+  padding: 10px 10px 10px 40px;
   width: 100%;
+  border: none;
 }
 
 /* ---------------------- 
@@ -148,6 +155,10 @@ footer h3 {
   flex-wrap: wrap;
   gap: 50px;
   padding: 25px;
+}
+
+footer ul {
+  width: 68px;
 }
 
 .container-ul li a {
