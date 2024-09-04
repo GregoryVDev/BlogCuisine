@@ -1,0 +1,46 @@
+.footer-top {
+  background-color: #a4b494;
+  padding: 20px;
+}
+
+footer {
+  background-color: var(--color2);
+}
+
+footer h3 {
+  color: var(--color6);
+  margin-bottom: 25px;
+}
+
+.container-ul {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 25px;
+}
+
+.container-ul li a {
+  color: var(--color5);
+  text-decoration: none;
+  line-height: 30px;
+}
+
+.container-ul li a:hover {
+  color: var(--color6);
+  text-decoration: none;
+  line-height: 30px;
+}
+
+.newsletter {
+  border: 3px solid blue;
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter label {
+  color: var(--color6);
+  text-transform: uppercase;
+}
