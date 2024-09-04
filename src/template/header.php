@@ -25,7 +25,7 @@
         <img src="../img/logos/gregory-trans.png" alt="Logo du site">
     </div>
     <h1>La Cuisine Familiale</h1>
-    <h2>Bienvenue dans la famille</h2>
+    <h3>Bienvenue dans la famille</h3>
     <div class="bulle">
         <p><a href="#">Grég</a></p>
         <div class="dr"></div>
