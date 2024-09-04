@@ -27,9 +27,9 @@
     <h1>La Cuisine Familiale</h1>
     <h3>Bienvenue dans la famille</h3>
     <div class="bulle">
-        <p><a href="#">Grég</a></p>
-        <div class="dr"></div>
         <p><a href="#">Élise</a></p>
+        <div class="dr"></div>
+        <p><a href="#">Grégory</a></p>
     </div>
     <div class="container-search">
         <img src="../img/logos/search.svg" alt="Recherche">

@@ -22,7 +22,15 @@
 
         <p>C'est pourquoi nous avons décidé de les rassembler ici, pour que chacun puisse y accéder et les transmettre à son tour. Ensemble, gardons vivantes nos meilleures recettes, partageons-les avec nos proches et assurons-nous qu'elles continuent de faire partie de notre héritage culinaire.</p>
 
-        <img src="./img/logos/gregelise.png" alt="Grég & Élise">
+        <div class="container-image">
+            <img src="./img/logos/gregelise.png" alt="Grég & Élise">
+        </div>
+
+        <h3>Quel endroit voulez-vous visiter ?</h3>
+        <div class="container-links">
+            <a href="#">Élise</a>
+            <a href="#">Grégory</a>
+        </div>
     </section>
     <?php require_once("./template/footer.php") ?>
 </body>
