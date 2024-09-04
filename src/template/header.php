@@ -31,5 +31,9 @@
         <div class="dr"></div>
         <p><a href="#">Élise</a></p>
     </div>
-    <input type="search" name="search" id="search">
+    <div class="container-search">
+        <img src="../img/logos/search.svg" alt="Recherche">
+        <input type="search" name="search" id="search" placeholder="Nom de la recette">
+    </div>
+
 </header>
