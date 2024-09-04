@@ -13,7 +13,9 @@
 <body>
     <?php require_once("./template/header.php") ?>
     <section id="#">
-
+        <div class="illustration-img">
+            <img src="./img/logos/backgroundplat.jpg" alt="Photo Illustration">
+        </div>
     </section>
     <?php require_once("./template/footer.php") ?>
 </body>
