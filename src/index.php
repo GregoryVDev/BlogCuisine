@@ -59,6 +59,9 @@
             </article>
         </div>
     </section>
+    <section id="last">
+
+    </section>
 
     <?php require_once("./template/footer.php") ?>
 </body>
