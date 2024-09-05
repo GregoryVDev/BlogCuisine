@@ -32,6 +32,17 @@
             <a href="#">Grégory</a>
         </div>
     </section>
+    <section id="category">
+        <h2>Catégories</h2>
+        <div class="container-articles">
+            <article class="square-img">
+                <figure>
+                    <img src="./img/entrees/entree.jpg" alt="Entrée / Apéritif">
+                    <figcaption>Entrées / Apéros</figcaption>
+                </figure>
+            </article>
+        </div>
+    </section>
     <?php require_once("./template/footer.php") ?>
 </body>
 

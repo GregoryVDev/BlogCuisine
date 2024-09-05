@@ -83,7 +83,7 @@ h3 {
   justify-content: center;
   border-radius: 50px;
   background: var(--color3);
-  gap: 20px;
+  gap: 15px;
   padding: 10px;
   width: 250px;
   margin: auto;
@@ -193,6 +193,50 @@ section h2 {
 
 .container-links a:hover {
   background: var(--color4);
+}
+
+/* ---------------------- 
+        CATEGORIES
+   ----------------------
+*/
+
+.container-articles {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.square-img {
+  width: 255px;
+  height: 235px;
+  position: relative;
+  overflow: hidden;
+}
+
+.square-img figure {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.square-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.square-img figcaption {
+  position: absolute;
+  bottom: 80px;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 /* ---------------------- 

@@ -1,5 +1,5 @@
 body {
-  background: url("../img/login/plat.jpg") no-repeat;
+  background: url("../img/login/plat.jpg") no-repeat !important;
   background-position-y: 20%;
 }
 
