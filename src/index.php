@@ -60,7 +60,7 @@
         </div>
     </section>
     <section id="last">
-
+        <h3>Les derniers articles publiés</h3>
     </section>
 
     <?php require_once("./template/footer.php") ?>

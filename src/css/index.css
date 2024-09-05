@@ -242,6 +242,16 @@ section h2 {
 }
 
 /* ---------------------- 
+        LAST ARTICLES
+   ----------------------
+*/
+
+#last h3 {
+  text-transform: uppercase;
+  color: var(--color1);
+}
+
+/* ---------------------- 
           FOOTER
    ----------------------
 */
