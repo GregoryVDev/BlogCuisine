@@ -202,6 +202,7 @@ section h2 {
 
 .container-articles {
   margin-top: 20px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
 }
@@ -230,7 +231,7 @@ section h2 {
 
 .square-img figcaption {
   position: absolute;
-  bottom: 90px;
+  bottom: 85px;
   width: 100%;
   padding: 15px 0;
   background-color: rgba(0, 0, 0, 0.5);

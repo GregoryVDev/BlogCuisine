@@ -45,28 +45,21 @@
         <div class="container-articles">
             <article class="square-img">
                 <figure>
-                    <img src="./img/entrees/entree.jpg" alt="Entrée / Apéritif">
-                    <figcaption>Entrées / Apéros</figcaption>
+                    <img src="./img/plats/plat.jpg" alt="Plat">
+                    <figcaption>Plats</figcaption>
                 </figure>
             </article>
         </div>
         <div class="container-articles">
             <article class="square-img">
                 <figure>
-                    <img src="./img/entrees/entree.jpg" alt="Entrée / Apéritif">
-                    <figcaption>Entrées / Apéros</figcaption>
-                </figure>
-            </article>
-        </div>
-        <div class="container-articles">
-            <article class="square-img">
-                <figure>
-                    <img src="./img/entrees/entree.jpg" alt="Entrée / Apéritif">
-                    <figcaption>Entrées / Apéros</figcaption>
+                    <img src="./img/desserts/dessert.jpg" alt="Dessert">
+                    <figcaption>Desserts</figcaption>
                 </figure>
             </article>
         </div>
     </section>
+
     <?php require_once("./template/footer.php") ?>
 </body>
 
