@@ -61,6 +61,19 @@
     </section>
     <section id="last">
         <h3>Les derniers articles publiés</h3>
+        <div class="container-produit">
+            <article class="produit">
+                <figure>
+                    <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
+                    <figcaption>
+                        <div class="container-tags">
+                            <a href="#">Plats</a>
+                            <a href="#">Viandes</a>
+                        </div>
+                    </figcaption>
+                </figure>
+            </article>
+        </div>
     </section>
 
     <?php require_once("./template/footer.php") ?>
