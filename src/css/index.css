@@ -278,11 +278,22 @@ section h2 {
 .container-tags a {
   text-align: center;
   width: 100px;
-  padding: 10px;
+  padding: 5px;
   background: var(--color5);
   text-decoration: none;
   font-size: var(--fsize4);
   color: var(--color2);
+}
+
+.produit figcaption h2 {
+  font-size: var(--fsize4);
+  font-family: var(--RobotoBold);
+  margin-bottom: 20px;
+}
+
+.produit figcaption p {
+  font-family: var(--PlayRegular);
+  padding: 10px;
 }
 
 /* ---------------------- 
