@@ -138,6 +138,11 @@
             </p>
         </div>
     </section>
+    <section id="contact">
+        <form action=""></form>
+    </section>
+
+
 
 
     <?php require_once("./template/footer.php") ?>
