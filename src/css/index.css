@@ -291,9 +291,23 @@ section h2 {
   margin-bottom: 20px;
 }
 
-.produit figcaption p {
+.produit figcaption .text {
   font-family: var(--PlayRegular);
   padding: 10px;
+}
+
+.container-credit a {
+  text-decoration: none;
+  color: var(--color5);
+}
+
+.container-credit a:hover {
+  color: var(--color4);
+  text-decoration: underline;
+}
+
+.container-credit p {
+  font-family: var(--PlayRegular);
 }
 
 /* ---------------------- 

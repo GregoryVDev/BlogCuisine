@@ -67,11 +67,17 @@
                     <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
                     <figcaption>
                         <div class="container-tags">
-                            <a href="#">Plats</a>
-                            <a href="#">Viandes</a>
+                            <a href="#">Plat</a>
+                            <a href="#">Viande</a>
                         </div>
                         <h2>Boeuf Bourguignon au vin</h2>
-                        <p>Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne. Il s'agit d'un ragoût de viande de bœuf mijoté lentement dans un vin rouge corsé...</p>
+                        <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne. Il s'agit d'un ragoût de viande de bœuf mijoté lentement dans un vin rouge corsé...</p>
+
+                        <div class="container-credit">
+                            <p>posté : 20 août 2024</p>
+                            <p>tags : <a href="#">Plat</a> , <a href="#">viande</a></p>
+                            <p>par : Grégory</p>
+                        </div>
                     </figcaption>
                 </figure>
             </article>
