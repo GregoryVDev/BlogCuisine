@@ -37,31 +37,37 @@
         <div class="container-articles">
             <article class="square-img">
                 <figure>
-                    <img src="./img/entrees/entree.jpg" alt="Entrée / Apéritif">
-                    <figcaption>Entrées / Apéros</figcaption>
+                    <a href="#">
+                        <img src="./img/entrees/entree.jpg" alt="Entrée / Apéritif">
+                        <figcaption>Entrées / Apéros</figcaption>
+                    </a>
                 </figure>
             </article>
         </div>
         <div class="container-articles">
             <article class="square-img">
                 <figure>
-                    <img src="./img/plats/plat.jpg" alt="Plat">
-                    <figcaption>Plats</figcaption>
+                    <a href="#">
+                        <img src="./img/plats/plat.jpg" alt="Plat">
+                        <figcaption>Plats</figcaption>
+                    </a>
                 </figure>
             </article>
         </div>
         <div class="container-articles">
             <article class="square-img">
                 <figure>
-                    <img src="./img/desserts/dessert.jpg" alt="Dessert">
-                    <figcaption>Desserts</figcaption>
+                    <a href="#">
+                        <img src="./img/desserts/dessert.jpg" alt="Dessert">
+                        <figcaption>Desserts</figcaption>
+                    </a>
                 </figure>
             </article>
         </div>
     </section>
     <section id="last">
         <h3>Les derniers articles publiés</h3>
-        <div class="container-produit">
+        <div id="article-container" class="container-produit">
             <article class="produit">
                 <figure>
                     <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
@@ -71,18 +77,35 @@
                             <a href="#">Viande</a>
                         </div>
                         <h2>Boeuf Bourguignon au vin</h2>
-                        <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne. Il s'agit d'un ragoût de viande de bœuf mijoté lentement dans un vin rouge corsé...</p>
-
+                        <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</p>
                         <div class="container-credit">
-                            <p><span class=credit>posté :</span> 20 août 2024</p>
-                            <p><span class="credit">tags :</span> <a href="#">Plat</a> , <a href="#">viande</a></p>
+                            <p><span class="credit">posté :</span> 20 août 2024</p>
+                            <p><span class="credit">tags :</span> <a href="#">Plat</a>, <a href="#">Viande</a></p>
+                            <p><span class="credit">par :</span> Grégory</p>
+                        </div>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article class="produit">
+                <figure>
+                    <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
+                    <figcaption>
+                        <div class="container-tags">
+                            <a href="#">Plat</a>
+                            <a href="#">Viande</a>
+                        </div>
+                        <h2>Boeuf Bourguignon au vin</h2>
+                        <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</p>
+                        <div class="container-credit">
+                            <p><span class="credit">posté :</span> 20 août 2024</p>
+                            <p><span class="credit">tags :</span> <a href="#">Plat</a>, <a href="#">Viande</a></p>
                             <p><span class="credit">par :</span> Grégory</p>
                         </div>
                     </figcaption>
                 </figure>
             </article>
             <article class="produit">
-
                 <figure>
                     <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
                     <figcaption>
@@ -91,37 +114,31 @@
                             <a href="#">Viande</a>
                         </div>
                         <h2>Boeuf Bourguignon au vin</h2>
-                        <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne. Il s'agit d'un ragoût de viande de bœuf mijoté lentement dans un vin rouge corsé...</p>
-
+                        <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</p>
                         <div class="container-credit">
-                            <p><span class=credit>posté :</span> 20 août 2024</p>
-                            <p><span class="credit">tags :</span> <a href="#">Plat</a> , <a href="#">viande</a></p>
-                            <p><span class="credit">par :</span> Grégory</p>
-                        </div>
-                    </figcaption>
-                </figure>
-            </article>
-            <article class="produit">
-                <figure>
-                    <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
-                    <figcaption>
-                        <div class="container-tags">
-                            <a href="#">Plat</a>
-                            <a href="#">Viande</a>
-                        </div>
-                        <h2>Boeuf Bourguignon au vin</h2>
-                        <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne. Il s'agit d'un ragoût de viande de bœuf mijoté lentement dans un vin rouge corsé...</p>
-
-                        <div class="container-credit">
-                            <p><span class=credit>posté :</span> 20 août 2024</p>
-                            <p><span class="credit">tags :</span> <a href="#">Plat</a> , <a href="#">viande</a></p>
+                            <p><span class="credit">posté :</span> 20 août 2024</p>
+                            <p><span class="credit">tags :</span> <a href="#">Plat</a>, <a href="#">Viande</a></p>
                             <p><span class="credit">par :</span> Grégory</p>
                         </div>
                     </figcaption>
                 </figure>
             </article>
         </div>
+
+        <!-- Pagination -->
+        <div id="pagination" class="container-pages">
+            <p id="prevPage">
+                <img src="./img/logos/arrow-left-solid.svg" alt="Flèche précédente">
+                Précédente
+            </p>
+            <span id="pageNumbers"></span>
+            <p id="nextPage">
+                Suivante
+                <img src="./img/logos/arrow-right-solid.svg" alt="Flèche Suivante">
+            </p>
+        </div>
     </section>
+
 
     <?php require_once("./template/footer.php") ?>
 </body>

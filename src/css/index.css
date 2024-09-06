@@ -322,14 +322,30 @@ section h2 {
 
 .container-pages {
   display: flex;
+  justify-content: center;
   gap: 10px;
+  margin: 20px 0;
 }
 
-.container-pages img {
-  height: 24px;
+#pageNumbers {
+  color: var(--color2);
 }
 
-/* ------------------------------------ */
+#prevPage,
+#nextPage {
+  cursor: pointer;
+  color: var(--color4);
+}
+
+#nextPage,
+#prevPage img {
+  width: 10px;
+}
+
+/* ---------------------- 
+          CONTACT
+   ----------------------
+*/
 
 /* ---------------------- 
           FOOTER
