@@ -1,7 +1,5 @@
 <?php
 
-
-
 try {
     $server_name = "db";
     $db_name = "blogcuisine";
