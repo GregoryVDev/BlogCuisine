@@ -253,10 +253,12 @@ section h2 {
 }
 
 .container-produit {
+  margin: 50px 0;
   width: 100%;
-  border: 3px solid red;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 }
 
 .produit {
@@ -264,6 +266,7 @@ section h2 {
   height: 220px;
   background: var(--color3);
   height: auto;
+  padding-bottom: 20px;
 }
 
 .container-tags {
@@ -316,6 +319,17 @@ section h2 {
 .container-credit .credit {
   color: #6f6f6f;
 }
+
+.container-pages {
+  display: flex;
+  gap: 10px;
+}
+
+.container-pages img {
+  height: 24px;
+}
+
+/* ------------------------------------ */
 
 /* ---------------------- 
           FOOTER

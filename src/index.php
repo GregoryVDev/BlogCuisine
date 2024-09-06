@@ -81,10 +81,50 @@
                     </figcaption>
                 </figure>
             </article>
+            <article class="produit">
+
+                <figure>
+                    <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
+                    <figcaption>
+                        <div class="container-tags">
+                            <a href="#">Plat</a>
+                            <a href="#">Viande</a>
+                        </div>
+                        <h2>Boeuf Bourguignon au vin</h2>
+                        <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne. Il s'agit d'un ragoût de viande de bœuf mijoté lentement dans un vin rouge corsé...</p>
+
+                        <div class="container-credit">
+                            <p><span class=credit>posté :</span> 20 août 2024</p>
+                            <p><span class="credit">tags :</span> <a href="#">Plat</a> , <a href="#">viande</a></p>
+                            <p><span class="credit">par :</span> Grégory</p>
+                        </div>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="produit">
+                <figure>
+                    <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
+                    <figcaption>
+                        <div class="container-tags">
+                            <a href="#">Plat</a>
+                            <a href="#">Viande</a>
+                        </div>
+                        <h2>Boeuf Bourguignon au vin</h2>
+                        <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne. Il s'agit d'un ragoût de viande de bœuf mijoté lentement dans un vin rouge corsé...</p>
+
+                        <div class="container-credit">
+                            <p><span class=credit>posté :</span> 20 août 2024</p>
+                            <p><span class="credit">tags :</span> <a href="#">Plat</a> , <a href="#">viande</a></p>
+                            <p><span class="credit">par :</span> Grégory</p>
+                        </div>
+                    </figcaption>
+                </figure>
+            </article>
         </div>
     </section>
 
     <?php require_once("./template/footer.php") ?>
 </body>
+<script src="./js/script.js"></script>
 
 </html>
