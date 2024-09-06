@@ -294,6 +294,13 @@ section h2 {
 .produit figcaption .text {
   font-family: var(--PlayRegular);
   padding: 10px;
+  margin-bottom: 10px;
+}
+
+.container-credit p {
+  font-family: var(--PlayRegular);
+  padding: 0 10px;
+  color: var(--color1);
 }
 
 .container-credit a {
@@ -306,8 +313,8 @@ section h2 {
   text-decoration: underline;
 }
 
-.container-credit p {
-  font-family: var(--PlayRegular);
+.container-credit .credit {
+  color: #6f6f6f;
 }
 
 /* ---------------------- 
