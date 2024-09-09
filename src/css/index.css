@@ -388,7 +388,7 @@ form {
 
 #contact input:focus {
   border: none;
-  border-bottom: 1px solid #007aff;
+  border-bottom: 1px solid var(--color4);
   padding-bottom: 1px;
   outline: none;
   padding-bottom: 10px;
