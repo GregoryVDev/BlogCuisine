@@ -296,13 +296,13 @@ section h2 {
 
 .produit figcaption .text {
   font-family: var(--PlayRegular);
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 10px;
 }
 
 .container-credit p {
   font-family: var(--PlayRegular);
-  padding: 0 10px;
+  padding: 0 20px;
   color: var(--color1);
 }
 
@@ -391,6 +391,13 @@ form {
   padding-bottom: 1px;
   outline: none;
   padding-bottom: 10px;
+}
+
+#contact button {
+  padding: 15px 20px;
+  background: var(--color5);
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 /* ---------------------- 
