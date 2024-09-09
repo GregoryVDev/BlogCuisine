@@ -356,6 +356,7 @@ section h2 {
 #contact p {
   font-size: var(--fsize4);
   margin: 20px 60px;
+  font-family: var(--RobotoLight);
 }
 
 form {
