@@ -143,7 +143,23 @@
         <p>Envie de partager vos nouvelles recettes ou vous avez une petite question sur une des recettes ? </p>
         <p>Utilisez notre formulaire de contact pour échanger avec nous et enrichir ensemble notre passion culinaire !</p>
         <form method="POST">
-
+            <div class="container-name">
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Nom complet">
+            </div>
+            <div class="container-email">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="container-object">
+                <label for="object"></label>
+                <input type="text" id="email" name="object" placeholder="Objet du message">
+            </div>
+            <div class="container-message">
+                <label for="message"></label>
+                <input type="text" id="message" name="message" placeholder="Votre message">
+            </div>
+            <button type="submit">Envoyer</button>
         </form>
     </section>
 

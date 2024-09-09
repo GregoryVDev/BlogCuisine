@@ -350,11 +350,47 @@ section h2 {
 #contact h3 {
   color: var(--color1);
   margin-top: 50px;
+  font-size: var(--fsize2);
 }
 
 #contact p {
   font-size: var(--fsize4);
   margin: 20px 60px;
+}
+
+form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.container-name,
+.container-email,
+.container-object,
+.container-message {
+  text-align: center;
+}
+
+.container-message {
+  margin-top: 20px;
+}
+
+#contact input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 300px;
+  padding-bottom: 10px;
+}
+
+#contact input:focus {
+  border: none;
+  border-bottom: 1px solid #007aff;
+  padding-bottom: 1px;
+  outline: none;
+  padding-bottom: 10px;
 }
 
 /* ---------------------- 
