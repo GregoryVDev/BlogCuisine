@@ -139,7 +139,12 @@
         </div>
     </section>
     <section id="contact">
-        <form action=""></form>
+        <h3>Un petit mot, une grande recette...</h3>
+        <p>Envie de partager vos nouvelles recettes ou vous avez une petite question sur une des recettes ? </p>
+        <p>Utilisez notre formulaire de contact pour échanger avec nous et enrichir ensemble notre passion culinaire !</p>
+        <form method="POST">
+
+        </form>
     </section>
 
 
