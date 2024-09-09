@@ -480,4 +480,8 @@ footer p {
   nav ul li a {
     font-size: 0.9em;
   }
+
+  #contact h3 {
+    font-size: var(--fsize4);
+  }
 }
