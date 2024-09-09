@@ -487,5 +487,7 @@ footer p {
   }
 }
 
+/* TABLET */
+
 @media all and (min-width: 480px) and (max-width: 768px) {
 }
