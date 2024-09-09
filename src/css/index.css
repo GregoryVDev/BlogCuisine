@@ -474,6 +474,8 @@ footer p {
   margin-top: 50px;
 }
 
+/* less 480px */
+
 @media all and (max-width: 480px) {
   nav ul li a {
     font-size: 0.9em;
