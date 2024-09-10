@@ -140,8 +140,10 @@
     </section>
     <section id="contact">
         <h3>Un petit mot, une grande recette...</h3>
-        <p>Envie de partager vos nouvelles recettes ou vous avez une petite question sur une des recettes ? </p>
-        <p>Utilisez notre formulaire de contact pour échanger avec nous et enrichir ensemble notre passion culinaire !</p>
+        <div class="container-contact">
+            <p>Envie de partager vos nouvelles recettes ou vous avez une petite question sur une des recettes ? </p>
+            <p>Utilisez notre formulaire de contact pour échanger avec nous et enrichir ensemble notre passion culinaire !</p>
+        </div>
         <form method="POST">
             <div class="container-name">
                 <label for="name"></label>
@@ -157,7 +159,7 @@
             </div>
             <div class="container-message">
                 <label for="message"></label>
-                <input type="text" id="message" name="message" placeholder="Votre message">
+                <textarea name="message" id="message" placeholder="Votre message"></textarea>
             </div>
             <button type="submit">Envoyer</button>
         </form>

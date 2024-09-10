@@ -353,9 +353,12 @@ section h2 {
   font-size: var(--fsize2);
 }
 
+.container-contact {
+}
+
 #contact p {
   font-size: var(--fsize4);
-  margin: 20px 60px;
+  margin: 20px 20px;
   font-family: var(--RobotoLight);
 }
 
@@ -384,6 +387,23 @@ form {
   border-bottom: 1px solid black;
   width: 300px;
   padding-bottom: 10px;
+}
+
+textarea {
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 300px;
+  padding-bottom: 50px;
+  resize: vertical;
+}
+
+textarea:focus {
+  border: none;
+  border-bottom: 1px solid var(--color4);
+  padding-bottom: 1px;
+  outline: none;
+  padding-bottom: 50px;
 }
 
 #contact input:focus {
