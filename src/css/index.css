@@ -275,7 +275,7 @@ section h2 {
 }
 
 .produit {
-  width: 263px;
+  width: 350px;
   height: 220px;
   background: var(--color3);
   height: auto;
@@ -429,6 +429,10 @@ textarea:focus {
   background: var(--color5);
   cursor: pointer;
   text-transform: uppercase;
+}
+
+#contact button:hover {
+  background: var(--color4);
 }
 
 /* ---------------------- 
