@@ -160,6 +160,7 @@ section h2 {
 #about p {
   padding: 20px 20px 0px 20px;
   text-align: justify;
+  font-family: var(--RobotoLight);
 }
 
 .container-image {
@@ -276,7 +277,6 @@ section h2 {
 
 .produit {
   width: 350px;
-  height: 220px;
   background: var(--color3);
   height: auto;
   padding-bottom: 20px;
@@ -367,9 +367,10 @@ section h2 {
 }
 
 #contact p {
-  font-size: var(--fsize4);
+  font-size: var(--fsize5);
   margin: 20px 20px;
   font-family: var(--RobotoLight);
+  text-align: center;
 }
 
 form {
@@ -547,5 +548,8 @@ footer p {
 
 /* TABLET */
 
-@media all and (min-width: 480px) and (max-width: 768px) {
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .flex-row {
+    border: 3px solid black;
+  }
 }

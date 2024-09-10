@@ -71,7 +71,7 @@
         <h3>Les derniers articles publiés</h3>
         <div id="article-container" class="container-produit">
             <article class="produit">
-                <figure>
+                <figure class="flex-row">
                     <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
                     <figcaption>
                         <div class="container-tags">
@@ -90,7 +90,7 @@
             </article>
 
             <article class="produit">
-                <figure>
+                <figure class="row-reverse">
                     <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
                     <figcaption>
                         <div class="container-tags">
