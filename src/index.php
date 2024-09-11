@@ -108,7 +108,7 @@
                 </figure>
             </article>
             <article class="produit">
-                <figure>
+                <figure class="flex-row">
                     <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
                     <figcaption>
                         <div class="container-tags">
