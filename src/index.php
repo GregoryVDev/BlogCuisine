@@ -142,30 +142,32 @@
     </section>
     <section id="contact">
         <h3>Un petit mot, une grande recette...</h3>
-        <div class="container-contact">
-            <p>Envie de partager vos nouvelles recettes ou vous avez une petite question sur une des recettes ? </p>
-            <p>Utilisez notre formulaire de contact pour échanger avec nous et enrichir ensemble notre passion culinaire !</p>
+        <div class="container-form">
+            <form method="POST">
+                <div class="container-contact">
+                    <p>Envie de partager vos nouvelles recettes ou vous avez une petite question sur une des recettes ? </p>
+                    <p>Utilisez notre formulaire de contact pour échanger avec nous et enrichir ensemble notre passion culinaire !</p>
+                </div>
+                <div class="container-name">
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" placeholder="Nom complet">
+                </div>
+                <div class="container-email">
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                </div>
+                <div class="container-object">
+                    <label for="object"></label>
+                    <input type="text" id="email" name="object" placeholder="Objet du message">
+                </div>
+                <div class="container-message">
+                    <label for="message"></label>
+                    <textarea name="message" id="message" placeholder="Votre message"></textarea>
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
         </div>
 
-        <form method="POST">
-            <div class="container-name">
-                <label for="name"></label>
-                <input type="text" id="name" name="name" placeholder="Nom complet">
-            </div>
-            <div class="container-email">
-                <label for="email"></label>
-                <input type="email" id="email" name="email" placeholder="Email">
-            </div>
-            <div class="container-object">
-                <label for="object"></label>
-                <input type="text" id="email" name="object" placeholder="Objet du message">
-            </div>
-            <div class="container-message">
-                <label for="message"></label>
-                <textarea name="message" id="message" placeholder="Votre message"></textarea>
-            </div>
-            <button type="submit">Envoyer</button>
-        </form>
     </section>
 
 
