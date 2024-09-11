@@ -146,6 +146,7 @@
             <p>Envie de partager vos nouvelles recettes ou vous avez une petite question sur une des recettes ? </p>
             <p>Utilisez notre formulaire de contact pour échanger avec nous et enrichir ensemble notre passion culinaire !</p>
         </div>
+
         <form method="POST">
             <div class="container-name">
                 <label for="name"></label>

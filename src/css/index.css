@@ -562,27 +562,26 @@ footer p {
     flex-direction: column-reverse;
   }
 
-  @media (min-width: 768px) {
-    .flex-row {
-      flex-direction: row;
-    }
+  .flex-row {
+    flex-direction: row;
+  }
 
-    .row-reverse {
-      display: flex;
-      flex-direction: row-reverse;
-    }
+  .row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 
-    .produit {
-      width: 100%;
-      max-width: 1000px;
-    }
+  .produit {
+    width: 100%;
+    max-width: 1000px;
+  }
 
-    .produit img {
-      width: 350px;
-    }
+  .produit img {
+    width: 350px;
+  }
 
-    #article-container {
-      flex-direction: column;
-    }
+  #article-container {
+    flex-direction: column;
+    padding: 20px;
   }
 }
