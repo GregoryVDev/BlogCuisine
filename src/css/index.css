@@ -227,6 +227,11 @@ section h2 {
   height: 235px;
   position: relative;
   overflow: hidden;
+  border: 2px solid #1e1e1e;
+}
+
+.square-img:hover {
+  border: 2px solid #1e1e1e;
 }
 
 .square-img figure {
@@ -241,7 +246,11 @@ section h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border: 2px solid;
+  transition: transform 0.3s ease;
+}
+
+.square-img:hover img {
+  transform: scale(1.1);
 }
 
 .square-img figcaption {
@@ -555,7 +564,6 @@ footer p {
   .flex-row {
     display: flex;
     flex-direction: column;
-    gap: 20px;
   }
 
   .row-reverse {
@@ -594,10 +602,10 @@ footer p {
 
   form {
     position: relative;
-    top: 290px;
-    left: 5px;
+    top: 300px;
     width: 500px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: 140px;
   }
 
   .container-contact {
@@ -610,19 +618,6 @@ footer p {
   }
 }
 
-/* FORMULAIRE DE CONTACT */
-@media all and (min-width: 850px) {
-  form {
-    left: 40px;
-  }
-}
-
-@media all and (min-width: 960px) {
-  form {
-    left: 100px;
-  }
-}
-
 /* DESKTOP */
 
 @media all and (min-width: 1024px) {
@@ -631,9 +626,64 @@ footer p {
     object-fit: cover;
   }
 
+  /* --------------------
+          ABOUT
+   ----------------------
+*/
+
   #about p {
     text-align: left;
     width: 700px;
     margin: auto;
+  }
+
+  .container-image img {
+    width: 200px;
+  }
+
+  /* --------------------
+          CATEGORIES
+   ----------------------
+*/
+
+  .container-square {
+    gap: 100px;
+  }
+
+  /* ------------------
+          ARTICLES
+   --------------------
+*/
+
+  .flex-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .flex-row {
+    flex-direction: row;
+  }
+
+  .row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .produit {
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  .produit img {
+    width: 350px;
+  }
+
+  #article-container {
+    flex-direction: column;
+    padding: 20px;
   }
 }
