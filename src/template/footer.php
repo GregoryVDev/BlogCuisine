@@ -15,6 +15,7 @@
                     <h3>Entrées</h3>
                     <li><a href="#">Froides</a></li>
                     <li><a href="#">Chaudes</a></li>
+                    <li><a href="#">Apéros</a></li>
                 </ul>
             </div>
             <div class="container-plats">

@@ -456,6 +456,7 @@ footer {
 footer h3 {
   color: var(--color6);
   margin-bottom: 25px;
+  margin-right: 20px;
 }
 
 .container-ul {
@@ -594,6 +595,7 @@ footer p {
   form {
     position: relative;
     top: 290px;
+    left: 5px;
     width: 500px;
     margin: auto;
   }
@@ -609,5 +611,18 @@ footer p {
 }
 
 /* FORMULAIRE DE CONTACT */
-@media all and (min-width: 800px) {
+@media all and (min-width: 850px) {
+  form {
+    left: 40px;
+  }
 }
+
+@media all and (min-width: 960px) {
+  form {
+    left: 100px;
+  }
+}
+
+/* DESKTOP */
+
+@media all and (min-width: 1024px);
