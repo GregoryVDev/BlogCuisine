@@ -626,4 +626,14 @@ footer p {
 /* DESKTOP */
 
 @media all and (min-width: 1024px) {
+  #illustration img {
+    height: 700px;
+    object-fit: cover;
+  }
+
+  #about p {
+    text-align: left;
+    width: 700px;
+    margin: auto;
+  }
 }
