@@ -12,9 +12,7 @@
 
 <body>
     <?php require_once("./template/header.php") ?>
-    <section id="illustration">
-        <img src="./img/logos/backgroundplat.jpg" alt="Photo Illustration">
-    </section>
+    <section id="illustration"></section>
     <section id="about">
         <h2>A propos</h2>
         <h3>Voici le blog de recette d'Élise & Grégory</h3>
