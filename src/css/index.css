@@ -188,7 +188,6 @@ section h2 {
 .container-links a {
   text-align: center;
   width: 150px;
-  border: 2px solid black;
   padding: 20px;
   background: var(--color5);
   text-decoration: none;
@@ -228,11 +227,11 @@ section h2 {
   height: 235px;
   position: relative;
   overflow: hidden;
-  border: 2px solid #1e1e1e;
+  border: 1px solid #1e1e1e;
 }
 
 .square-img:hover {
-  border: 2px solid #1e1e1e;
+  border: 1px solid #1e1e1e;
 }
 
 .square-img figure {

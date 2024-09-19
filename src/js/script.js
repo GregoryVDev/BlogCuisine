@@ -1,3 +1,5 @@
+// Ajout d'une pagination
+
 document.addEventListener("DOMContentLoaded", function () {
   const articlesPerPage = 2;
   const articles = document.querySelectorAll("#article-container .produit");
@@ -16,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Show or hide the previous page button
+    // Montre ou cache le bouton précédent pour la pagination
     const prevPageButton = document.getElementById("prevPage");
     if (page === 1) {
       prevPageButton.style.display = "none";
@@ -25,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       prevPageButton.style.gap = "5px";
     }
 
-    // Show or hide the next page button
+    // Montre ou cache le bouton suivant pour la pagination
     const nextPageButton = document.getElementById("nextPage");
     if (page === totalPages) {
       nextPageButton.style.display = "none";
@@ -34,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nextPageButton.style.gap = "5px";
     }
 
-    // Update the page numbers
+    // Mise à jour du nombre de page
     const pageNumbers = document.getElementById("pageNumbers");
     pageNumbers.innerHTML = "";
 
@@ -52,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       pageNumbers.appendChild(pageNumber);
 
-      // Add a space between numbers
+      // Ajout d'un espace entre les chiffres
       if (i < totalPages) {
         pageNumbers.appendChild(document.createTextNode(" "));
       }
@@ -73,6 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Show the first page initially
+  // Affiche d'abord la première page
   showPage(currentPage);
 });
