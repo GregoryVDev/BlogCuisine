@@ -645,7 +645,7 @@ footer p {
   }
 
   #about p {
-    text-align: left;
+    text-align: justify;
     width: 700px;
     margin: auto;
   }
