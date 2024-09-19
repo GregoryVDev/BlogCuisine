@@ -536,7 +536,7 @@ footer p {
 
 @media all and (max-width: 480px) {
   nav ul li a {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 
   #contact h3 {
