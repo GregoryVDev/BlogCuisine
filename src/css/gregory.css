@@ -29,6 +29,10 @@
   text-align: center;
 }
 
+#entrees-options button {
+  margin-right: 50px;
+}
+
 #plats-options {
   border: 3px solid;
   text-align: center;
