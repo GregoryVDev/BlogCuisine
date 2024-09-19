@@ -78,3 +78,27 @@ document.addEventListener("DOMContentLoaded", function () {
   // Affiche d'abord la première page
   showPage(currentPage);
 });
+
+// Affichage des boutons quand on clique sur un des catégories
+
+// Je sélectionne tous les éléments qui ont la classe 'category-btn' (les liens pour chaque catégorie)
+document.querySelectorAll(".category-btn").forEach((button) => {
+  button.addEventListener("click", function (event) {
+    event.preventDefault(); // Empêche le comportement par défaut du lien
+
+    // Cache tous les conteneurs d'options
+    document.querySelectorAll(".options").forEach((option) => {
+      option.classList.add("hidden");
+    });
+
+    // Affiche les boutons en fonction de la catégorie sélectionnée
+    const category = this.getAttribute("data-category");
+    const optionsContainer = document.getElementById(category + "-options");
+
+    if (optionsContainer) {
+      optionsContainer.classList.remove("hidden");
+    } else {
+      console.error("Conteneur non trouvé pour la catégorie : " + category);
+    }
+  });
+});

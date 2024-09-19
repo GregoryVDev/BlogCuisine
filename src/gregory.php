@@ -21,7 +21,7 @@
                 <div class="container-articles">
                     <article class="square-img">
                         <figure>
-                            <a href="#">
+                            <a href="#" class="category-btn" data-category="entrees">
                                 <img src="./img/entrees/entree.jpg" alt="Entrée / Apéritif">
                                 <figcaption>Entrées / Apéros</figcaption>
                             </a>
@@ -31,7 +31,7 @@
                 <div class="container-articles">
                     <article class="square-img">
                         <figure>
-                            <a href="#">
+                            <a href="#" class="category-btn" data-category="plats">
                                 <img src="./img/plats/plat.jpg" alt="Plat">
                                 <figcaption>Plats</figcaption>
                             </a>
@@ -41,7 +41,7 @@
                 <div class="container-articles">
                     <article class="square-img">
                         <figure>
-                            <a href="#">
+                            <a href="#" class="category-btn" data-category="desserts">
                                 <img src="./img/desserts/dessert.jpg" alt="Dessert">
                                 <figcaption>Desserts</figcaption>
                             </a>
@@ -49,8 +49,27 @@
                     </article>
                 </div>
             </div>
+
+            <!-- Boutons pour chaque catégorie -->
+            <div id="entrees-options" class="options hidden">
+                <button><a href="#">Froids</a></button>
+                <button><a href="#">Chauds</a></button>
+                <button><a href="#">Apéros</a></button>
+            </div>
+
+            <div id="plats-options" class="options hidden">
+                <button><a href="#">Viandes</a></button>
+                <button><a href="#">Légumes</a></button>
+                <button><a href="#">Poissons</a></button>
+            </div>
+
+            <div id="desserts-options" class="options hidden">
+                <button><a href="#">Froids</a></button>
+                <button><a href="#">Chauds</a></button>
+            </div>
         </section>
     </main>
+    <?php require_once("./template/footer.php") ?>
 </body>
 <script src="./js/script.js"></script>
 
