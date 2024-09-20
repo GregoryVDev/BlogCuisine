@@ -12,30 +12,21 @@
   --fsize4: 1.3em;
   --fsize5: 1em;
 
-  /* ---------------------- 
-        ROBOTO
-   ----------------------
-*/
+  /* ROBOTO */
 
   --RobotoBlack: "Roboto-Black";
   --RobotoBold: "Roboto-Bold";
   --RobotoRegular: "Roboto-Regular";
   --RobotoLight: "Roboto-Light";
 
-  /* ---------------------- 
-    PLAYFAIR DISPLAY
-   ----------------------
-*/
+  /* PLAYFAIR DISPLAY */
 
   --PlayBlack: "PlayfairDisplay-Black";
   --PlayBold: "PlayfairDisplay-Bold";
   --PlayRegular: "PlayfairDisplay-Regular";
 }
 
-/* ---------------------- 
-          GENERAL
-   ----------------------
-*/
+/* GENERAL */
 
 * {
   padding: 0;

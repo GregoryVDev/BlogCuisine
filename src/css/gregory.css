@@ -1,20 +1,14 @@
 #gregory-link {
   color: var(--color4);
 }
-/* ---------------------- 
-        Illustration
-   ----------------------
-*/
+/* Illustration */
 
 #illustration-onglet {
   background: url("../img/logos/recettebg.jpg") fixed no-repeat;
   height: 400px;
 }
 
-/* ---------------------- 
-        Category
-   ----------------------
-*/
+/* Catégorie */
 
 .hidden {
   display: none;

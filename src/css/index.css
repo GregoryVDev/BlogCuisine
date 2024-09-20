@@ -1,7 +1,4 @@
-/* ---------------------- 
-          NAVBAR
-   ----------------------
-*/
+/* NAVBAR */
 
 .navbar-top {
   background-color: var(--color4);
@@ -52,10 +49,7 @@ nav ul li a:hover {
   color: var(--color4);
 }
 
-/* ---------------------- 
-          HEADER
-   ----------------------
-*/
+/* HEADER */
 
 .container-img {
   text-align: center;
@@ -128,20 +122,14 @@ header a:hover {
   border: none;
 }
 
-/* ---------------------- 
-        ILLUSTRATION
-   ----------------------
-*/
+/* ILLUSTRATION */
 
 #illustration {
   background: url("../img/logos/backgroundplat.jpg") fixed;
   height: 400px;
 }
 
-/* ---------------------- 
-          ABOUT
-   ----------------------
-*/
+/* ABOUT */
 
 section h2 {
   color: var(--color1);
@@ -199,10 +187,7 @@ section h2 {
   background: var(--color4);
 }
 
-/* ---------------------- 
-        CATEGORIES
-   ----------------------
-*/
+/* CATEGORIES */
 
 .container-square {
   display: flex;
@@ -265,10 +250,7 @@ section h2 {
   white-space: nowrap;
 }
 
-/* ---------------------- 
-        LAST ARTICLES
-   ----------------------
-*/
+/* LAST ARTICLES */
 
 #last h3 {
   text-transform: uppercase;
@@ -340,7 +322,7 @@ section h2 {
 
 .container-credit a {
   text-decoration: none;
-  color: var(--color5);
+  color: var(--color1);
 }
 
 .container-credit a:hover {
@@ -374,10 +356,7 @@ section h2 {
   width: 10px;
 }
 
-/* ---------------------- 
-          CONTACT
-   ----------------------
-*/
+/* CONTACT */
 
 #contact h3 {
   color: var(--color1);
@@ -456,10 +435,7 @@ textarea:focus {
   background: var(--color4);
 }
 
-/* ---------------------- 
-          FOOTER
-   ----------------------
-*/
+/* FOOTER */
 
 .footer-top {
   background-color: #a4b494;
@@ -653,19 +629,13 @@ footer p {
     width: 200px;
   }
 
-  /* --------------------
-          CATEGORIES
-   ----------------------
-*/
+  /* CATEGORIES */
 
   .container-square {
     gap: 100px;
   }
 
-  /* ------------------
-          ARTICLES
-   --------------------
-*/
+  /* ARTICLES */
 
   .flex-row {
     display: flex;
@@ -699,10 +669,7 @@ footer p {
     padding: 20px;
   }
 
-  /* ------------------
-          CONTACT
-   --------------------
-*/
+  /* CONTACT */
 
   #contact input {
     width: 450px;
