@@ -268,7 +268,7 @@ section h2 {
 
 .produit {
   width: 350px;
-  background: var(--color3);
+  background: #cdcaba;
 }
 
 .produit img {
@@ -311,7 +311,8 @@ section h2 {
 }
 
 .container-credit {
-  padding-bottom: 20px;
+  font-size: 1.1em;
+  margin-top: 30px;
 }
 
 .container-credit p {

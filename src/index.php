@@ -11,8 +11,9 @@
 </head>
 
 <body>
+
+    <?php require_once("./template/header.php") ?>
     <main>
-        <?php require_once("./template/header.php") ?>
         <section id="illustration"></section>
         <section id="about">
             <h2>A propos</h2>
@@ -22,7 +23,7 @@
             <p>C'est pourquoi nous avons décidé de les rassembler ici, pour que chacun puisse y accéder et les transmettre à son tour. Ensemble, gardons vivantes nos meilleures recettes, partageons-les avec nos proches et assurons-nous qu'elles continuent de faire partie de notre héritage culinaire.</p>
 
             <div class="container-image">
-                <img src="./img/logos/gregelise.png" alt="Grég & Élise">
+                <img src="./img/logos/gregelise.png" alt="">
             </div>
 
             <h3>Quel endroit voulez-vous visiter ?</h3>
@@ -129,13 +130,13 @@
             <!-- Pagination -->
             <div id="pagination" class="container-pages">
                 <p id="prevPage">
-                    <img src="./img/logos/arrow-left-solid.svg" alt="Flèche précédente">
+                    <img src="./img/logos/arrow-left-solid.svg" alt="Page précédente">
                     Précédente
                 </p>
                 <span id="pageNumbers"></span>
                 <p id="nextPage">
                     Suivante
-                    <img src="./img/logos/arrow-right-solid.svg" alt="Flèche Suivante">
+                    <img src="./img/logos/arrow-right-solid.svg" alt="Page Suivante">
                 </p>
             </div>
         </section>

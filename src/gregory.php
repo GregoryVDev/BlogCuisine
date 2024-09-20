@@ -12,8 +12,9 @@
 </head>
 
 <body>
+
+    <?php require_once("./template/header.php") ?>
     <main>
-        <?php require_once("./template/header.php") ?>
         <section id="illustration-onglet"></section>
         <section id="category">
             <h2>Catégories</h2>

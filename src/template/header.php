@@ -1,13 +1,13 @@
 <header>
     <div class="navbar-top">
         <div class="container-icons">
-            <a href="#"><img src="../img/logos/dashboard.svg" alt="Dashboard"></a>
+            <a href="#"><img src="../img/logos/dashboard.svg" alt="Panel Admin"></a>
             <div class="dr"></div>
-            <a href="#"><img src="../img/logos/user.svg" alt="Connexion"> </a>
+            <a href="#"><img src="../img/logos/user.svg" alt="Se connecter"> </a>
             <div class="dr"></div>
-            <a href="#"><img src="../img/logos/heart.svg" alt="Favoris"></a>
+            <a href="#"><img src="../img/logos/heart.svg" alt="Ajouté au favoris"></a>
             <div class="dr"></div>
-            <a href="#"><img src="../img/logos/moon.svg" alt="Dark mode"></a>
+            <a href="#"><img src="../img/logos/moon.svg" alt="Activer le mode sombre"></a>
         </div>
     </div>
     <nav>
@@ -22,7 +22,7 @@
         </ul>
     </nav>
     <div class="container-img">
-        <img src="../img/logos/gregory-trans.png" alt="Logo du site">
+        <img src="../img/logos/gregory-trans.png" alt="">
     </div>
     <h1>La Cuisine Familiale</h1>
     <h3>Bienvenue dans la famille</h3>
