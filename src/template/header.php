@@ -13,11 +13,11 @@
     <nav>
         <ul>
             <li><a href="#home">Accueil</a></li>
-            <span class="circle"></span>
+            <li class="circle"></li>
             <li><a href="#about">A propos</a></li>
-            <span class="circle"></span>
+            <li class="circle"></li>
             <li><a href="#category">Catégories</a></li>
-            <span class="circle"></span>
+            <li class="circle"></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -25,7 +25,7 @@
         <img src="../img/logos/gregory-trans.png" alt="">
     </div>
     <h1>La Cuisine Familiale</h1>
-    <h3>Bienvenue dans la famille</h3>
+    <h2>Bienvenue dans la famille</h2>
     <div class="bulle">
         <p><a href="elise.php" id="elise-link">Élise</a></p>
         <div class="dr"></div>

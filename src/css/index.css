@@ -67,6 +67,7 @@ h1 {
   font-family: var(--RobotoBold);
 }
 
+h2,
 h3 {
   text-align: center;
   margin-bottom: 30px;
@@ -268,7 +269,7 @@ section h2 {
 
 .produit {
   width: 350px;
-  background: #cdcaba;
+  background: #e8e6d9;
 }
 
 .produit img {
@@ -332,7 +333,7 @@ section h2 {
 }
 
 .container-credit .credit {
-  color: #6f6f6f;
+  color: #4f4f4f;
 }
 
 .container-pages {
@@ -349,7 +350,12 @@ section h2 {
 #prevPage,
 #nextPage {
   cursor: pointer;
-  color: var(--color4);
+  background: none;
+  border: none;
+  font: inherit;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 #nextPage,
@@ -516,7 +522,7 @@ footer p {
 
 @media all and (max-width: 480px) {
   nav ul li a {
-    font-size: 0.8em;
+    font-size: 13px;
   }
 
   #contact h3 {

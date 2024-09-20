@@ -2,8 +2,8 @@
         <div class="footer-top"></div>
         <div class="container-ul">
             <div class="container-accueil">
+                <h3>Accueil</h3>
                 <ul>
-                    <h3>Accueil</h3>
                     <li><a href="#">A propos</a></li>
                     <li><a href="#">Catégories</a></li>
                     <li><a href="#">Articles</a></li>
@@ -11,23 +11,23 @@
             </div>
 
             <div class="container-entrees">
+                <h3>Entrées</h3>
                 <ul>
-                    <h3>Entrées</h3>
                     <li><a href="#">Froides</a></li>
                     <li><a href="#">Chaudes</a></li>
                     <li><a href="#">Apéros</a></li>
                 </ul>
             </div>
             <div class="container-plats">
+                <h3>Plats</h3>
                 <ul>
-                    <h3>Plats</h3>
                     <li><a href="#">Viandes</a></li>
                     <li><a href="#">Poissons</a></li>
                 </ul>
             </div>
             <div class="container-desserts">
+                <h3>Desserts</h3>
                 <ul>
-                    <h3>Desserts</h3>
                     <li><a href="#">Froids</a></li>
                     <li><a href="#">Chauds</a></li>
                 </ul>
