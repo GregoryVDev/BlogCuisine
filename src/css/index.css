@@ -380,6 +380,10 @@ form {
   gap: 20px;
 }
 
+label {
+  display: none;
+}
+
 .container-name,
 .container-email,
 .container-object,
@@ -610,10 +614,7 @@ footer p {
 /* DESKTOP */
 
 @media all and (min-width: 1023px) {
-  /* --------------------
-          ABOUT
-   ----------------------
-*/
+  /* ABOUT */
 
   #illustration {
     height: 600px;
