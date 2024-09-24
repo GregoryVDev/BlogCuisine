@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentPage = 1;
 
   function showPage(page) {
-    const start = (page - 1) * articlesPerPage;
+    // C'est l'index (0) (la position) du premier article à afficher sur une page donnée. Sur la 2e page, l'article aura l'index (2) car l'index 0 c'est le tout premier article, etc...
+    const start = (page - 1) * articlesPerPage; // C'est la première page donc (1 - 1)* 2 car il y a deux pages d'articles = 0 donc le premier article commencera avec l'index 0
+    // Si on est sur la 2e page on fait donc (2 - 1) * 2 = 2 donc on commence la page 2 avec l'article qui a l'index 2 (en général ça serait le 3e article mais on commence avec l'index 0)
     const end = start + articlesPerPage;
 
     articles.forEach((article, index) => {
