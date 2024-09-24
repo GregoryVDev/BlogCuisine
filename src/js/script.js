@@ -21,7 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Sur la 2e page on fait start (2) + 2 = 4 donc on va afficher l'index 2 et 3
     const end = start + articlesPerPage;
 
+    // On parcourt chaque article dans la liste avec son index
     articles.forEach((article, index) => {
+      // Si l'index de l'article est supérieur ou égale au start et inférieur à end, on l'affiche en block. Sinon, on le cache avec display: none.
+      // Avec ce code, seuls les articles de la page actuelle sont visibles, les autres sont cachés.
       if (index >= start && index < end) {
         article.style.display = "block";
       } else {
@@ -29,10 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Montre ou cache le bouton précédent pour la pagination
+    // Montre ou cache le bouton précédent pour la pagination selon notre position
     const prevPageButton = document.getElementById("prevPage");
+    // Si la page est strictement égale à 1, on cache le bouton "précédent"
     if (page === 1) {
       prevPageButton.style.display = "none";
+      // Sinon on affiche le bouton "précédent"
     } else {
       prevPageButton.style.display = "flex";
       prevPageButton.style.gap = "5px";
@@ -40,8 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Montre ou cache le bouton suivant pour la pagination
     const nextPageButton = document.getElementById("nextPage");
+    // Si on est sur la dernière page, on cache le bouton "suivant"
     if (page === totalPages) {
       nextPageButton.style.display = "none";
+      // Sinon on affiche le bouton "suivant"
     } else {
       nextPageButton.style.display = "flex";
       nextPageButton.style.gap = "5px";
