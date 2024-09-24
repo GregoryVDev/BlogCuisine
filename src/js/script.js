@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
       pageNumber.textContent = i;
       pageNumber.className = "page-number";
       pageNumber.style.cursor = "pointer";
+      // Si la page est à jour, on affiche en gras la page actuelle où on se trouve
       if (i === currentPage) {
         pageNumber.style.fontWeight = "bold";
       }
