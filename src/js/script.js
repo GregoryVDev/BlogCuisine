@@ -86,15 +86,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // On récupère l'id prevPage en lui donnant une fonction avec un événement clique
   document.getElementById("prevPage").addEventListener("click", function () {
+    // Si la page actuelle est supérieur à 1
     if (currentPage > 1) {
+      // On peut la décrémente de 1 la page seulement si on n'est pas déjà à la première page
       currentPage--;
+      // On appelle la fonction avec la page actuelle
       showPage(currentPage);
     }
   });
 
   document.getElementById("nextPage").addEventListener("click", function () {
+    // Si la page actuelle est inférieur au nombre total de page
     if (currentPage < totalPages) {
+      // On incrémente de 1 la page seulement si on n'est pas déjà à la dernière page
       currentPage++;
       showPage(currentPage);
     }
