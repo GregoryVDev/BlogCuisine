@@ -19,25 +19,73 @@
 }
 
 #entrees-options {
-  border: 3px solid;
   text-align: center;
 }
 
 #entrees-options button {
-  margin-right: 50px;
+  margin: 0px 50px 25px 0;
   padding: 20px;
-  width: 100px;
-  background-color: var(--color4);
+  width: 150px;
+  background-color: var(--color5);
+  border: none;
   text-decoration: none;
   cursor: pointer;
 }
 
+#entrees-options button:hover {
+  background: var(--color4);
+}
+
+#entrees-options button a {
+  text-decoration: none;
+  color: var(--color2);
+  font-size: var(--fsize3);
+}
+
 #plats-options {
-  border: 3px solid;
   text-align: center;
 }
 
+#plats-options button {
+  margin: 0px 50px 25px 0;
+  padding: 20px;
+  width: 150px;
+  background-color: var(--color5);
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#plats-options button:hover {
+  background: var(--color4);
+}
+
+#plats-options button a {
+  text-decoration: none;
+  color: var(--color2);
+  font-size: var(--fsize3);
+}
+
 #desserts-options {
-  border: 3px solid;
   text-align: center;
+}
+
+#desserts-options button {
+  margin: 0px 50px 25px 0;
+  padding: 20px;
+  width: 150px;
+  background-color: var(--color5);
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#desserts-options button:hover {
+  background: var(--color4);
+}
+
+#desserts-options button a {
+  text-decoration: none;
+  color: var(--color2);
+  font-size: var(--fsize3);
 }
