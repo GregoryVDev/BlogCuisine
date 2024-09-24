@@ -56,10 +56,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Mise à jour du nombre de page
     const pageNumbers = document.getElementById("pageNumbers");
+    // On vide l'élément HTML où on a affiché les numéros de page pour remettre à jour à chaque fois qu'on change de page
     pageNumbers.innerHTML = "";
 
+    // On commence à la page 1
     for (let i = 1; i <= totalPages; i++) {
       const pageNumber = document.createElement("span");
+      // On affiche le "i" à jour
       pageNumber.textContent = i;
       pageNumber.className = "page-number";
       pageNumber.style.cursor = "pointer";
