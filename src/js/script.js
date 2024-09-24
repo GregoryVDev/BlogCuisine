@@ -70,6 +70,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (i === currentPage) {
         pageNumber.style.fontWeight = "bold";
       }
+
+      // On ajoute un événement pour que quand on clique pour changer de page, on met l'index à jour pour savoir la page actuelle et on appel la fonction showPage
       pageNumber.addEventListener("click", () => {
         currentPage = i;
         showPage(currentPage);
@@ -77,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
       pageNumbers.appendChild(pageNumber);
 
       // Ajout d'un espace entre les chiffres
+      // Si la page actuelle est inférieur au nombre total de page, on créé un text avec un espace entre chaque chiffre
       if (i < totalPages) {
         pageNumbers.appendChild(document.createTextNode(" "));
       }
