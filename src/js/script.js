@@ -1,5 +1,6 @@
 // Ajout d'une pagination
 
+// Attend que la page HTML soit chargé avant d'executer la function
 document.addEventListener("DOMContentLoaded", function () {
   const articlesPerPage = 2;
   const articles = document.querySelectorAll("#article-container .produit");
@@ -81,24 +82,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Affichage des boutons quand on clique sur un des catégories
 
+// Variable pour stocker la catégorie actuellement affichée
+let currentCategory = null;
+
 // Je sélectionne tous les éléments qui ont la classe 'category-btn' (les liens pour chaque catégorie)
 document.querySelectorAll(".category-btn").forEach((button) => {
   button.addEventListener("click", function (event) {
     event.preventDefault(); // Empêche le comportement par défaut du lien
 
-    // Cache tous les conteneurs d'options
-    document.querySelectorAll(".options").forEach((option) => {
-      option.classList.add("hidden");
-    });
-
-    // Affiche les boutons en fonction de la catégorie sélectionnée
     const category = this.getAttribute("data-category");
     const optionsContainer = document.getElementById(category + "-options");
 
-    if (optionsContainer) {
-      optionsContainer.classList.remove("hidden");
+    // Vérifie si c'est la catégorie déjà affichée
+    if (currentCategory === category) {
+      // Si c'est la catégorie visible, on la cache
+      optionsContainer.classList.add("hidden");
+      currentCategory = null; // Réinitialise la catégorie affichée
     } else {
-      console.error("Conteneur non trouvé pour la catégorie : " + category);
+      // Cache tous les conteneurs d'options
+      document.querySelectorAll(".options").forEach((option) => {
+        option.classList.add("hidden");
+      });
+
+      // Affiche les boutons en fonction de la catégorie sélectionnée
+      if (optionsContainer) {
+        optionsContainer.classList.remove("hidden");
+        currentCategory = category; // Met à jour la catégorie affichée
+      } else {
+        console.error("Conteneur non trouvé pour la catégorie : " + category);
+      }
     }
   });
 });
