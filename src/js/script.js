@@ -2,7 +2,9 @@
 
 // Attend que la page HTML soit chargé avant d'executer la function
 document.addEventListener("DOMContentLoaded", function () {
+  // On définit combien d'articles on veut afficher par page (limité à 2 par page)
   const articlesPerPage = 2;
+  // On sélectionne tous les éléments avec la classe .produit à l'intérieur de l'élément qui a l'ID #article-container. On récupère tous les articles
   const articles = document.querySelectorAll("#article-container .produit");
   const totalPages = Math.ceil(articles.length / articlesPerPage);
   let currentPage = 1;
