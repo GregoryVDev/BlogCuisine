@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Affiche d'abord la première page
+  // On appelle la fonction showPage en mettant à jour la page actuelle
   showPage(currentPage);
 });
 
