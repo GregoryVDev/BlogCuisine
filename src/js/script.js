@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
       pageNumbers.appendChild(pageNumber);
 
       // Ajout d'un espace entre les chiffres
-      // Si la page actuelle est inférieur au nombre total de page, on créé un text avec un espace entre chaque chiffre
+      // Si la page actuelle est inférieur au nombre total de page, on créé un text avec un espace entre chaque chiffre car il reste encore des pages à afficher après celle-ci.
       if (i < totalPages) {
         pageNumbers.appendChild(document.createTextNode(" "));
       }
