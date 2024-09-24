@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const articles = document.querySelectorAll("#article-container .produit");
   // On calcule le nombre total de pages en divisant le nombre total d'articles et Math.ceil permet d'arrondir supérieurement chaque pour qu'il y ait assez de pages pour chaques articles
   const totalPages = Math.ceil(articles.length / articlesPerPage);
-
+  // On garde la page actuelle. Par défaut, on est à la première page de la pagination
   let currentPage = 1;
 
   function showPage(page) {
