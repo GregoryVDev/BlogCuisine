@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const articlesPerPage = 2;
   // On sélectionne tous les éléments avec la classe .produit à l'intérieur de l'élément qui a l'ID #article-container. On récupère tous les articles
   const articles = document.querySelectorAll("#article-container .produit");
+  // On calcule le nombre total de pages en divisant le nombre total d'articles et Math.ceil permet d'arrondir supérieurement chaque pour qu'il y ait assez de pages pour chaques articles
   const totalPages = Math.ceil(articles.length / articlesPerPage);
+
   let currentPage = 1;
 
   function showPage(page) {
