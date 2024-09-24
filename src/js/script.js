@@ -56,10 +56,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Mise à jour du nombre de page
     const pageNumbers = document.getElementById("pageNumbers");
-    // On vide l'élément HTML où on a affiché les numéros de page pour remettre à jour à chaque fois qu'on change de page
+    // On vide l'élément HTML où on a affiché les numéros de page pour remettre à jour à chaque fois qu'on change de page. C'est important car quand on change de page, on veut réinitialiser l'affichage des numéros de page avant d'ajouter les nouveaux numéros. Si on ne fait pas ça, les anciens numéros de page resteraient affichés, ce qui pourrait créer de la confusion
     pageNumbers.innerHTML = "";
 
-    // On commence à la page 1
+    // On commence à la page 1 et on ajoute une page à chaque fois qu'on a de page. Là on a 2 pages, donc on tant qu'on a pas i = 2, on va ajouter +1 au i jusqu'à qu'il soit à la page 2. Donc on va afficher 2 pages en tout
     for (let i = 1; i <= totalPages; i++) {
       const pageNumber = document.createElement("span");
       // On affiche le "i" à jour
