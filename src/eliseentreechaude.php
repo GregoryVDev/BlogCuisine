@@ -15,6 +15,9 @@
     <?php require_once("./template/header.php") ?>
     <main>
         <section id="illustration-entree"></section>
+        <section id="articles">
+            <h1>Entrées chaudes</h1>
+        </section>
     </main>
 
 </body>
