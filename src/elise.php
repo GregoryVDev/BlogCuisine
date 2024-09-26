@@ -53,8 +53,8 @@
 
             <!-- Boutons pour chaque catégorie -->
             <div id="entrees-options" class="options hidden">
-                <button><a href="#">Froids</a></button>
-                <button><a href="#">Chauds</a></button>
+                <button><a href="#">Froides</a></button>
+                <button><a href="#">Chaudes</a></button>
                 <button><a href="#">Apéros</a></button>
             </div>
 
