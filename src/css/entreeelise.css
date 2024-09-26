@@ -3,3 +3,9 @@
 }
 
 /* ILLUSTRATION */
+
+#illustration-entree {
+  background: url("../img/entrees/entreebg.jpg") fixed;
+  background-position-y: 50%;
+  height: 400px;
+}
