@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/entrees.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/fonts.css">
-    <title>Entrées Chaudes - Elise</title>
+    <title>Entrées Chaudes</title>
 </head>
 
 <body>
