@@ -575,14 +575,6 @@ footer p {
 
   .flex-row {
     display: flex;
-    flex-direction: column;
-  }
-
-  .row-reverse {
-    flex-direction: column-reverse;
-  }
-
-  .flex-row {
     flex-direction: row;
   }
 
