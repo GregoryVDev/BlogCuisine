@@ -144,6 +144,8 @@
             </div>
         </section>
     </main>
+    <?php require_once("./template/footer.php") ?>
+
 
 </body>
 <script src="./js/plats.js"></script>
