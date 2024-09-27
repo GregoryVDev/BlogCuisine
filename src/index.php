@@ -75,14 +75,14 @@
                         <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
                         <figcaption>
                             <div class="container-tags">
-                                <a href="#">Plat</a>
+                                <a href="#">Légumes</a>
                                 <a href="#">Viande</a>
                             </div>
-                            <h2>Boeuf Bourguignon au vin</h2>
+                            <h2><a href="#">Boeuf Bourguignon au vin</a></h2>
                             <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</p>
                             <div class="container-credit">
                                 <p><span class="credit">posté :</span> 20 août 2024</p>
-                                <p><span class="credit">tags :</span> <a href="#">Plat</a>, <a href="#">Viande</a></p>
+                                <p><span class="credit">tags :</span> <a href="#">Légumes</a>, <a href="#">Viande</a></p>
                                 <p><span class="credit">par :</span> Grégory</p>
                             </div>
                         </figcaption>
@@ -94,14 +94,14 @@
                         <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
                         <figcaption>
                             <div class="container-tags">
-                                <a href="#">Plat</a>
+                                <a href="#">Légumes</a>
                                 <a href="#">Viande</a>
                             </div>
-                            <h2>Boeuf Bourguignon au vin</h2>
+                            <h2><a href="#">Boeuf Bourguignon au vin</a></h2>
                             <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</p>
                             <div class="container-credit">
                                 <p><span class="credit">posté :</span> 20 août 2024</p>
-                                <p><span class="credit">tags :</span> <a href="#">Plat</a>, <a href="#">Viande</a></p>
+                                <p><span class="credit">tags :</span> <a href="#">Légumes</a>, <a href="#">Viande</a></p>
                                 <p><span class="credit">par :</span> Grégory</p>
                             </div>
                         </figcaption>
@@ -112,14 +112,14 @@
                         <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
                         <figcaption>
                             <div class="container-tags">
-                                <a href="#">Plat</a>
+                                <a href="#">Légumes</a>
                                 <a href="#">Viande</a>
                             </div>
-                            <h2>Boeuf Bourguignon au vin</h2>
+                            <h2><a href="#">Boeuf Bourguignon au vin</a></h2>
                             <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</p>
                             <div class="container-credit">
                                 <p><span class="credit">posté :</span> 20 août 2024</p>
-                                <p><span class="credit">tags :</span> <a href="#">Plat</a>, <a href="#">Viande</a></p>
+                                <p><span class="credit">tags :</span> <a href="#">Légumes</a>, <a href="#">Viande</a></p>
                                 <p><span class="credit">par :</span> Grégory</p>
                             </div>
                         </figcaption>

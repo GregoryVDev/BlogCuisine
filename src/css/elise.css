@@ -19,6 +19,10 @@
   margin-top: 20px;
 }
 
+.display-desktop {
+  display: none;
+}
+
 #entrees-options {
   text-align: center;
 }

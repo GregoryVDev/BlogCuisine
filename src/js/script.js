@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
   showPage(currentPage);
 });
 
-// Affichage des boutons quand on clique sur un des catégories
+// Affichage des boutons quand on clique sur une des catégories
 
 // Variable pour stocker la catégorie actuellement affichée
 let currentCategory = null;
