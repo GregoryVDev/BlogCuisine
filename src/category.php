@@ -53,8 +53,8 @@
 
             <!-- Boutons pour chaque catégorie -->
             <div id="entrees-options" class="options hidden">
-                <button><a href="#">Froides</a></button>
-                <button><a href="./eliseentreechaude.php">Chaudes</a></button>
+                <button><a href="./entreesfroides.php">Froides</a></button>
+                <button><a href="./entreeschaudes.php">Chaudes</a></button>
                 <button><a href="#">Apéros</a></button>
             </div>
 
