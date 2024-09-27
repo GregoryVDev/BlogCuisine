@@ -75,7 +75,7 @@
                     </figure>
                 </article>
                 <article class="produit">
-                    <figure class="flex-row">
+                    <figure class="row-reverse">
                         <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
                         <figcaption>
                             <div class="container-tags">
@@ -111,7 +111,7 @@
                     </figure>
                 </article>
                 <article class="produit">
-                    <figure class="flex-row">
+                    <figure class="row-reverse">
                         <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
                         <figcaption>
                             <div class="container-tags">
