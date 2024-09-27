@@ -276,6 +276,15 @@ section h2 {
   width: 100%;
 }
 
+.produit h2 a {
+  text-decoration: none;
+  color: var(--color1);
+}
+
+.produit h2 a:hover {
+  color: var(--color4);
+}
+
 .container-tags {
   width: 100%;
   margin: 20px 0;

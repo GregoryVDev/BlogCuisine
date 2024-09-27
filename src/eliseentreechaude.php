@@ -27,7 +27,7 @@
                                 <a href="#">Légumes</a>
                                 <a href="#">Viande</a>
                             </div>
-                            <h2>Boeuf Bourguignon au vin</h2>
+                            <h2><a href="#">Boeuf Bourguignon au vin</a></h2>
                             <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</p>
                             <div class="container-credit">
                                 <p><span class="credit">posté :</span> 20 août 2024</p>
@@ -46,7 +46,7 @@
                                 <a href="#">Légumes</a>
                                 <a href="#">Viande</a>
                             </div>
-                            <h2>Boeuf Bourguignon au vin</h2>
+                            <h2><a href="#">Boeuf Bourguignon au vin</a></h2>
                             <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</p>
                             <div class="container-credit">
                                 <p><span class="credit">posté :</span> 20 août 2024</p>
