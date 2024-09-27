@@ -16,7 +16,7 @@
     <main>
         <section id="illustration-entree"></section>
         <section id="articles">
-            <h1>Entrées chaudes</h1>
+            <h2>Entrées chaudes</h2>
         </section>
     </main>
 

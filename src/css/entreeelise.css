@@ -10,3 +10,8 @@
   height: 400px;
   margin-bottom: 50px;
 }
+
+h2 {
+  font-size: var(--fsize3);
+  font-family: var(--PlayRegular);
+}
