@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/entrees.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/fonts.css">
-    <title>Entrées froides</title>
+    <title>Légumes</title>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <main>
         <section id="illustration-entree"></section>
         <section id="articles">
-            <h2>Entrées froides</h2>
+            <h2>Légumes</h2>
 
             <div id="article-container" class="container-produit">
                 <article class="produit">
