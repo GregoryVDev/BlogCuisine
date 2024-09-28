@@ -51,6 +51,14 @@ h2 {
   margin-bottom: 50px;
 }
 
+#illustration-legume {
+  background: url("../img/plats/legumes.jpg") fixed;
+  background-position-y: 50%;
+  background-position-x: 25%;
+  height: 500px;
+  margin-bottom: 50px;
+}
+
 #illustration-dessertchaud {
   background: url("../img/desserts/cremebrulee.jpg") fixed;
   background-position-y: 50%;

@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="./css/recettes.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/fonts.css">
-    <title>Légumes</title>
+    <title>Poissons & Fruits de mer</title>
 </head>
 
 <body>
     <?php require_once("./template/header.php") ?>
     <main>
-        <section id="illustration-entree"></section>
+        <section id="illustration-poisson"></section>
         <section id="articles">
-            <h2>Légumes</h2>
+            <h2>Poissons & Fruits de mer</h2>
 
             <div id="article-container" class="container-produit">
                 <article class="produit">
