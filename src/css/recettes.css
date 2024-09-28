@@ -1,5 +1,12 @@
+/* GENERAL */
+
 #elise-link {
   color: var(--color4);
+}
+
+h2 {
+  font-size: var(--fsize3);
+  font-family: var(--PlayRegular);
 }
 
 /* ILLUSTRATION */
@@ -12,7 +19,10 @@
   margin-bottom: 50px;
 }
 
-h2 {
-  font-size: var(--fsize3);
-  font-family: var(--PlayRegular);
+#illustration-apero {
+  background: url("../img/entrees/aperitif.jpg") fixed;
+  background-position-y: 50%;
+  background-position-x: 25%;
+  height: 400px;
+  margin-bottom: 50px;
 }
