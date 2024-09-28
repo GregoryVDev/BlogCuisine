@@ -15,7 +15,7 @@ h2 {
   background: url("../img/entrees/entreebg.jpg") fixed;
   background-position-y: 50%;
   background-position-x: 25%;
-  height: 400px;
+  height: 500px;
   margin-bottom: 50px;
 }
 
@@ -23,6 +23,14 @@ h2 {
   background: url("../img/entrees/aperitif.jpg") fixed;
   background-position-y: 50%;
   background-position-x: 25%;
-  height: 400px;
+  height: 500px;
+  margin-bottom: 50px;
+}
+
+#illustration-viande {
+  background: url("../img/plats/magret.jpg") fixed;
+  background-position-y: 50%;
+  background-position-x: 25%;
+  height: 500px;
   margin-bottom: 50px;
 }
