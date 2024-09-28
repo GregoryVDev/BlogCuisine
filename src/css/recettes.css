@@ -42,3 +42,11 @@ h2 {
   height: 500px;
   margin-bottom: 50px;
 }
+
+#illustration-dessertchaud {
+  background: url("../img/desserts/cremebrulee.jpg") fixed;
+  background-position-y: 50%;
+  background-position-x: 25%;
+  height: 500px;
+  margin-bottom: 50px;
+}
