@@ -14,7 +14,7 @@
 <body>
     <?php require_once("./template/header.php") ?>
     <main>
-        <section id="illustration-entree"></section>
+        <section id="illustration-poisson"></section>
         <section id="articles">
             <h2>Poissons</h2>
 
