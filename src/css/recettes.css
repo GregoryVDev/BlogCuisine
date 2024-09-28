@@ -19,6 +19,14 @@ h2 {
   margin-bottom: 50px;
 }
 
+#illustration-entreechaude {
+  background: url("../img/entrees/quiche.jpg") fixed;
+  background-position-y: 50%;
+  background-position-x: 25%;
+  height: 500px;
+  margin-bottom: 50px;
+}
+
 #illustration-apero {
   background: url("../img/entrees/aperitif.jpg") fixed;
   background-position-y: 50%;
