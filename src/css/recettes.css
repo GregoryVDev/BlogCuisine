@@ -50,3 +50,11 @@ h2 {
   height: 500px;
   margin-bottom: 50px;
 }
+
+#illustration-dessertfroid {
+  background: url("../img/desserts/pannacotta.jpg") fixed;
+  background-position-y: 50%;
+  background-position-x: 25%;
+  height: 500px;
+  margin-bottom: 50px;
+}
