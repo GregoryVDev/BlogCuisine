@@ -30,6 +30,7 @@
                 <div class="img-container">
                     <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon" class="image-plat">
                 </div>
+                <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</p>
 
             </article>
         </section>

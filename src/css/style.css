@@ -42,3 +42,7 @@ body {
 section {
   width: 100%;
 }
+
+p {
+  font-family: var(--RobotoRegular);
+}
