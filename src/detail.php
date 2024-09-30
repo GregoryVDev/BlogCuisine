@@ -45,6 +45,9 @@
                         <p>4 personnes</p>
                     </div>
                 </div>
+                <aside>
+                    <h3>Ingrédients</h3>
+                </aside>
             </article>
         </section>
     </main>
