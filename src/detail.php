@@ -30,8 +30,21 @@
                 <div class="img-container">
                     <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon" class="image-plat">
                 </div>
-                <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</p>
-
+                <p class="text-content">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</p>
+                <div class="container-info">
+                    <div class="left-info">
+                        <h3>Temps de préparation :</h3>
+                        <p>20 minutes</p>
+                    </div>
+                    <div class="middle-info">
+                        <h3>Temps de cuisson :</h3>
+                        <p>40 minutes</p>
+                    </div>
+                    <div class="right-info">
+                        <h3>Personnes :</h3>
+                        <p>4 personnes</p>
+                    </div>
+                </div>
             </article>
         </section>
     </main>
