@@ -60,8 +60,8 @@
 
             <div id="plats-options" class="options hidden">
                 <button><a href="#">Viandes</a></button>
-                <button><a href="#">Légumes</a></button>
-                <button><a href="#">Poissons</a></button>
+                <button><a href="#">Féculents</a></button>
+                <button><a href="#">Marins</a></button>
             </div>
 
             <div id="desserts-options" class="options hidden">
