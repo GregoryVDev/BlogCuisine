@@ -503,6 +503,10 @@ footer ul {
   line-height: 30px;
 }
 
+footer label {
+  display: block;
+}
+
 .newsletter {
   display: flex;
   justify-content: center;

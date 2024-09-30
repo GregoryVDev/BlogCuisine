@@ -179,3 +179,33 @@ aside h3 {
   margin: 0;
   color: var(--color1);
 }
+
+aside ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+aside ul li {
+  list-style: inside;
+  font-family: var(--PlayfairDisplay-Black);
+}
+
+.instruction {
+  padding: 20px;
+}
+
+.instruction h3 {
+  margin-top: 20px;
+  color: var(--color1);
+}
+
+.instruction ol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.instruction ol li {
+  list-style-type: decimal;
+}

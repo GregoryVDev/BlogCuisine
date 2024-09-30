@@ -23,6 +23,7 @@
                 <ul>
                     <li><a href="#">Viandes</a></li>
                     <li><a href="#">Poissons</a></li>
+                    <li><a href="#">Féculents</a></li>
                 </ul>
             </div>
             <div class="container-desserts">
