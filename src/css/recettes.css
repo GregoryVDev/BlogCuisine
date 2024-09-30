@@ -74,3 +74,58 @@ h2 {
   height: 500px;
   margin-bottom: 50px;
 }
+
+/* DETAILS RECETTES */
+
+.detail {
+  background: var(--color3);
+  padding: 20px 0px;
+}
+
+.container-detail {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.container-detail a {
+  text-align: center;
+  width: 100px;
+  padding: 5px;
+  background: var(--color5);
+  text-decoration: none;
+  font-size: var(--fsize4);
+  color: var(--color2);
+}
+
+.detail h2 {
+  font-size: var(--fsize3);
+}
+
+.credit-detail {
+  font-size: 0.89em;
+  display: flex;
+}
+
+.credit-detail p {
+  font-family: var(--PlayRegular);
+  padding: 0 5px;
+  color: var(--color1);
+}
+
+.credit-detail a {
+  text-decoration: none;
+  color: var(--color1);
+}
+
+.credit-detail a:hover {
+  color: var(--color4);
+  text-decoration: underline;
+}
+
+.credit-detail .credit {
+  color: #4f4f4f;
+}
