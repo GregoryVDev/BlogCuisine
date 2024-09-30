@@ -26,8 +26,11 @@
                     <p><span class="credit">par :</span> Grégory</p>
                     <p><span class="credit">posté :</span> 20 août 2024</p>
                     <p><span class="credit">tags :</span> <a href="#">Plats</a>, <a href="#">Viande</a></p>
-
                 </div>
+                <div class="img-container">
+                    <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon" class="image-plat">
+                </div>
+
             </article>
         </section>
     </main>

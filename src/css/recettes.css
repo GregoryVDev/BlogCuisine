@@ -78,7 +78,7 @@ h2 {
 /* DETAILS RECETTES */
 
 .detail {
-  background: var(--color3);
+  background: #e8e6d9;
   padding: 20px 0px;
 }
 
@@ -128,4 +128,16 @@ h2 {
 
 .credit-detail .credit {
   color: #4f4f4f;
+}
+
+.img-container {
+  width: 100%;
+  text-align: center;
+}
+
+.image-plat {
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  margin-top: 20px;
 }
