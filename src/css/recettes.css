@@ -101,6 +101,10 @@ h2 {
   color: var(--color2);
 }
 
+.container-detail a:hover {
+  background: var(--color4);
+}
+
 .detail h2 {
   font-size: var(--fsize3);
 }
@@ -145,6 +149,7 @@ h2 {
 .text-content {
   margin: 0px 20px 50px;
   text-align: left;
+  font-family: var(--PlayRegular);
 }
 
 .container-info h3 {
@@ -224,6 +229,11 @@ aside ul li {
 /* TABLET */
 
 @media all and (min-width: 768px) and (max-width: 1023px) {
+  .detail {
+    width: 80%;
+    margin: auto auto 70px;
+  }
+
   .credit-detail {
     justify-content: center;
     font-size: 1em;
@@ -258,7 +268,64 @@ aside ul li {
   }
 
   aside {
-    width: 100%;
+    width: 1000px;
     margin: 40px 20px 20px;
+  }
+}
+
+/* DESKTOP */
+
+@media all and (min-width: 1024px) {
+  .detail {
+    width: 50%;
+    margin: auto auto 70px;
+  }
+
+  .credit-detail {
+    justify-content: center;
+    font-size: 1.2em;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+
+  .container-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .left-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .middle-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .container-recette {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 50px;
+  }
+
+  aside {
+    width: 500px;
+    margin: 35px 0 0 20px;
+  }
+
+  .instruction {
+    width: 800px;
   }
 }
