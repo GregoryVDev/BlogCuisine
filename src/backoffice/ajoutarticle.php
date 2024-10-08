@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <?php require_once("./src/template/header.php") ?>
 
 </body>
 
