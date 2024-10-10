@@ -27,13 +27,22 @@
                         <label for="categorie">Catégorie :</label>
                         <select id="categorie" name="categorie">
                             <option value="">--Choisir une catégorie--</option>
-                            <!-- Add categories here -->
+                            <option value="">Entrées / Apéro</option>
+                            <option value="">Plats</option>
+                            <option value="">Desserts</option>
                         </select>
 
                         <label for="tags">Tags :</label>
                         <select id="tags" name="tags">
                             <option value="">--Choisir des tags--</option>
-                            <!-- Add tags here -->
+                            <option value="">Froides</option>
+                            <option value="">Chaudes</option>
+                            <option value="">Apéros</option>
+                            <option value="">Viandes</option>
+                            <option value="">Féculents</option>
+                            <option value="">Marins</option>
+                            <option value="">Froids</option>
+                            <option value="">Chauds</option>
                         </select>
 
                         <label for="titre">Titre :</label>
