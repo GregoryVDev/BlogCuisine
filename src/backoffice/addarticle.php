@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="../css/recettes.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <title>Backoffice</title>
 </head>
 
 <body>
-    <?php require_once("../template/header.php") ?>
+    <?php require_once("../backoffice/template/header.php") ?>
 
 
 </body>

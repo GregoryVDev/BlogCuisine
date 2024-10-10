@@ -1,0 +1,7 @@
+h2,
+h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: var(--RobotoLight);
+  font-size: 24px;
+}
