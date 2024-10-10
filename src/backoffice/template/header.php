@@ -10,5 +10,15 @@
             <a href="#"><img src="../img/logos/moon.svg" alt="Activer le mode sombre"></a>
         </div>
     </div>
-
+    <nav>
+        <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li class="circle"></li>
+            <li><a href="#about">A propos</a></li>
+            <li class="circle"></li>
+            <li><a href="#category">Catégories</a></li>
+            <li class="circle"></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 </header>
