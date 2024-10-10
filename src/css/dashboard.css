@@ -45,6 +45,7 @@ form {
 
 label {
   margin: 5px 0;
+  display: block;
 }
 
 input[type="text"],
