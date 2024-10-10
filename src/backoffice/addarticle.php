@@ -18,7 +18,7 @@
     <section class="formulaire">
         <form method="POST">
             <div class="container">
-                <h1>Ajouter un article</h1>
+                <h3>Ajouter un article</h3>
                 <form action="#" method="post" enctype="multipart/form-data">
                     <div class="left-section">
                         <div class="container-prenom">

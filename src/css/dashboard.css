@@ -26,9 +26,10 @@ h3 {
   gap: 20px;
 }
 
-h1 {
+.formulaire h3 {
   grid-column: span 2;
   text-align: center;
+  color: var(--color1);
 }
 
 form {
