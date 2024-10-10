@@ -21,4 +21,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    <div class="container-img">
+        <img src="../img/logos/gregory-trans.png" alt="">
+    </div>
 </header>
