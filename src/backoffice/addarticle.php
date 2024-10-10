@@ -15,6 +15,65 @@
 <body>
     <?php require_once("../backoffice/template/header.php") ?>
     <section class="illust-addarticle"></section>
+    <section class="formulaire">
+        <form method="POST">
+            <div class="container">
+                <h1>Ajouter un article</h1>
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <div class="left-section">
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" id="prenom" name="prenom">
+
+                        <label for="categorie">Catégorie :</label>
+                        <select id="categorie" name="categorie">
+                            <option value="">--Choisir une catégorie--</option>
+                            <!-- Add categories here -->
+                        </select>
+
+                        <label for="tags">Tags :</label>
+                        <select id="tags" name="tags">
+                            <option value="">--Choisir des tags--</option>
+                            <!-- Add tags here -->
+                        </select>
+
+                        <label for="titre">Titre :</label>
+                        <input type="text" id="titre" name="titre">
+
+                        <label for="temps_cuisson">Temps cuisson :</label>
+                        <input type="text" id="temps_cuisson" name="temps_cuisson">
+
+                        <label for="temps_preparation">Temps préparation :</label>
+                        <input type="text" id="temps_preparation" name="temps_preparation">
+
+                        <label for="personnes">Personnes :</label>
+                        <input type="text" id="personnes" name="personnes">
+
+                        <label for="alt_image">Alt image :</label>
+                        <input type="text" id="alt_image" name="alt_image">
+                    </div>
+
+                    <div class="right-section">
+                        <label for="description">Description :</label>
+                        <textarea id="description" name="description"></textarea>
+
+                        <label for="ingredients">Ingrédients :</label>
+                        <textarea id="ingredients" name="ingredients"></textarea>
+
+                        <label for="preparation">Préparation :</label>
+                        <textarea id="preparation" name="preparation"></textarea>
+
+
+
+                        <label for="image">Image :</label>
+                        <input type="file" id="image" name="image">
+                    </div>
+
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+
+        </form>
+    </section>
 
 
 </body>
