@@ -27,7 +27,7 @@
                         </div>
                         <div class="container-categories">
                             <label for="categorie">Catégorie :</label>
-                            <select id="categorie" name="categorie">
+                            <select id="categorie" name="category">
                                 <option value="">--Choisir une catégorie--</option>
                                 <option value="">Entrées / Apéro</option>
                                 <option value="">Plats</option>
@@ -50,15 +50,15 @@
                         </div>
                         <div class="container-title">
                             <label for="titre">Titre :</label>
-                            <input type="text" id="titre" name="titre">
+                            <input type="text" id="titre" name="title">
                         </div>
                         <div class="container-coocking">
                             <label for="temps_cuisson">Temps cuisson :</label>
-                            <input type="text" id="temps_cuisson" name="temps_cuisson">
+                            <input type="text" id="temps_cuisson" name="coocking">
                         </div>
                         <div class="container-preparation">
                             <label for="temps_preparation">Temps préparation :</label>
-                            <input type="text" id="temps_preparation" name="temps_preparation">
+                            <input type="text" id="temps_preparation" name="preparation">
                         </div>
                         <div class="container-personnes">
                             <label for="personnes">Personnes :</label>
