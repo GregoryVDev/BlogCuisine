@@ -14,6 +14,7 @@
 
 <body>
     <?php require_once("../backoffice/template/header.php") ?>
+    <section class="illust-addarticle"></section>
 
 
 </body>

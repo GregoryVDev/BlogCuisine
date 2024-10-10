@@ -5,3 +5,11 @@ h3 {
   font-family: var(--RobotoLight);
   font-size: 24px;
 }
+
+.illust-addarticle {
+  background: url("../img/logos/fruits.jpg") fixed;
+  background-position-y: 50%;
+  background-position-x: 25%;
+  height: 500px;
+  margin-bottom: 50px;
+}
