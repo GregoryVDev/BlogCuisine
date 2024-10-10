@@ -24,4 +24,6 @@
     <div class="container-img">
         <img src="../img/logos/gregory-trans.png" alt="">
     </div>
+    <h1>La Cuisine Familiale</h1>
+    <h2>Bienvenue sur le backoffice</h2>
 </header>
