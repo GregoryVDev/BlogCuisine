@@ -34,7 +34,7 @@
                                 <option value="">Desserts</option>
                             </select>
                         </div>
-                        <div class="container-tags">
+                        <div class="container-tags-form">
                             <label for="tags">Tags :</label>
                             <select id="tags" name="tags">
                                 <option value="">--Choisir des tags--</option>
