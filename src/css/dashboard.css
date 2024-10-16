@@ -114,3 +114,8 @@ button:hover {
   border-radius: 10px; /* Coins arrondis pour l'image */
   margin-top: 10px; /* Espacement au-dessus de l'image */
 }
+
+h3 {
+  margin: 50px 0;
+  color: var(--color1);
+}
