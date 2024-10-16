@@ -59,7 +59,7 @@ select {
   width: 100%;
 }
 
-textarea {
+.right-section textarea {
   resize: vertical;
   height: 100px;
 }

@@ -423,7 +423,7 @@ label {
   padding-bottom: 10px;
 }
 
-textarea {
+#contact textarea {
   background: none;
   border: none;
   border-bottom: 1px solid black;
@@ -714,7 +714,7 @@ footer p {
     width: 450px;
   }
 
-  textarea {
+  #contact textarea {
     width: 450px;
   }
 
