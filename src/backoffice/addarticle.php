@@ -104,6 +104,14 @@
                 <th>Catégorie</th>
                 <th>Checkbox</th>
             </tr>
+        <tbody>
+            <tr>
+                <td>
+                    <button>Modifier</button>
+                    <button>Supprimer</button>
+                </td>
+            </tr>
+        </tbody>
         </thead>
     </table>
     <button type="submit" class="btn btn-danger">Supprimer les articles sélectionnés</button>
