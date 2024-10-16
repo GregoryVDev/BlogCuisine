@@ -25,6 +25,10 @@
                             <label for="prenom">Prénom :</label>
                             <input type="text" id="prenom" name="firstname">
                         </div>
+                        <div class="container-title">
+                            <label for="titre">Titre :</label>
+                            <input type="text" id="titre" name="title">
+                        </div>
                         <div class="container-categories">
                             <label for="categorie">Catégorie :</label>
                             <select id="categorie" name="category">
@@ -38,35 +42,33 @@
                             <label for="tags">Tags :</label>
                             <select id="tags" name="tags">
                                 <option value="">--Choisir des tags--</option>
-                                <option value="">Froides</option>
-                                <option value="">Chaudes</option>
+                                <option value="">Entrées Froides</option>
+                                <option value="">Entrées Chaudes</option>
                                 <option value="">Apéros</option>
                                 <option value="">Viandes</option>
-                                <option value="">Féculents</option>
                                 <option value="">Marins</option>
-                                <option value="">Froids</option>
-                                <option value="">Chauds</option>
+                                <option value="">Féculents</option>
+                                <option value="">Desserts Froids</option>
+                                <option value="">Desserts Chauds</option>
                             </select>
                         </div>
-                        <div class="container-title">
-                            <label for="titre">Titre :</label>
-                            <input type="text" id="titre" name="title">
-                        </div>
                         <div class="container-coocking">
-                            <label for="temps_cuisson">Temps cuisson :</label>
+                            <label for="temps_cuisson">Temps cuisson (minutes) :</label>
                             <input type="text" id="temps_cuisson" name="coocking">
                         </div>
                         <div class="container-preparation">
-                            <label for="temps_preparation">Temps préparation :</label>
+                            <label for="temps_preparation">Temps préparation (minutes) :</label>
                             <input type="text" id="temps_preparation" name="preparation">
                         </div>
                         <div class="container-personnes">
                             <label for="personnes">Personnes :</label>
-                            <input type="text" id="personnes" name="personnes">
-                        </div>
-                        <div class="container-alt">
-                            <label for="alt_image">Alt image :</label>
-                            <input type="text" id="alt_image" name="alt_image">
+                            <select id="personnes" name="number">
+                                <option value="">--Choisir le nombre de personne--</option>
+                                <option value="">2</option>
+                                <option value="">4</option>
+                                <option value="">6</option>
+                                <option value="">8</option>
+                            </select>
                         </div>
                     </div>
 
