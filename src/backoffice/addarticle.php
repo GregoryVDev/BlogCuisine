@@ -106,6 +106,7 @@
             </tr>
         </thead>
     </table>
+    <button type="submit" class="btn btn-danger">Supprimer les articles sélectionnés</button>
 
 </body>
 
