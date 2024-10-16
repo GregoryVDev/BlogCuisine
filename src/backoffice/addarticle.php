@@ -91,6 +91,10 @@
     </section>
 
     <h3>Dashboard</h3>
+    <div class="container-search">
+        <img src="../img/logos/search.svg" alt="Recherche">
+        <input type="search" name="search" id="search" placeholder="Nom de la recette">
+    </div>
 
 </body>
 
