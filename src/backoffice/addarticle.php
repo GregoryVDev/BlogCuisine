@@ -96,6 +96,17 @@
         <input type="search" name="search" id="search" placeholder="Nom de la recette">
     </div>
 
+    <table>
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Titre</th>
+                <th>Catégorie</th>
+                <th>Checkbox</th>
+            </tr>
+        </thead>
+    </table>
+
 </body>
 
 </html>
