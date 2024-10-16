@@ -107,8 +107,8 @@
         <tbody>
             <tr>
                 <td>
-                    <button>Modifier</button>
-                    <button>Supprimer</button>
+                    <button><a href="#">Modifier</a></button>
+                    <button><a href="#">Supprimer</a></button>
                 </td>
             </tr>
         </tbody>
