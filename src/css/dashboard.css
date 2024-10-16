@@ -63,7 +63,7 @@ select {
   resize: vertical;
   height: 100px;
   width: 100%;
-  margin: auto;
+  margin: 10px auto;
 }
 
 input[type="file"] {
@@ -87,4 +87,31 @@ button:hover {
 .container-tags-form {
   width: 100%;
   margin: 20px 0;
+}
+
+#uploadLabel {
+  display: inline-block;
+  background-color: #aebd8f; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 40px 40px; /* Espacement interne */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur de pointeur pour indiquer que c'est cliquable */
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin: 20px 0px;
+  height: 100px;
+}
+
+#uploadLabel:hover {
+  background-color: #98a178; /* Couleur au survol */
+}
+
+#previewImage {
+  display: none; /* Caché par défaut */
+  width: 100px; /* Largeur de l'image */
+  height: 100px; /* Hauteur de l'image */
+  object-fit: cover; /* Pour que l'image s'ajuste correctement */
+  border: 2px solid #aebd8f; /* Bordure autour de l'image */
+  border-radius: 10px; /* Coins arrondis pour l'image */
+  margin-top: 10px; /* Espacement au-dessus de l'image */
 }

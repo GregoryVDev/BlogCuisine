@@ -23,11 +23,11 @@
                     <div class="left-section">
                         <div class="container-prenom">
                             <label for="prenom">Prénom :</label>
-                            <input type="text" id="prenom" name="firstname">
+                            <input type="text" id="prenom" name="firstname" placeholder="Prénom">
                         </div>
                         <div class="container-title">
                             <label for="titre">Titre :</label>
-                            <input type="text" id="titre" name="title">
+                            <input type="text" id="titre" name="title" placeholder="Titre">
                         </div>
                         <div class="container-categories">
                             <label for="categorie">Catégorie :</label>
@@ -54,11 +54,11 @@
                         </div>
                         <div class="container-coocking">
                             <label for="temps_cuisson">Temps cuisson (minutes) :</label>
-                            <input type="text" id="temps_cuisson" name="coocking">
+                            <input type="text" id="temps_cuisson" name="coocking" placeholder="Temps de cuisson en minutes">
                         </div>
                         <div class="container-preparation">
                             <label for="temps_preparation">Temps préparation (minutes) :</label>
-                            <input type="text" id="temps_preparation" name="preparation">
+                            <input type="text" id="temps_preparation" name="preparation" placeholder="Temps de préparation en minutes">
                         </div>
                         <div class="container-personnes">
                             <label for="personnes">Personnes :</label>
@@ -74,18 +74,17 @@
 
                     <div class="right-section">
                         <label for="description">Description :</label>
-                        <textarea id="description" name="description"></textarea>
+                        <textarea id="description" name="description" placeholder="Description"></textarea>
 
                         <label for="ingredients">Ingrédients :</label>
-                        <textarea id="ingredients" name="ingredients"></textarea>
+                        <textarea id="ingredients" name="ingredients" placeholder="Ingrédients"></textarea>
 
                         <label for="preparation">Préparation :</label>
-                        <textarea id="preparation" name="preparation"></textarea>
+                        <textarea id="preparation" name="preparation" placeholder="Instruction de la préparation"></textarea>
 
-
-
-                        <label for="image">Image :</label>
-                        <input type="file" id="image" name="image">
+                        <label id="uploadLabel" for="image">Uploader une photo</label>
+                        <input type="file" id="image" style="display: none;">
+                        <img id="previewImage" src="#" alt="Aperçu de l'image">
                     </div>
 
                     <button type="submit">Envoyer</button>
