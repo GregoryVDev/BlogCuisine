@@ -105,6 +105,12 @@
             </tr>
         </thead>
         <tbody>
+            <tr>
+                <td>
+                    <button class="edit"><a href="#">Modifier</a></button>
+                    <button class="see"><a href="#">Voir</a></button>
+                    <button class="delete"><a href="#">Supprimer</a></button>
+                </td>
 
         </tbody>
     </table>
