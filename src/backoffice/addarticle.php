@@ -98,23 +98,14 @@
 
     <table>
         <thead>
-            <tr class="action">
-                <th>Action</th>
-                <th>Titre</th>
-                <th><input type="checkbox" id="selectAllPromoCheckbox"></th>
+            <tr>
+                <th scope="col">Action</th>
+                <th scope="col">Titre</th>
+                <th scope="col"><input type="checkbox"></th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>
-                    <button><a href="#">Modifier</a></button>
-                    <button><a href="#">Voir</a></button>
-                    <button><a href="#">Supprimer</a></button>
-                </td>
-                <td>test</td>
 
-                <td><input type="checkbox"></td>
-            </tr>
         </tbody>
     </table>
     <button type="submit" class="delete-articles">Supprimer les articles sélectionnés</button>
