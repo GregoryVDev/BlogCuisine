@@ -107,9 +107,9 @@
         <tbody>
             <tr>
                 <td>
-                    <button class="edit"><a href="#">Modifier</a></button>
-                    <button class="see"><a href="#">Voir</a></button>
-                    <button class="delete"><a href="#">Supprimer</a></button>
+                    <a href="#">Modifier</a>
+                    <a href="#">Voir</a>
+                    <a href="#">Supprimer</a>
                 </td>
 
         </tbody>
