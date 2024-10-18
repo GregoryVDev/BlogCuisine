@@ -106,7 +106,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>
+                <td class="action">
                     <a href="#">Modifier</a>
                     <a href="#">Voir</a>
                     <a href="#">Supprimer</a>

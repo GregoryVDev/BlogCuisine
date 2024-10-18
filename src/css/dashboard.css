@@ -133,3 +133,8 @@ th {
   background: var(--color3);
   padding: 10px;
 }
+
+td {
+  display: flex;
+  flex-direction: column;
+}
