@@ -111,7 +111,7 @@
                     <a href="#">Voir</a>
                     <a href="#">Supprimer</a>
                 </td>
-
+            </tr>
         </tbody>
     </table>
     <button type="submit" class="delete-articles">Supprimer les articles sélectionnés</button>
