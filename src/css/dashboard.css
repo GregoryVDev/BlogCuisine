@@ -129,11 +129,16 @@ h3 {
 
 table {
   margin: auto;
+  border-collapse: collapse;
 }
 
 th {
   background: var(--color3);
   padding: 10px;
+}
+
+td {
+  text-align: center;
 }
 
 td a {
