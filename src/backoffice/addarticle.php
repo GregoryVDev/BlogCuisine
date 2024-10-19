@@ -31,7 +31,7 @@
                     <div class="container-categories">
                         <label for="categorie">Catégorie :</label>
                         <select id="categorie" name="category">
-                            <option value="">--Choisir une catégorie--</option>
+                            <option value="">--Catégorie--</option>
                             <option value="">Entrées / Apéro</option>
                             <option value="">Plats</option>
                             <option value="">Desserts</option>
@@ -62,7 +62,7 @@
                     <div class="container-personnes">
                         <label for="personnes">Personnes :</label>
                         <select id="personnes" name="number">
-                            <option value="">--Choisir le nombre de personne--</option>
+                            <option value="">--Nombre de personne--</option>
                             <option value="">2</option>
                             <option value="">4</option>
                             <option value="">6</option>

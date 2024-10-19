@@ -97,7 +97,7 @@ button:hover {
   display: inline-block;
   background-color: #aebd8f; /* Couleur de fond */
   color: white; /* Couleur du texte */
-  padding: 40px 40px; /* Espacement interne */
+  padding: 40px 60px; /* Espacement interne */
   border-radius: 5px; /* Coins arrondis */
   cursor: pointer; /* Curseur de pointeur pour indiquer que c'est cliquable */
   font-size: 14px;
