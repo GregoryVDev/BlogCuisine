@@ -131,9 +131,13 @@ table {
   margin: auto;
 }
 
-.delete-articles {
-  background-color: rgba(255, 0, 0, 0.836);
-  color: var(--color3);
+.table-header {
+  background: var(--color3);
+}
+
+tr {
+  display: flex;
+  gap: 20px;
 }
 
 th {
@@ -144,4 +148,9 @@ th {
 td {
   display: flex;
   flex-direction: column;
+}
+
+.delete-articles {
+  background-color: rgba(255, 0, 0, 0.836);
+  color: var(--color3);
 }
