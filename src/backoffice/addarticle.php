@@ -108,10 +108,11 @@
         <tbody>
             <tr>
                 <td class="action">
-                    <a href="#">Modifier</a>
-                    <a href="#">Voir</a>
-                    <a href="#">Supprimer</a>
+                    <a href="#" class="btn-edit">Modifier</a>
+                    <a href="#" class="btn-see">Voir</a>
+                    <a href="#" class="btn-delete">Supprimer</a>
                 </td>
+
             </tr>
         </tbody>
     </table>
