@@ -99,26 +99,26 @@
     <table>
         <thead>
             <tr>
-                <th>#</th>
                 <th>Title</th>
                 <th>Catégorie</th>
+                <th>#</th>
             </tr>
         </thead>
         <tbody>
             <tr data-page="1">
-                <td><label><input type="checkbox"></label></td>
                 <td>The Bible</td>
                 <td>952</td>
+                <td><label><input type="checkbox"></label></td>
             </tr>
             <tr data-page="1">
-                <td><label><input type="checkbox"></label></td>
                 <td>Harry Potter</td>
                 <td>312</td>
+                <td><label><input type="checkbox"></label></td>
             </tr>
             <tr data-page="1">
-                <td><label><input type="checkbox"></label></td>
                 <td>The Lord of the Rings</td>
                 <td>1178</td>
+                <td><label><input type="checkbox"></label></td>
             </tr>
         </tbody>
     </table>
