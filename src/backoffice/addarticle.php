@@ -97,11 +97,13 @@
     </div>
 
     <table>
-        <thead>
+        <thead class="table-header">
             <tr>
                 <th scope="col">Action</th>
-                <th scope="col">Titre</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Catégorie</th>
                 <th scope="col"><input type="checkbox"></th>
+                <th scope="col"><input type="checkbox" id="selectAllPromoCheckbox"></th>
             </tr>
         </thead>
         <tbody>

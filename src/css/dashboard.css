@@ -37,7 +37,10 @@ h3 {
 form {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   width: 100%;
+  margin-left: auto;
+  margin-right: 140px;
 }
 
 .left-section,
