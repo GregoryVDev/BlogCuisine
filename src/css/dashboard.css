@@ -131,23 +131,9 @@ table {
   margin: auto;
 }
 
-.table-header {
-  background: var(--color3);
-}
-
-tr {
-  display: flex;
-  gap: 20px;
-}
-
 th {
   background: var(--color3);
   padding: 10px;
-}
-
-td {
-  display: flex;
-  flex-direction: column;
 }
 
 td a {
