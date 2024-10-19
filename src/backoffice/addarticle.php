@@ -100,223 +100,26 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>ID</th>
                 <th>Title</th>
-                <th>Pages</th>
+                <th>Catégorie</th>
             </tr>
         </thead>
         <tbody>
             <tr data-page="1">
                 <td><label><input type="checkbox"></label></td>
-                <td>1</td>
                 <td>The Bible</td>
                 <td>952</td>
             </tr>
             <tr data-page="1">
                 <td><label><input type="checkbox"></label></td>
-                <td>2</td>
                 <td>Harry Potter</td>
                 <td>312</td>
             </tr>
             <tr data-page="1">
                 <td><label><input type="checkbox"></label></td>
-                <td>3</td>
                 <td>The Lord of the Rings</td>
                 <td>1178</td>
             </tr>
-            <tr data-page="1">
-                <td><label><input type="checkbox"></label></td>
-                <td>4</td>
-                <td>To Kill a Mockingbird</td>
-                <td>281</td>
-            </tr>
-            <tr data-page="1">
-                <td><label><input type="checkbox"></label></td>
-                <td>5</td>
-                <td>1984</td>
-                <td>328</td>
-            </tr>
-            <tr data-page="1">
-                <td><label><input type="checkbox"></label></td>
-                <td>6</td>
-                <td>Moby Dick</td>
-                <td>635</td>
-            </tr>
-            <tr data-page="1">
-                <td><label><input type="checkbox"></label></td>
-                <td>7</td>
-                <td>War and Peace</td>
-                <td>1225</td>
-            </tr>
-            <tr data-page="1">
-                <td><label><input type="checkbox"></label></td>
-                <td>8</td>
-                <td>The Great Gatsby</td>
-                <td>180</td>
-            </tr>
-            <tr data-page="1">
-                <td><label><input type="checkbox"></label></td>
-                <td>9</td>
-                <td>Pride and Prejudice</td>
-                <td>432</td>
-            </tr>
-            <tr data-page="1">
-                <td><label><input type="checkbox"></label></td>
-                <td>10</td>
-                <td>The Catcher in the Rye</td>
-                <td>277</td>
-            </tr>
-            <tr data-page="2">
-                <td><label><input type="checkbox"></label></td>
-                <td>11</td>
-                <td>Crime and Punishment</td>
-                <td>671</td>
-            </tr>
-            <tr data-page="2">
-                <td><label><input type="checkbox"></label></td>
-                <td>12</td>
-                <td>Anna Karenina</td>
-                <td>864</td>
-            </tr>
-            <tr data-page="2">
-                <td><label><input type="checkbox"></label></td>
-                <td>13</td>
-                <td>Ulysses</td>
-                <td>730</td>
-            </tr>
-            <tr data-page="2">
-                <td><label><input type="checkbox"></label></td>
-                <td>14</td>
-                <td>The Odyssey</td>
-                <td>374</td>
-            </tr>
-            <tr data-page="2">
-                <td><label><input type="checkbox"></label></td>
-                <td>15</td>
-                <td>Brave New World</td>
-                <td>311</td>
-            </tr>
-            <tr data-page="2">
-                <td><label><input type="checkbox"></label></td>
-                <td>16</td>
-                <td>Don Quixote</td>
-                <td>992</td>
-            </tr>
-            <tr data-page="2">
-                <td><label><input type="checkbox"></label></td>
-                <td>17</td>
-                <td>The Iliad</td>
-                <td>683</td>
-            </tr>
-            <tr data-page="2">
-                <td><label><input type="checkbox"></label></td>
-                <td>18</td>
-                <td>Les Misérables</td>
-                <td>1463</td>
-            </tr>
-            <tr data-page="2">
-                <td><label><input type="checkbox"></label></td>
-                <td>19</td>
-                <td>Jane Eyre</td>
-                <td>500</td>
-            </tr>
-            <tr data-page="2">
-                <td><label><input type="checkbox"></label></td>
-                <td>20</td>
-                <td>The Divine Comedy</td>
-                <td>798</td>
-            </tr>
-            <tr data-page="3">
-                <td><label><input type="checkbox"></label></td>
-                <td>21</td>
-                <td>The Brothers Karamazov</td>
-                <td>796</td>
-            </tr>
-            <tr data-page="3">
-                <td><label><input type="checkbox"></label></td>
-                <td>22</td>
-                <td>The Hobbit</td>
-                <td>310</td>
-            </tr>
-            <tr data-page="3">
-                <td><label><input type="checkbox"></label></td>
-                <td>23</td>
-                <td>The Grapes of Wrath</td>
-                <td>464</td>
-            </tr>
-            <tr data-page="3">
-                <td><label><input type="checkbox"></label></td>
-                <td>24</td>
-                <td>Wuthering Heights</td>
-                <td>416</td>
-            </tr>
-            <tr data-page="3">
-                <td><label><input type="checkbox"></label></td>
-                <td>25</td>
-                <td>A Tale of Two Cities</td>
-                <td>489</td>
-            </tr>
-            <tr data-page="3">
-                <td><label><input type="checkbox"></label></td>
-                <td>26</td>
-                <td>The Picture of Dorian Gray</td>
-                <td>254</td>
-            </tr>
-            <tr data-page="3">
-                <td><label><input type="checkbox"></label></td>
-                <td>27</td>
-                <td>Dracula</td>
-                <td>418</td>
-            </tr>
-            <tr data-page="3">
-                <td><label><input type="checkbox"></label></td>
-                <td>28</td>
-                <td>Fahrenheit 451</td>
-                <td>194</td>
-            </tr>
-            <tr data-page="3">
-                <td><label><input type="checkbox"></label></td>
-                <td>29</td>
-                <td>The Sound and the Fury</td>
-                <td>326</td>
-            </tr>
-            <tr data-page="3">
-                <td><label><input type="checkbox"></label></td>
-                <td>30</td>
-                <td>Frankenstein</td>
-                <td>280</td>
-            </tr>
-            <tr data-page="4">
-                <td><label><input type="checkbox"></label></td>
-                <td>31</td>
-                <td>One Hundred Years of Solitude</td>
-                <td>417</td>
-            </tr>
-            <tr data-page="4">
-                <td><label><input type="checkbox"></label></td>
-                <td>32</td>
-                <td>Heart of Darkness</td>
-                <td>96</td>
-            </tr>
-            <tr data-page="4">
-                <td><label><input type="checkbox"></label></td>
-                <td>33</td>
-                <td>The Old Man and the Sea</td>
-                <td>127</td>
-            </tr>
-            <tr data-page="4">
-                <td><label><input type="checkbox"></label></td>
-                <td>34</td>
-                <td>The Count of Monte Cristo</td>
-                <td>1276</td>
-            </tr>
-            <tr data-page="4">
-                <td><label><input type="checkbox"></label></td>
-                <td>35</td>
-                <td>Gulliver's Travels</td>
-                <td>306</td>
-            </tr>
-
         </tbody>
     </table>
     <button type="submit" class="delete-articles">Supprimer les articles sélectionnés</button>

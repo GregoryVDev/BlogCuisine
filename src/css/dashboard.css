@@ -130,15 +130,18 @@ h3 {
 table {
   margin: auto;
   border-collapse: collapse;
+  width: 100%; /* Ajoute cette ligne pour que le tableau prenne toute la largeur */
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd; /* Ajoute une bordure pour améliorer la lisibilité */
 }
 
 th {
   background: var(--color3);
-  padding: 10px;
-}
-
-td {
-  text-align: center;
 }
 
 td a {
