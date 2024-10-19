@@ -156,12 +156,17 @@ td a {
   text-decoration: none;
 }
 
+.actions {
+  display: flex;
+  flex-direction: column;
+}
+
 .btn-edit {
-  color: var(--color4);
+  color: var(--color6);
 }
 
 .btn-see {
-  color: var(--color1);
+  color: var(--color2);
 }
 
 .btn-delete {

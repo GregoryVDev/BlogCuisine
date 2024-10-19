@@ -99,6 +99,7 @@
     <table>
         <thead>
             <tr>
+                <th>Action</th>
                 <th>Title</th>
                 <th>Catégorie</th>
                 <th>#</th>
@@ -106,16 +107,28 @@
         </thead>
         <tbody>
             <tr data-page="1">
+                <td class="actions"><a href="#" class="btn-edit">Modifier</a>
+                    <a href="#" class="btn-see">Voir</a>
+                    <a href="#" class="btn-delete">Supprimer</a>
+                </td>
                 <td>The Bible</td>
                 <td>952</td>
                 <td><label><input type="checkbox"></label></td>
             </tr>
             <tr data-page="1">
+                <td class="actions"><a href="#" class="btn-edit">Modifier</a>
+                    <a href="#" class="btn-see">Voir</a>
+                    <a href="#" class="btn-delete">Supprimer</a>
+                </td>
                 <td>Harry Potter</td>
                 <td>312</td>
                 <td><label><input type="checkbox"></label></td>
             </tr>
             <tr data-page="1">
+                <td class="actions"><a href="#" class="btn-edit">Modifier</a>
+                    <a href="#" class="btn-see">Voir</a>
+                    <a href="#" class="btn-delete">Supprimer</a>
+                </td>
                 <td>The Lord of the Rings</td>
                 <td>1178</td>
                 <td><label><input type="checkbox"></label></td>
