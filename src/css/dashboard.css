@@ -133,6 +133,14 @@ table {
   width: 100%; /* Ajoute cette ligne pour que le tableau prenne toute la largeur */
 }
 
+tbody tr:nth-child(odd) {
+  background-color: #a4b494; /* Couleur des lignes impaires */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #bddfbb; /* Couleur des lignes paires */
+}
+
 th,
 td {
   padding: 10px;
