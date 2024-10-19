@@ -103,7 +103,6 @@
                 <th scope="col">Nom</th>
                 <th scope="col">Catégorie</th>
                 <th scope="col"><input type="checkbox"></th>
-                <th scope="col"><input type="checkbox" id="selectAllPromoCheckbox"></th>
             </tr>
         </thead>
         <tbody>
