@@ -20,7 +20,7 @@ h3 {
   background-color: #c5cbb4;
   padding: 20px;
   border-radius: 8px;
-  width: 85%;
+  width: 300px;
   display: flex;
   justify-items: center;
   gap: 20px;
@@ -99,7 +99,7 @@ button:hover {
   color: var(--color3);
   cursor: pointer;
   font-size: 14px;
-  margin: 20px 0;
+  margin: 20px auto;
   height: 100px;
   padding: 40px;
   border-radius: 10px;
@@ -148,7 +148,7 @@ th,
 td {
   padding: 10px;
   text-align: center;
-  border: 1px solid #ddd; /* Ajoute une bordure pour améliorer la lisibilité */
+  border: 1px solid var(--color2); /* Ajoute une bordure pour améliorer la lisibilité */
 }
 
 th {
@@ -180,4 +180,13 @@ td a {
   margin-top: 20px;
   background-color: rgba(255, 0, 0, 0.836);
   color: var(--color3);
+}
+
+/* TABLET */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  form {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
