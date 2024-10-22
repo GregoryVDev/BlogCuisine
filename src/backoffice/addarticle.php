@@ -101,7 +101,7 @@
             <tr>
                 <th>Action</th>
                 <th>Titre</th>
-                <th>#</th>
+                <th><input type="checkbox"></th>
             </tr>
         </thead>
         <tbody>
@@ -111,7 +111,6 @@
                     <a href="#" class="btn-delete">Supprimer</a>
                 </td>
                 <td>The Bible</td>
-                <td>952</td>
                 <td><label><input type="checkbox"></label></td>
             </tr>
             <tr data-page="1">
@@ -120,7 +119,6 @@
                     <a href="#" class="btn-delete">Supprimer</a>
                 </td>
                 <td>Harry Potter</td>
-                <td>312</td>
                 <td><label><input type="checkbox"></label></td>
             </tr>
             <tr data-page="1">
@@ -129,7 +127,6 @@
                     <a href="#" class="btn-delete">Supprimer</a>
                 </td>
                 <td>The Lord of the Rings</td>
-                <td>1178</td>
                 <td><label><input type="checkbox"></label></td>
             </tr>
         </tbody>
