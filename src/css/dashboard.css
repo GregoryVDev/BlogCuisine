@@ -96,7 +96,7 @@ button:hover {
 .uploadLabel {
   display: inline-block;
   background-color: #aebd8f; /* Couleur de fond */
-  color: white; /* Couleur du texte */
+  color: var(--color3);
   cursor: pointer;
   font-size: 14px;
   margin: 20px 0;
@@ -107,6 +107,10 @@ button:hover {
 
 #uploadLabel:hover {
   background-color: #98a178; /* Couleur au survol */
+}
+
+.image {
+  display: none;
 }
 
 #previewImage {
