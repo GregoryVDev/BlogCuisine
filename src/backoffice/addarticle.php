@@ -82,7 +82,7 @@
                     <textarea id="preparation" name="preparation" placeholder="Instruction de la préparation"></textarea>
 
                     <label id="uploadLabel" for="image">Uploader une photo</label>
-                    <input type="file" id="image" style="display: none;">
+                    <input type="file" id="image" name="image" style="display: none;">
                     <img id="previewImage" src="#" alt="Aperçu de l'image">
                 </div>
                 <button type="submit">Envoyer</button>
