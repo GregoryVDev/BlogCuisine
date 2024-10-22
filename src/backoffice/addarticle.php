@@ -81,7 +81,7 @@
                     <label for="preparation">Préparation :</label>
                     <textarea id="preparation" name="preparation" placeholder="Instruction de la préparation"></textarea>
 
-                    <label class="uploadLabel" for="image" id="uploadLabel">Uploader icon du PEGI</label>
+                    <label class="uploadLabel" for="image" id="uploadLabel">Télécharger la photo</label>
                     <input type="file" id="image" name="image" class="image" accept="image/*" required>
 
                     <img id="previewImage" src="#" alt="Aperçu de l'image" style="max-width: 100%; display: none;">
