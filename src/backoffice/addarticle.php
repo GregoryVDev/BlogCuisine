@@ -100,8 +100,7 @@
         <thead>
             <tr>
                 <th>Action</th>
-                <th>Title</th>
-                <th>Catégorie</th>
+                <th>Titre</th>
                 <th>#</th>
             </tr>
         </thead>
