@@ -93,17 +93,16 @@ button:hover {
   width: 100%;
 }
 
-#uploadLabel {
+.uploadLabel {
   display: inline-block;
   background-color: #aebd8f; /* Couleur de fond */
   color: white; /* Couleur du texte */
-  padding: 40px 60px; /* Espacement interne */
-  border-radius: 5px; /* Coins arrondis */
-  cursor: pointer; /* Curseur de pointeur pour indiquer que c'est cliquable */
+  cursor: pointer;
   font-size: 14px;
-  transition: background-color 0.3s ease;
-  margin: 20px 0px;
+  margin: 20px 0;
   height: 100px;
+  padding: 40px;
+  border-radius: 10px;
 }
 
 #uploadLabel:hover {

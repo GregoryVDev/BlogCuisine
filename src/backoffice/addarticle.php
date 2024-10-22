@@ -81,7 +81,7 @@
                     <label for="preparation">Préparation :</label>
                     <textarea id="preparation" name="preparation" placeholder="Instruction de la préparation"></textarea>
 
-                    <label id="uploadLabel" for="image">Uploader une photo</label>
+                    <label class="uploadLabel" for="image">Uploader une photo</label>
                     <input type="file" id="image" name="image" accept="image/*" required>
                     <img id="previewImage" src="#" alt="Aperçu de l'image" style="max-width: 100%; display: none;">
                     <button type="button" id="deleteImageButton" style="display: none;">Supprimer</button>
