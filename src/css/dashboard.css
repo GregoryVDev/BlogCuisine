@@ -133,7 +133,7 @@ h3 {
 table {
   margin: auto;
   border-collapse: collapse;
-  width: 100%; /* Ajoute cette ligne pour que le tableau prenne toute la largeur */
+  width: 300px;
 }
 
 tbody tr:nth-child(odd) {
