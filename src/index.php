@@ -75,8 +75,8 @@
                         <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
                         <figcaption>
                             <div class="container-tags">
-                                <a href="#">Légumes</a>
-                                <a href="#">Viande</a>
+                                <a href="vegetaux.php">Légumes</a>
+                                <a href="viandes.php">Viande</a>
                             </div>
                             <h2><a href="#">Boeuf Bourguignon au vin</a></h2>
                             <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</p>
