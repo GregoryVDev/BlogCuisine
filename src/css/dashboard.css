@@ -176,9 +176,14 @@ td a {
   color: rgba(255, 0, 0, 0.836);
 }
 
+.container-button {
+  text-align: center;
+}
+
 .delete-articles {
   margin-top: 20px;
   background-color: rgba(255, 0, 0, 0.836);
+  text-align: center;
   color: var(--color3);
 }
 
