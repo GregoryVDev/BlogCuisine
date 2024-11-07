@@ -137,5 +137,6 @@
         <button type="submit" class="delete-produits">Supprimer les articles sélectionnés</button>
     </div>
 </body>
+<script src="./js/pagination.js"></script>
 
 </html>
