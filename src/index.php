@@ -28,8 +28,8 @@
 
             <h3>Quel endroit voulez-vous visiter ?</h3>
             <div class="container-links">
-                <a href="#">Élise</a>
-                <a href="#">Grégory</a>
+                <a href="category.php">Élise</a>
+                <a href="category.php">Grégory</a>
             </div>
         </section>
         <section id="category">
