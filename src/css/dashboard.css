@@ -193,4 +193,8 @@ td a {
     margin-left: auto;
     margin-right: auto;
   }
+
+  table {
+    width: 500px;
+  }
 }

@@ -53,11 +53,11 @@
                     </div>
                     <div class="container-coocking">
                         <label for="temps_cuisson">Temps cuisson (minutes) :</label>
-                        <input type="text" id="temps_cuisson" name="coocking" placeholder="Temps de cuisson en minutes">
+                        <input type="text" id="temps_cuisson" name="coocking" placeholder="Cuisson en minutes">
                     </div>
                     <div class="container-preparation">
                         <label for="temps_preparation">Temps préparation (minutes) :</label>
-                        <input type="text" id="temps_preparation" name="preparation" placeholder="Temps de préparation en minutes">
+                        <input type="text" id="temps_preparation" name="preparation" placeholder="Préparation en minutes">
                     </div>
                     <div class="container-personnes">
                         <label for="personnes">Personnes :</label>
