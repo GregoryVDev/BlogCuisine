@@ -134,7 +134,7 @@
         </tbody>
     </table>
     <div class="container-button">
-        <button type="submit" class="delete-articles">Supprimer les articles sélectionnés</button>
+        <button type="submit" class="delete-produits">Supprimer les articles sélectionnés</button>
     </div>
 </body>
 
