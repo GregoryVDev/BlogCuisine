@@ -8,8 +8,6 @@ if (!isset($_SESSION["user_cook"])) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-    $first_time
 }
 
 
