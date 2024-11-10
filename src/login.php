@@ -33,7 +33,7 @@ if (!empty($_POST)) {
 
         $_SESSION["user_cook"] = [
             "user_id" => $user["id"],
-            "prenom" => $user["prenom"],
+            "name" => $user["name"],
             "email" => $user["email"]
         ];
 
