@@ -172,5 +172,6 @@
     <?php require_once("./template/footer.php") ?>
 </body>
 <script src="./js/script.js"></script>
+<script src="./js/pagination.js"></script>
 
 </html>
