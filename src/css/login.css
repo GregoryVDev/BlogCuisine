@@ -13,6 +13,7 @@ main {
 
 img {
   height: 40%;
+  object-fit: cover;
 }
 
 form {
@@ -23,6 +24,7 @@ form {
   padding: 0 50px 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: var(--color6);
   width: 400px;
 }
 

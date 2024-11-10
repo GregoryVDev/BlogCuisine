@@ -1,14 +1,14 @@
 <header>
     <div class="navbar-top">
         <div class="container-icons">
-            <a href="#"><img src="../img/logos/dashboard.svg" alt="Panel Admin"></a>
+            <a href="../backoffice/addarticle.php"><img src="../img/logos/dashboard.svg" alt="Panel Admin"></a>
             <div class="dr"></div>
-            <a href="#"><img src="../img/logos/user.svg" alt="Se connecter"> </a>
+            <a href="login.php"><img src="../img/logos/user.svg" alt="Se connecter"> </a>
         </div>
     </div>
     <nav>
         <ul>
-            <li><a href="#home">Accueil</a></li>
+            <li><a href="../index.php">Accueil</a></li>
             <li class="circle"></li>
             <li><a href="#about">A propos</a></li>
             <li class="circle"></li>
