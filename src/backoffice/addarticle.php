@@ -7,6 +7,9 @@ if (!isset($_SESSION["user_cook"])) {
     header("Location: login.php");
 }
 
+// Vérifie si le formulaire a été soumis via une requête POST
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
 
 ?>
 
