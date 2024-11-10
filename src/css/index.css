@@ -449,6 +449,7 @@ textarea:focus {
 }
 
 #contact button {
+  border: none;
   padding: 15px 20px;
   background: var(--color5);
   cursor: pointer;
