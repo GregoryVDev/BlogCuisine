@@ -1,9 +1,13 @@
 <header>
     <div class="navbar-top">
         <div class="container-icons">
-            <a href="../backoffice/addarticle.php"><img src="../img/logos/dashboard.svg" alt="Panel Admin"></a>
-            <div class="dr"></div>
-            <a href="login.php"><img src="../img/logos/user.svg" alt="Se connecter"> </a>
+            <?php if (isset($_SESSION["user_cook"]) && $_SESSION["user_cook"]) { ?>
+                <a href="../backoffice/addarticle.php"><img src="../img/logos/dashboard.svg" alt="Panel Admin"></a>
+                <div class="dr"></div>
+                <a href="../deconnexion.php"><img src="../img/logos/userred.svg" alt="Deconnexion"></a>
+            <?php } else { ?>
+                <a href="login.php"><img src="../img/logos/user.svg" alt="Se connecter"> </a>
+            <?php } ?>
         </div>
     </div>
     <nav>
