@@ -726,7 +726,7 @@ footer p {
     max-width: 1905px;
   }
 
-  .contact form {
+  #contact form {
     position: relative;
     top: 60px;
     width: 500px;
