@@ -17,27 +17,15 @@
     <section class="illust-addarticle"></section>
     <section class="formulaire">
         <div class="container">
-            <h3>Ajouter le nombre de personne</h3>
+            <h3>Nombre de personne</h3>
             <form action="#" method="post" enctype="multipart/form-data">
                 <div class="left-section">
-                    <div class="container-prenom">
-                        <label for="prenom">Prénom :</label>
-                        <input type="text" id="prenom" name="firstname" placeholder="Prénom">
-                    </div>
-                    <div class="container-title">
-                        <label for="titre">Titre :</label>
-                        <input type="text" id="titre" name="title" placeholder="Titre">
-                    </div>
-                    <div class="container-categories">
-                        <label for="categorie">Catégorie :</label>
-                        <select id="categorie" name="category">
-                            <option value="">--Catégorie--</option>
-                            <option value="">Entrées / Apéro</option>
-                            <option value="">Plats</option>
-                            <option value="">Desserts</option>
-                        </select>
+                    <div class="container-prenom" style="margin: auto;">
+                        <label for="personnes">Personnes :</label>
+                        <input type="number" id="number" name="number" style="padding: 5px; margin-bottom: 20px;" placeholder="Nombre de personne">
                     </div>
                 </div>
+                <button type="submit">Envoyer</button>
             </form>
         </div>
     </section>
