@@ -32,7 +32,7 @@ $sql = "SELECT * FROM personnes WHERE id";
 $query = $db->prepare($sql);
 $query->execute();
 
-$number = $query->fetchAll(PDO::FETCH_ASSOC);
+$numbers = $query->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -75,29 +75,17 @@ $number = $query->fetchAll(PDO::FETCH_ASSOC);
                 <th><input type="checkbox"></th>
             </tr>
         </thead>
-        <tbody>
-            <tr data-page="1">
-                <td class="actions"><a href="#" class="btn-edit">Modifier</a>
-                    <a href="#" class="btn-delete">Supprimer</a>
-                </td>
-                <td>The Bible</td>
-                <td><label><input type="checkbox"></label></td>
-            </tr>
-            <tr data-page="1">
-                <td class="actions"><a href="#" class="btn-edit">Modifier</a>
-                    <a href="#" class="btn-delete">Supprimer</a>
-                </td>
-                <td>Harry Potter</td>
-                <td><label><input type="checkbox"></label></td>
-            </tr>
-            <tr data-page="1">
-                <td class="actions"><a href="#" class="btn-edit">Modifier</a>
-                    <a href="#" class="btn-delete">Supprimer</a>
-                </td>
-                <td>The Lord of the Rings</td>
-                <td><label><input type="checkbox"></label></td>
-            </tr>
-        </tbody>
+        <?php foreach ($numbers as $number) { ?>
+            <tbody>
+                <tr data-page="1">
+                    <td class="actions">
+                        <a href="#" class="btn-delete">Supprimer</a>
+                    </td>
+                    <td>The Bible</td>
+                    <td><label><input type="checkbox"></label></td>
+                </tr>
+            </tbody>
+        <?php } ?>
     </table>
     <div class="container-button">
         <button type="submit" class="delete-produits">Supprimer les articles sélectionnés</button>
