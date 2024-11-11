@@ -1,3 +1,41 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION["user_cook"])) {
+    header("Location: login.php");
+}
+
+require_once("../connect.php");
+
+if (isset($_SESSION["user_cook"])) {
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $number = strip_tags($_POST["number"]);
+
+        $sql_people = "INSERT INTO personnes (number) VALUES (:number)";
+
+        $query = $db->prepare($sql_people);
+        $query->bindValue(":number", $number);
+        $query->execute();
+
+        require_once("../close.php");
+
+        header("Location: peoples.php");
+        exit();
+    }
+} else {
+    header("Location: ../index.php ");
+}
+
+$sql = "SELECT * FROM personnes WHERE id";
+
+$query = $db->prepare($sql);
+$query->execute();
+
+$number = $query->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -29,6 +67,41 @@
             </form>
         </div>
     </section>
+    <table style="margin-top: 50px;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Personnes</th>
+                <th><input type="checkbox"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-page="1">
+                <td class="actions"><a href="#" class="btn-edit">Modifier</a>
+                    <a href="#" class="btn-delete">Supprimer</a>
+                </td>
+                <td>The Bible</td>
+                <td><label><input type="checkbox"></label></td>
+            </tr>
+            <tr data-page="1">
+                <td class="actions"><a href="#" class="btn-edit">Modifier</a>
+                    <a href="#" class="btn-delete">Supprimer</a>
+                </td>
+                <td>Harry Potter</td>
+                <td><label><input type="checkbox"></label></td>
+            </tr>
+            <tr data-page="1">
+                <td class="actions"><a href="#" class="btn-edit">Modifier</a>
+                    <a href="#" class="btn-delete">Supprimer</a>
+                </td>
+                <td>The Lord of the Rings</td>
+                <td><label><input type="checkbox"></label></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="container-button">
+        <button type="submit" class="delete-produits">Supprimer les articles sélectionnés</button>
+    </div>
 </body>
 
 </html>
