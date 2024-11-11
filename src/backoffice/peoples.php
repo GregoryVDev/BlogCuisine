@@ -79,9 +79,9 @@ $numbers = $query->fetchAll(PDO::FETCH_ASSOC);
             <tbody>
                 <tr data-page="1">
                     <td class="actions">
-                        <a href="#" class="btn-delete">Supprimer</a>
+                        <a href="deletepeoples.php?id=<?= $number["id"] ?>" class="btn-delete">Supprimer</a>
                     </td>
-                    <td>The Bible</td>
+                    <td><?= $number["number"] ?></td>
                     <td><label><input type="checkbox"></label></td>
                 </tr>
             </tbody>

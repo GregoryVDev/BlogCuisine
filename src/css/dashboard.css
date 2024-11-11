@@ -159,11 +159,6 @@ td a {
   text-decoration: none;
 }
 
-.actions {
-  display: flex;
-  flex-direction: column;
-}
-
 .btn-edit {
   color: var(--color6);
 }
