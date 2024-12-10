@@ -8,7 +8,6 @@ require_once("../connect.php");
 // }
 
 // Récupération des catégories
-
 $sql_category = "SELECT * FROM categorie";
 $query_category = $db->prepare($sql_category);
 $query_category->execute();
@@ -19,6 +18,12 @@ $sql_tags = "SELECT * FROM tags";
 $query_tags = $db->prepare($sql_tags);
 $query_tags->execute();
 $tag = $query_tags->fetchAll(PDO::FETCH_ASSOC);
+
+// Récupération des personnes
+$sql_pers = "SELECT * FROM personnes";
+$query_pers = $db->prepare($sql_pers);
+$query_pers->execute();
+$personne = $query_pers->fetchAll(PDO::FETCH_ASSOC);
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
