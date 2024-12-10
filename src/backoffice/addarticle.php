@@ -14,6 +14,12 @@ $query_category = $db->prepare($sql_category);
 $query_category->execute();
 $category = $query_category->fetchAll(PDO::FETCH_ASSOC);
 
+// Récupération des tags
+$sql_tags = "SELECT * FROM tags";
+$query_tags = $db->prepare($sql_tags);
+$query_tags->execute();
+$tag = $query_tags->fetchAll(PDO::FETCH_ASSOC);
+
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
