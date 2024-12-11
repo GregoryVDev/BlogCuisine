@@ -117,10 +117,10 @@ $instruction = strip_tags($_POST["instruction"]);
 
                 <div class="right-section">
                     <label for="description">Description :</label>
-                    <textarea id="description" name="description" placeholder="Description"></textarea>
+                    <textarea id="description" name="description" placeholder="Description du plat"></textarea>
 
                     <label for="ingredients">Ingrédients :</label>
-                    <textarea id="ingredients" name="ingredients" placeholder="Ingrédients"></textarea>
+                    <textarea id="ingredients" name="ingredients" placeholder="Ingrédients besoins"></textarea>
 
                     <label for="preparation">Préparation :</label>
                     <textarea id="preparation" name="preparation" placeholder="Instruction de la préparation"></textarea>
