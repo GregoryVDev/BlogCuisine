@@ -77,10 +77,20 @@ try {
 
     $article_id = $db->lastInsertId();
 
-    if (isset($_POST["categoryIds"])) {
+    if (isset($_POST["tagsIds"])) {
         $sql_add_category = "INSERT INTO articletags (article_id, tag_id) VALUES (:article_id, :tag_id)";
         $query = $db->prepare($sql_add_category);
+
+        foreach ($_POST["tagsIds"] as $tag_id) {
+            $query->execute([":article_id" => $article_id, ":tag_id" => (int) $tag_id]);
+        }
     }
+
+    echo "<script>
+                    alert('Les données ont été insérées avec succès.');
+                    window.location.href = 'addarticle.php';
+                  </script>";
+    exit();
 } catch (Exception $e) {
     echo "<script>alert(" . json_encode('Erreur SQL : ' . $e->getMessage()) . ");</script>";
 }
