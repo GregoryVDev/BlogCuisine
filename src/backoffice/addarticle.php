@@ -28,11 +28,10 @@ $personne = $query_pers->fetchAll(PDO::FETCH_ASSOC);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-$prenom = strip_tags($_POST["prenom"]);
-$titre = strip_tags($_POST["titre"]);
-$description = strip_tags($_POST["description"]);
-$date = strip_tags($_POST["date"]);
-$cuisson = strip_tags($_POST["cuisson"]);
+$username = strip_tags($_POST["username"]);
+$title = strip_tags($_POST["title"]);
+$content = strip_tags($_POST["content"]);
+$cooking = strip_tags($_POST["cooking"]);
 $ingredients = strip_tags($_POST["ingredients"]);
 $instruction = strip_tags($_POST["instruction"]);
 }
