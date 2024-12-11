@@ -56,45 +56,44 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             echo "<script>alert('Erreur : Fichier $fileKey invalide ou trop volumineux.');</script>";
         }
     }
-}
 
-try {
-    $sql_article = "INSERT INTO article (username, category_id, tag_id, pers_id, title, content, cooking, ingredients, instruction, image) VALUES (:username, :category_id, :tag_id, :pers_id, :title, :content, :cooking, :ingredients, :instruction, :image)";
-    $query = $db->prepare($sql_article);
+    try {
+        $sql_article = "INSERT INTO article (username, category_id, tag_id, pers_id, title, content, cooking, ingredients, instruction, image) VALUES (:username, :category_id, :tag_id, :pers_id, :title, :content, :cooking, :ingredients, :instruction, :image)";
+        $query = $db->prepare($sql_article);
 
-    $query->bindValue(":username", $username);
-    $query->bindValue(":category_id", $category_id);
-    $query->bindValue(":tag_id", $tag_id);
-    $query->bindValue(":pers_id", $pers_id);
-    $query->bindValue(":title", $title);
-    $query->bindValue(":content", $content);
-    $query->bindValue(":cooking", $cooking);
-    $query->bindValue(":ingredients", $ingredients);
-    $query->bindValue(":instruction", $instruction);
-    $query->bindValue(":image", $image ?? null);
+        $query->bindValue(":username", $username);
+        $query->bindValue(":category_id", $category_id);
+        $query->bindValue(":tag_id", $tag_id);
+        $query->bindValue(":pers_id", $pers_id);
+        $query->bindValue(":title", $title);
+        $query->bindValue(":content", $content);
+        $query->bindValue(":cooking", $cooking);
+        $query->bindValue(":ingredients", $ingredients);
+        $query->bindValue(":instruction", $instruction);
+        $query->bindValue(":image", $image ?? null);
 
-    $query->execute();
+        $query->execute();
 
-    $article_id = $db->lastInsertId();
+        $article_id = $db->lastInsertId();
 
-    if (isset($_POST["tagsIds"])) {
-        $sql_add_category = "INSERT INTO articletags (article_id, tag_id) VALUES (:article_id, :tag_id)";
-        $query = $db->prepare($sql_add_category);
+        if (isset($_POST["tagsIds"])) {
+            $sql_add_category = "INSERT INTO articletags (article_id, tag_id) VALUES (:article_id, :tag_id)";
+            $query = $db->prepare($sql_add_category);
 
-        foreach ($_POST["tagsIds"] as $tag_id) {
-            $query->execute([":article_id" => $article_id, ":tag_id" => (int) $tag_id]);
+            foreach ($_POST["tagsIds"] as $tag_id) {
+                $query->execute([":article_id" => $article_id, ":tag_id" => (int) $tag_id]);
+            }
         }
-    }
 
-    echo "<script>
+        echo "<script>
                     alert('Les données ont été insérées avec succès.');
                     window.location.href = 'addarticle.php';
                   </script>";
-    exit();
-} catch (Exception $e) {
-    echo "<script>alert(" . json_encode('Erreur SQL : ' . $e->getMessage()) . ");</script>";
+        exit();
+    } catch (Exception $e) {
+        echo "<script>alert(" . json_encode('Erreur SQL : ' . $e->getMessage()) . ");</script>";
+    }
 }
-
 ?>
 
 
@@ -118,15 +117,15 @@ try {
     <section class="formulaire">
         <div class="container">
             <h3>Ajouter un article</h3>
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form action="" method="POST" enctype="multipart/form-data">
                 <div class="left-section">
                     <div class="container-prenom">
                         <label for="prenom">Prénom :</label>
-                        <input type="text" id="prenom" name="firstname" placeholder="Prénom">
+                        <input type="text" id="prenom" name="username" placeholder="Prénom" required>
                     </div>
                     <div class="container-title">
                         <label for="titre">Titre :</label>
-                        <input type="text" id="titre" name="title" placeholder="Titre">
+                        <input type="text" id="titre" name="title" placeholder="Titre" required>
                     </div>
                     <div class="container-categories">
                         <label for="categorie">Catégorie :</label>
@@ -139,18 +138,17 @@ try {
                     </div>
                     <div class="container-tags-form">
                         <label for="tags">Tags :</label>
-                        <select id="tags" name="tags">
-                            <option value="">--Choisir des tags--</option>
-                            <option value="">Entrées Froides</option>
-                            <option value="">Entrées Chaudes</option>
-                            <option value="">Apéros</option>
-                            <option value="">Viandes</option>
-                            <option value="">Marins</option>
-                            <option value="">Garnitures</option>
-                            <option value="">Desserts Froids</option>
-                            <option value="">Desserts Chauds</option>
-                        </select>
+                        <!-- Bouton du dropdown -->
+                        <button class="dropdown-btn" onclick="toggleDropdown()" type="button">--Choisir les tags--</button>
+                        <!-- Contenu du dropdown avec checkboxes -->
+                        <div class="list-tags">
+                            <?php foreach ($tag as $tags) { ?>
+                                <label><input type="checkbox" name=tagsIds[]
+                                        value="<?= $tags["tag_id"] ?>"><?= $tags["tag_name"] ?></label>
+                            <?php } ?>
+                        </div>
                     </div>
+
                     <div class="container-coocking">
                         <label for="temps_cuisson">Temps cuisson (minutes) :</label>
                         <input type="text" id="temps_cuisson" name="coocking" placeholder="Cuisson en minutes">
@@ -238,5 +236,6 @@ try {
     </div>
 </body>
 <script src="./js/pagination.js"></script>
+<script src="./js/dropdown.js"></script>
 
 </html>
