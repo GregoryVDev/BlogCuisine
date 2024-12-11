@@ -4,9 +4,8 @@
             <div class="container-accueil">
                 <h3>Accueil</h3>
                 <ul>
-                    <li><a href="#">A propos</a></li>
                     <li><a href="#">Catégories</a></li>
-                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </div>
 
@@ -34,11 +33,15 @@
                 </ul>
             </div>
         </div>
-        <div class="newsletter">
+        <!-- <div class="newsletter">
             <label for="newsletter">Newsletter</label>
             <input type="email" name="newsletter" id="newsletter" placeholder="Email">
             <button type="submit" class="button-newsletter">OK</button>
-        </div>
+        </div> -->
 
         <p>© 2024 Grégory</p>
     </footer>
+    <!-- SCRIPT JS -->
+    </body>
+
+    </html>

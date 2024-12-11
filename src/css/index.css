@@ -74,17 +74,6 @@ h3 {
   font-family: var(--RobotoLight);
 }
 
-.bulle {
-  display: flex;
-  justify-content: center;
-  border-radius: 50px;
-  background: var(--color3);
-  gap: 15px;
-  padding: 10px;
-  width: 250px;
-  margin: auto;
-}
-
 header .dr {
   border: 1px solid var(--color2);
 }
@@ -164,29 +153,7 @@ section h2 {
   display: flex;
 }
 
-.container-links {
-  width: 100%;
-  margin: 50px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-}
-
-.container-links a {
-  text-align: center;
-  width: 150px;
-  padding: 20px;
-  background: var(--color5);
-  text-decoration: none;
-  font-size: var(--fsize3);
-  color: var(--color2);
-}
-
-.container-links a:hover {
-  background: var(--color4);
-}
+.
 
 /* CATEGORIES */
 
@@ -545,30 +512,6 @@ footer p {
 
   #contact h3 {
     font-size: var(--fsize4);
-  }
-
-  .container-links {
-    width: 100%;
-    margin: 50px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-  }
-
-  .container-links a {
-    text-align: center;
-    width: 150px;
-    border: 2px solid black;
-    padding: 20px;
-    background: var(--color5);
-    text-decoration: none;
-    font-size: var(--fsize3);
-    color: var(--color2);
-  }
-
-  .container-links a:hover {
-    background: var(--color4);
   }
 }
 
