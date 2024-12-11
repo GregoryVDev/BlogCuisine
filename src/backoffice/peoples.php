@@ -2,32 +2,32 @@
 
 session_start();
 
-if (!isset($_SESSION["user_cook"])) {
-    header("Location: login.php");
-}
+// if (!isset($_SESSION["user_cook"])) {
+//     header("Location: login.php");
+// }
 
 require_once("../connect.php");
 
-if (isset($_SESSION["user_cook"])) {
-    if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        $number = strip_tags($_POST["number"]);
+// if (isset($_SESSION["user_cook"])) {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $number = strip_tags($_POST["number"]);
 
-        $sql_people = "INSERT INTO personnes (number) VALUES (:number)";
+    $sql_people = "INSERT INTO personnes (number) VALUES (:number)";
 
-        $query = $db->prepare($sql_people);
-        $query->bindValue(":number", $number);
-        $query->execute();
+    $query = $db->prepare($sql_people);
+    $query->bindValue(":number", $number);
+    $query->execute();
 
-        require_once("../close.php");
+    require_once("../close.php");
 
-        header("Location: peoples.php");
-        exit();
-    }
-} else {
-    header("Location: ../index.php ");
+    header("Location: peoples.php");
+    exit();
 }
+// } else {
+//     header("Location: ../index.php ");
+// }
 
-$sql = "SELECT * FROM personnes WHERE id";
+$sql = "SELECT * FROM personnes WHERE pers_id";
 
 $query = $db->prepare($sql);
 $query->execute();
@@ -72,7 +72,6 @@ $numbers = $query->fetchAll(PDO::FETCH_ASSOC);
             <tr>
                 <th>Action</th>
                 <th>Personnes</th>
-                <th><input type="checkbox"></th>
             </tr>
         </thead>
         <?php foreach ($numbers as $number) { ?>
@@ -82,7 +81,6 @@ $numbers = $query->fetchAll(PDO::FETCH_ASSOC);
                         <a href="deletepeoples.php?id=<?= $number["id"] ?>" class="btn-delete">Supprimer</a>
                     </td>
                     <td><?= $number["number"] ?></td>
-                    <td><label><input type="checkbox"></label></td>
                 </tr>
             </tbody>
         <?php } ?>
