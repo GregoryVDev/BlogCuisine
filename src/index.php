@@ -3,7 +3,6 @@
 session_start();
 
 ?>
-
 <?php include "./template/header.php" ?>
 <main>
     <section id="illustration"></section>
@@ -120,9 +119,6 @@ session_start();
         </div>
     </section>
 </main>
-<?php include "./template/footer.php" ?>
-</body>
 <script src="./js/script.js"></script>
 <script src="./js/pagination.js"></script>
-
-</html>
+<?php include "./template/footer.php" ?>

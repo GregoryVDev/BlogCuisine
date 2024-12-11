@@ -42,6 +42,8 @@
         <p>© 2024 Grégory</p>
     </footer>
     <!-- SCRIPT JS -->
+    <script src="..js/script.js"></script>
+    <script src="../js/pagination.js"></script>
     </body>
 
     </html>

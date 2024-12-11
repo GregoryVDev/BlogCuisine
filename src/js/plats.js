@@ -1,7 +1,7 @@
 // Ajout d'une pagination
 
 document.addEventListener("DOMContentLoaded", function () {
-  // On définit combien d'articles on veut afficher par page (limité à 2 par page)
+  // On définit combien d'articles on veut afficher par page (limité à 5 par page)
   const articlesPerPage = 5;
   // On sélectionne tous les éléments avec la classe .produit à l'intérieur de l'élément qui a l'ID #article-container. On récupère tous les articles
   const articles = document.querySelectorAll("#article-container .produit");
