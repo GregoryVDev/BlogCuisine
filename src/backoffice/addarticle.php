@@ -27,16 +27,63 @@ $personne = $query_pers->fetchAll(PDO::FETCH_ASSOC);
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $username = strip_tags($_POST["username"]);
+    $category_id = (int) strip_tags($_POST["category_id"]);
+    $tag_id = (int) strip_tags($_POST["tag_id"]);
+    $pers_id = (int) strip_tags($_POST["pers_id"]);
+    $title = strip_tags($_POST["title"]);
+    $content = strip_tags($_POST["content"]);
+    $cooking = strip_tags($_POST["cooking"]);
+    $ingredients = strip_tags($_POST["ingredients"]);
+    $instruction = strip_tags($_POST["instruction"]);
 
-$username = strip_tags($_POST["username"]);
-$title = strip_tags($_POST["title"]);
-$content = strip_tags($_POST["content"]);
-$cooking = strip_tags($_POST["cooking"]);
-$ingredients = strip_tags($_POST["ingredients"]);
-$instruction = strip_tags($_POST["instruction"]);
+    $uploadDir = "images/recettes";
+
+    $allowedTypes = ['image/jpg', 'image/jpeg', 'image/png', 'image/webp'];
+
+    $maxFileSize = 4 * 1024 * 1024;
+
+    $imageFile = ['image'];
+
+    foreach ($imageFile as $fileKey) {
+
+        if (isset($_FILES[$fileKey]) && $_FILES[$fileKey]["error"] === 0) {
+            if ($_FILES[$fileKey]["size"] <= $maxFileSize && in_array(mime_content_type($_FILES[$fileKey]["tmp_name"]), $allowedTypes)) {
+                ${$fileKey} = $uploadDir . uniqid() . '.' . pathinfo($_FILES[$fileKey]['name'], PATHINFO_EXTENSION);
+                move_uploaded_file($_FILES[$fileKey]['tmp_name'], ${$fileKey});
+            }
+        } else {
+            echo "<script>alert('Erreur : Fichier $fileKey invalide ou trop volumineux.');</script>";
+        }
+    }
 }
 
+try {
+    $sql_article = "INSERT INTO article (username, category_id, tag_id, pers_id, title, content, cooking, ingredients, instruction, image) VALUES (:username, :category_id, :tag_id, :pers_id, :title, :content, :cooking, :ingredients, :instruction, :image)";
+    $query = $db->prepare($sql_article);
 
+    $query->bindValue(":username", $username);
+    $query->bindValue(":category_id", $category_id);
+    $query->bindValue(":tag_id", $tag_id);
+    $query->bindValue(":pers_id", $pers_id);
+    $query->bindValue(":title", $title);
+    $query->bindValue(":content", $content);
+    $query->bindValue(":cooking", $cooking);
+    $query->bindValue(":ingredients", $ingredients);
+    $query->bindValue(":instruction", $instruction);
+    $query->bindValue(":image", $image ?? null);
+
+    $query->execute();
+
+    $article_id = $db->lastInsertId();
+
+    if (isset($_POST["categoryIds"])) {
+        $sql_add_category = "INSERT INTO articletags (article_id, tag_id) VALUES (:article_id, :tag_id)";
+        $query = $db->prepare($sql_add_category);
+    }
+} catch (Exception $e) {
+    echo "<script>alert(" . json_encode('Erreur SQL : ' . $e->getMessage()) . ");</script>";
+}
 
 ?>
 
@@ -89,7 +136,7 @@ $instruction = strip_tags($_POST["instruction"]);
                             <option value="">Apéros</option>
                             <option value="">Viandes</option>
                             <option value="">Marins</option>
-                            <option value="">Féculents</option>
+                            <option value="">Garnitures</option>
                             <option value="">Desserts Froids</option>
                             <option value="">Desserts Chauds</option>
                         </select>
