@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/category.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/fonts.css">
-    <title>Onglet - Élise</title>
-</head>
-
-<body>
-
-    <?php require_once("./template/header.php") ?>
+    <?php include "./template/header.php" ?>
     <main>
         <section id="illustration-onglet"></section>
         <section id="category">
@@ -70,8 +55,5 @@
             </div>
         </section>
     </main>
-    <?php require_once("./template/footer.php") ?>
-</body>
-<script src="./js/script.js"></script>
-
-</html>
+    <script src="./js/script.js"></script>
+    <?php include "./template/footer.php" ?>
