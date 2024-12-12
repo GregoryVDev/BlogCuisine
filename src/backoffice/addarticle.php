@@ -34,10 +34,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $title = strip_tags($_POST["title"]);
     $content = strip_tags($_POST["content"]);
     $cooking = strip_tags($_POST["cooking"]);
+    $preparation = strip_tags($_POST["preparation"]);
     $ingredients = strip_tags($_POST["ingredients"]);
     $instruction = strip_tags($_POST["instruction"]);
 
-    $uploadDir = "images/recettes";
+    $uploadDir = "images/recettes/";
 
     $allowedTypes = ['image/jpg', 'image/jpeg', 'image/png', 'image/webp'];
 
@@ -58,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     try {
-        $sql_article = "INSERT INTO article (username, category_id, tag_id, pers_id, title, content, cooking, ingredients, instruction, image) VALUES (:username, :category_id, :tag_id, :pers_id, :title, :content, :cooking, :ingredients, :instruction, :image)";
+        $sql_article = "INSERT INTO article (username, category_id, tag_id, pers_id, title, content, cooking, preparation, ingredients, instruction, image) VALUES (:username, :category_id, :tag_id, :pers_id, :title, :content, :cooking, :preparation, :ingredients, :instruction, :image)";
         $query = $db->prepare($sql_article);
 
         $query->bindValue(":username", $username);
@@ -68,6 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $query->bindValue(":title", $title);
         $query->bindValue(":content", $content);
         $query->bindValue(":cooking", $cooking);
+        $query->bindValue(":preparation", $preparation);
         $query->bindValue(":ingredients", $ingredients);
         $query->bindValue(":instruction", $instruction);
         $query->bindValue(":image", $image ?? null);
@@ -94,15 +96,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <div class="left-section">
                 <div class="container-prenom">
                     <label for="prenom">Prénom :</label>
-                    <input type="text" id="prenom" name="username" placeholder="Prénom" required>
+                    <input type="text" id="prenom" name="username" placeholder="Prénom" value="<?= htmlspecialchars($_POST['username'] ?? '') ?>" required>
                 </div>
                 <div class="container-title">
                     <label for="titre">Titre :</label>
-                    <input type="text" id="titre" name="title" placeholder="Titre" required>
+                    <input type="text" id="titre" name="title" placeholder="Titre" value="<?= htmlspecialchars($_POST['title'] ?? '') ?>" required>
                 </div>
                 <div class="container-categories">
                     <label for="categorie">Catégorie :</label>
-                    <select id="categorie" name="category">
+                    <select id="categorie" name="category_id">
                         <option value="" disabled selected>--Catégorie--</option>
                         <?php foreach ($category as $categories) { ?>
                             <option value="<?= $categories["category_id"] ?>"><?= $categories["category_name"] ?></option>
@@ -112,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </div>
                 <div class="container-tags-form">
                     <label for="tags">Tags :</label>
-                    <select id="categorie" name="category" required>
+                    <select id="categorie" name="tag_id" required>
                         <option value="" disabled selected>--Tags--</option>
                         <?php foreach ($tag as $tags) { ?>
                             <option value="<?= $tags["tag_id"] ?>"><?= $tags["tag_name"] ?></option>
@@ -123,15 +125,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             <div class="container-coocking">
                 <label for="temps_cuisson">Temps cuisson (minutes) :</label>
-                <input type="text" id="temps_cuisson" name="coocking" placeholder="Cuisson en minutes">
+                <input type="text" id="temps_cuisson" name="cooking" placeholder="Cuisson en minutes" value="<?= htmlspecialchars($_POST['cooking'] ?? '') ?>" required>
             </div>
             <div class="container-preparation">
                 <label for="temps_preparation">Temps préparation (minutes) :</label>
-                <input type="text" id="temps_preparation" name="preparation" placeholder="Préparation en minutes">
+                <input type="text" id="temps_preparation" name="preparation" placeholder="Préparation en minutes" value="<?= htmlspecialchars($_POST['preparation'] ?? '') ?>" required>
             </div>
             <div class="container-personnes">
                 <label for="personnes">Personnes :</label>
-                <select id="personnes" name="number">
+                <select id="personnes" name="pers_id">
                     <option value="" disabled selected>--Nombre de personne--</option>
                     <?php foreach ($personne as $personnes) { ?>
                         <option value="<?= $personnes["pers_id"] ?>"><?= $personnes["number"] ?></option>
@@ -140,13 +142,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
             <div class="right-section">
                 <label for="description">Description :</label>
-                <textarea id="description" name="description" placeholder="Description du plat"></textarea>
+                <textarea id="description" name="content" placeholder="Description du plat" value="<?= htmlspecialchars($_POST['content'] ?? '') ?>" required></textarea>
 
                 <label for="ingredients">Ingrédients :</label>
-                <textarea id="ingredients" name="ingredients" placeholder="Ingrédients besoins"></textarea>
+                <textarea id="ingredients" name="ingredients" placeholder="Ingrédients besoins" value="<?= htmlspecialchars($_POST['ingredients'] ?? '') ?>" required></textarea>
 
                 <label for="preparation">Préparation :</label>
-                <textarea id="preparation" name="preparation" placeholder="Instruction de la préparation"></textarea>
+                <textarea id="preparation" name="instruction" placeholder="Instruction de la préparation" value="<?= htmlspecialchars($_POST['instruction'] ?? '') ?>" required></textarea>
 
                 <label class="uploadLabel" for="image" id="uploadLabel">Upload la photo</label>
                 <input type="file" id="image" name="image" class="image" accept="image/*" required>
