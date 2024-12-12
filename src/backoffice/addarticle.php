@@ -74,17 +74,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $query->execute();
 
-        $article_id = $db->lastInsertId();
-
-        if (isset($_POST["tagsIds"])) {
-            $sql_add_category = "INSERT INTO articletags (article_id, tag_id) VALUES (:article_id, :tag_id)";
-            $query = $db->prepare($sql_add_category);
-
-            foreach ($_POST["tagsIds"] as $tag_id) {
-                $query->execute([":article_id" => $article_id, ":tag_id" => (int) $tag_id]);
-            }
-        }
-
         echo "<script>
                     alert('Les données ont été insérées avec succès.');
                     window.location.href = 'addarticle.php';
@@ -114,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <div class="container-categories">
                     <label for="categorie">Catégorie :</label>
                     <select id="categorie" name="category">
-                        <option value="">--Catégorie--</option>
+                        <option value="" disabled selected>--Catégorie--</option>
                         <option value="">Entrées / Apéro</option>
                         <option value="">Plats</option>
                         <option value="">Desserts</option>
@@ -122,37 +111,32 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </div>
                 <div class="container-tags-form">
                     <label for="tags">Tags :</label>
-                    <!-- Bouton du dropdown -->
-                    <button class="dropdown-btn" onclick="toggleDropdown()" type="button">--Choisir les tags--</button>
-                    <!-- Contenu du dropdown avec checkboxes -->
-                    <div class="list-tags">
+                    <select id="categorie" name="category" required>
+                        <option value="" disabled selected>--Tags--</option>
                         <?php foreach ($tag as $tags) { ?>
-                            <label><input type="checkbox" name=tagsIds[]
-                                    value="<?= $tags["tag_id"] ?>"><?= $tags["tag_name"] ?></label>
+                            <option value="<?= $tags["tag_id"] ?>"><?= $tags["tag_name"] ?></option>
                         <?php } ?>
-                    </div>
-                </div>
-
-                <div class="container-coocking">
-                    <label for="temps_cuisson">Temps cuisson (minutes) :</label>
-                    <input type="text" id="temps_cuisson" name="coocking" placeholder="Cuisson en minutes">
-                </div>
-                <div class="container-preparation">
-                    <label for="temps_preparation">Temps préparation (minutes) :</label>
-                    <input type="text" id="temps_preparation" name="preparation" placeholder="Préparation en minutes">
-                </div>
-                <div class="container-personnes">
-                    <label for="personnes">Personnes :</label>
-                    <select id="personnes" name="number">
-                        <option value="">--Nombre de personne--</option>
-                        <option value="">2</option>
-                        <option value="">4</option>
-                        <option value="">6</option>
-                        <option value="">8</option>
                     </select>
                 </div>
             </div>
 
+            <div class="container-coocking">
+                <label for="temps_cuisson">Temps cuisson (minutes) :</label>
+                <input type="text" id="temps_cuisson" name="coocking" placeholder="Cuisson en minutes">
+            </div>
+            <div class="container-preparation">
+                <label for="temps_preparation">Temps préparation (minutes) :</label>
+                <input type="text" id="temps_preparation" name="preparation" placeholder="Préparation en minutes">
+            </div>
+            <div class="container-personnes">
+                <label for="personnes">Personnes :</label>
+                <select id="personnes" name="number">
+                    <option value="" disabled selected>--Nombre de personne--</option>
+                    <?php foreach ($personne as $personnes) { ?>
+                        <option value="<?= $personnes["pers_id"] ?>"><?= $personnes["number"] ?></option>
+                    <?php } ?>
+                </select>
+            </div>
             <div class="right-section">
                 <label for="description">Description :</label>
                 <textarea id="description" name="description" placeholder="Description du plat"></textarea>
