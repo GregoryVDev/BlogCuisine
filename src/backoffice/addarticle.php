@@ -25,7 +25,7 @@ $query_pers = $db->prepare($sql_pers);
 $query_pers->execute();
 $personne = $query_pers->fetchAll(PDO::FETCH_ASSOC);
 
-$sql = "SELECT title, username FROM article";
+$sql = "SELECT article_id, title, username FROM article";
 $query_article = $db->prepare($sql);
 $query_article->execute();
 $articles = $query_article->fetchAll(PDO::FETCH_ASSOC);
@@ -186,7 +186,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <tbody>
             <tr data-page="1">
                 <td class="actions">
-                    <a href="editarticle.php?id=1" class="btn-edit">Modifier</a>
+                    <a href="editarticle.php?id=<?= $article["article_id"] ?>" class="btn-edit">Modifier</a>
                     <a href="" class="btn-see">Voir</a>
                     <a href="deletearticle.php?id=<?= $article["article_id"] ?>" class="btn-delete">Supprimer</a>
                 </td>
