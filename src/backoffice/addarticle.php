@@ -25,6 +25,11 @@ $query_pers = $db->prepare($sql_pers);
 $query_pers->execute();
 $personne = $query_pers->fetchAll(PDO::FETCH_ASSOC);
 
+$sql = "SELECT title, username FROM article";
+$query_article = $db->prepare($sql);
+$query_article->execute();
+$articles = $query_article->fetchAll(PDO::FETCH_ASSOC);
+
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = strip_tags($_POST["username"]);
@@ -85,6 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "<script>alert(" . json_encode('Erreur SQL : ' . $e->getMessage()) . ");</script>";
     }
 }
+
 ?>
 
 <?php include "../backoffice/template/header.php" ?>
@@ -172,35 +178,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <tr>
             <th>Action</th>
             <th>Titre</th>
+            <th>Prénom</th>
             <th><input type="checkbox"></th>
         </tr>
     </thead>
-    <tbody>
-        <tr data-page="1">
-            <td class="actions"><a href="#" class="btn-edit">Modifier</a>
-                <a href="#" class="btn-see">Voir</a>
-                <a href="#" class="btn-delete">Supprimer</a>
-            </td>
-            <td>The Bible</td>
-            <td><label><input type="checkbox"></label></td>
-        </tr>
-        <tr data-page="1">
-            <td class="actions"><a href="#" class="btn-edit">Modifier</a>
-                <a href="#" class="btn-see">Voir</a>
-                <a href="#" class="btn-delete">Supprimer</a>
-            </td>
-            <td>Harry Potter</td>
-            <td><label><input type="checkbox"></label></td>
-        </tr>
-        <tr data-page="1">
-            <td class="actions"><a href="#" class="btn-edit">Modifier</a>
-                <a href="#" class="btn-see">Voir</a>
-                <a href="#" class="btn-delete">Supprimer</a>
-            </td>
-            <td>The Lord of the Rings</td>
-            <td><label><input type="checkbox"></label></td>
-        </tr>
-    </tbody>
+    <?php foreach ($articles as $article) { ?>
+        <tbody>
+            <tr data-page="1">
+                <td class="actions"><a href="#" class="btn-edit">Modifier</a>
+                    <a href="#" class="btn-see">Voir</a>
+                    <a href="#" class="btn-delete">Supprimer</a>
+                </td>
+                <td><?= $article["title"] ?></td>
+                <td><?= $article["username"] ?></td>
+                <td><label><input type="checkbox"></label></td>
+            </tr>
+        </tbody>
+    <?php } ?>
 </table>
 <div class="container-button">
     <button type="submit" class="delete-produits">Supprimer les articles sélectionnés</button>
