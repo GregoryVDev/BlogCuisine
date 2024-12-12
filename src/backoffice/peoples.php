@@ -35,59 +35,43 @@ $query->execute();
 $numbers = $query->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
-
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/recettes.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/fonts.css">
-    <link rel="stylesheet" href="../css/dashboard.css">
-    <title>Backoffice</title>
-</head>
-
-<body>
-    <?php require_once("../backoffice/template/header.php") ?>
-    <section class="illust-addarticle"></section>
-    <section class="formulaire">
-        <div class="container">
-            <h3>Nombre de personne</h3>
-            <form action="#" method="post" enctype="multipart/form-data">
-                <div class="left-section">
-                    <div class="container-prenom" style="margin: auto;">
-                        <label for="personnes">Personnes :</label>
-                        <input type="number" id="number" name="number" style="padding: 5px; margin-bottom: 20px;" placeholder="Nombre de personne">
-                    </div>
+<?php include "../backoffice/template/header.php" ?>
+<section class="illust-addarticle"></section>
+<section class="formulaire">
+    <div class="container">
+        <h3>Nombre de personne</h3>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div class="left-section">
+                <div class="container-prenom" style="margin: auto;">
+                    <label for="personnes">Personnes :</label>
+                    <input type="number" id="number" name="number" style="padding: 5px; margin-bottom: 20px;" placeholder="Nombre de personne">
                 </div>
-                <button type="submit">Envoyer</button>
-            </form>
-        </div>
-    </section>
-    <table style="margin-top: 50px;">
-        <thead>
-            <tr>
-                <th>Action</th>
-                <th>Personnes</th>
-            </tr>
-        </thead>
-        <?php foreach ($numbers as $number) { ?>
-            <tbody>
-                <tr data-page="1">
-                    <td class="actions">
-                        <a href="deletepeoples.php?id=<?= $number["id"] ?>" class="btn-delete">Supprimer</a>
-                    </td>
-                    <td><?= $number["number"] ?></td>
-                </tr>
-            </tbody>
-        <?php } ?>
-    </table>
-    <div class="container-button">
-        <button type="submit" class="delete-produits">Supprimer les articles sélectionnés</button>
+            </div>
+            <button type="submit">Envoyer</button>
+        </form>
     </div>
+</section>
+<table style="margin-top: 50px;">
+    <thead>
+        <tr>
+            <th>Action</th>
+            <th>Personnes</th>
+        </tr>
+    </thead>
+    <?php foreach ($numbers as $number) { ?>
+        <tbody>
+            <tr data-page="1">
+                <td class="actions">
+                    <a href="deletepeoples.php?id=<?= $number["id"] ?>" class="btn-delete">Supprimer</a>
+                </td>
+                <td><?= $number["number"] ?></td>
+            </tr>
+        </tbody>
+    <?php } ?>
+</table>
+<div class="container-button">
+    <button type="submit" class="delete-produits">Supprimer les articles sélectionnés</button>
+</div>
 </body>
 
 </html>
