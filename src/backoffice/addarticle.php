@@ -104,9 +104,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <label for="categorie">Catégorie :</label>
                     <select id="categorie" name="category">
                         <option value="" disabled selected>--Catégorie--</option>
-                        <option value="">Entrées / Apéro</option>
-                        <option value="">Plats</option>
-                        <option value="">Desserts</option>
+                        <?php foreach ($category as $categories) { ?>
+                            <option value="<?= $categories["category_id"] ?>"><?= $categories["category_name"] ?></option>
+                        <?php } ?>
+
                     </select>
                 </div>
                 <div class="container-tags-form">
