@@ -57,6 +57,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if ($_FILES[$fileKey]["size"] <= $maxFileSize && in_array(mime_content_type($_FILES[$fileKey]["tmp_name"]), $allowedTypes)) {
                 ${$fileKey} = $uploadDir . uniqid() . '.' . pathinfo($_FILES[$fileKey]['name'], PATHINFO_EXTENSION);
                 move_uploaded_file($_FILES[$fileKey]['tmp_name'], ${$fileKey});
+            } else {
+                echo "<script>alert('Erreur : Fichier $fileKey invalide ou trop volumineux.');</script>";
             }
         } else {
             echo "<script>alert('Erreur : Fichier $fileKey invalide ou trop volumineux.');</script>";
@@ -183,9 +185,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <?php foreach ($articles as $article) { ?>
         <tbody>
             <tr data-page="1">
-                <td class="actions"><a href="#" class="btn-edit">Modifier</a>
-                    <a href="#" class="btn-see">Voir</a>
-                    <a href="#" class="btn-delete">Supprimer</a>
+                <td class="actions">
+                    <a href="editarticle.php?id=1" class="btn-edit">Modifier</a>
+                    <a href="" class="btn-see">Voir</a>
+                    <a href="deletearticle.php?id=<?= $article["article_id"] ?>" class="btn-delete">Supprimer</a>
                 </td>
                 <td><?= $article["title"] ?></td>
                 <td><?= $article["username"] ?></td>
@@ -193,6 +196,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </tr>
         </tbody>
     <?php } ?>
+    <!-- PAGINATION -->
+    <div id="pagination" class="container-pages">
+        <span id="pageNumbers"></span>
+    </div>
 </table>
 <div class="container-button">
     <button type="submit" class="delete-produits">Supprimer les articles sélectionnés</button>
@@ -200,6 +207,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </body>
 <script src="./js/pagination.js"></script>
 <script src="./js/previewimage.js"></script>
-<script src="./js/dropdown.js"></script>
 
 </html>
