@@ -157,10 +157,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <textarea id="preparation" name="instruction" placeholder="Instruction de la préparation" value="<?= htmlspecialchars($_POST['instruction'] ?? '') ?>" required></textarea>
 
                 <label class="uploadLabel" for="image" id="uploadLabel">Upload la photo</label>
-                <input type="file" id="image" name="image" class="image" accept="image/*" required>
-
-                <img id="previewImage" src="#" alt="Aperçu de l'image" style="max-width: 100%; display: none;">
-                <button type="button" id="deleteImageButton" style="display: none;">Supprimer</button>
+                <input type="file" id="image" name="image" class="image" required onchange="previewImage(this, 'imagePreview')">
+                <div class="preview" id="imagePreview"></div>
             </div>
             <button type="submit">Envoyer</button>
         </form>
@@ -201,6 +199,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </div>
 </body>
 <script src="./js/pagination.js"></script>
+<script src="./js/previewimage.js"></script>
 <script src="./js/dropdown.js"></script>
 
 </html>
