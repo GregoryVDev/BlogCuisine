@@ -90,3 +90,13 @@
   color: var(--color2);
   font-size: var(--fsize3);
 }
+
+@media all and (min-width: 768px) {
+  #entrees-options button {
+    width: 260px;
+  }
+
+  #desserts-options button {
+    width: 275px;
+  }
+}

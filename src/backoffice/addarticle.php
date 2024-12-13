@@ -150,13 +150,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
             <div class="right-section">
                 <label for="description">Description :</label>
-                <textarea id="description" name="content" placeholder="Description du plat" value="<?= htmlspecialchars($_POST['content'] ?? '') ?>" required></textarea>
+                <textarea id="description" name="content" placeholder="Description du plat" required><?= htmlspecialchars($_POST['content'] ?? '') ?></textarea>
 
                 <label for="ingredients">Ingrédients :</label>
-                <textarea id="ingredients" name="ingredients" placeholder="Ingrédients besoins" value="<?= htmlspecialchars($_POST['ingredients'] ?? '') ?>" required></textarea>
+                <textarea id="ingredients" name="ingredients" placeholder="Ingrédients besoins" required><?= htmlspecialchars($_POST['ingredients'] ?? '') ?></textarea>
 
                 <label for="preparation">Préparation :</label>
-                <textarea id="preparation" name="instruction" placeholder="Instruction de la préparation" value="<?= htmlspecialchars($_POST['instruction'] ?? '') ?>" required></textarea>
+                <textarea id="preparation" name="instruction" placeholder="Instruction de la préparation" required><?= htmlspecialchars($_POST['instruction'] ?? '') ?></textarea>
 
                 <label class="uploadLabel" for="image" id="uploadLabel">Upload la photo</label>
                 <input type="file" id="image" name="image" class="image" required onchange="previewImage(this, 'imagePreview')">

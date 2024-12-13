@@ -30,7 +30,7 @@
             <ul>
                 <li><a href="../index.php">Accueil</a></li>
                 <li class="circle"></li>
-                <li><a href="../index.php#category">Catégories</a></li>
+                <li><a href="../category.php">Catégories</a></li>
                 <li class="circle"></li>
                 <li><a href="../index.php#contact">Contact</a></li>
             </ul>
