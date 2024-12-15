@@ -16,8 +16,6 @@ $tags = $query_tags->fetchall(PDO::FETCH_ASSOC);
 
 ?>
 
-
-
 <?php include "./template/header.php" ?>
 <main>
     <section id="illustration-onglet"></section>
