@@ -5,9 +5,7 @@ require_once("./connect.php");
 
 $sql = "SELECT * FROM article ORDER BY article_id DESC";
 $query = $db->prepare($sql);
-
 $query->execute();
-
 $articles = $query->fetchall(PDO::FETCH_ASSOC);
 
 
@@ -43,7 +41,7 @@ $articles_tags = $query_article->fetchall(PDO::FETCH_ASSOC);
                                 <div class="container-tags">
                                     <a href="#"><?= $article["category_name"] ?></a>
                                 </div>
-                                <h2><a href="#"><?= $article["title"] ?></a></h2>
+                                <h2><a href="detail.php?id=<?= $article["article_id"] ?>"><?= $article["title"] ?></a></h2>
                                 <p class="text"><?= $article["content"] ?></p>
                                 <div class="container-credit">
                                     <?php

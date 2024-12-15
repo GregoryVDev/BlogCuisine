@@ -1,35 +1,61 @@
-    <?php include "./template/header.php" ?>
-    <main>
-        <section class="detail">
+<?php
+session_start();
+
+require_once("./connect.php");
+
+$sql = "SELECT * FROM article";
+$query = $db->prepare($sql);
+$query->execute();
+$articles = $query->fetchall(PDO::FETCH_ASSOC);
+
+$sql_article = "SELECT a.article_id, c.category_name, t.tag_name, p.number, a.username, a.title, a.cooking, a.preparation, a.content, a.date, a.ingredients, a.instruction, a.image 
+    FROM article a 
+    LEFT JOIN tags t ON a.tag_id = t.tag_id 
+    LEFT JOIN categorie c ON a.category_id = c.category_id
+    LEFT JOIN personnes p ON a.pers_id = p.pers_id";
+
+
+$query_article = $db->prepare($sql_article);
+$query_article->execute();
+$articles_tags = $query_article->fetchall(PDO::FETCH_ASSOC);
+?>
+
+<?php include "./template/header.php" ?>
+<main>
+    <section class="detail">
+        <?php foreach ($articles_tags as $article) : ?>
             <article class="detail-article">
                 <div class="container-detail">
-                    <a href="#">Plats</a>
-                    <a href="#">Viande</a>
+                    <a href="viandes.php"><?= $article["category_name"] ?></a>
                 </div>
                 </div>
-                <h2>Boeuf Bourguignon</h2>
+                <h2><?= $article["title"] ?></h2>
                 <div class="credit-detail">
-                    <p><span class="credit">par :</span> Grégory</p>
-                    <p><span class="credit">posté :</span> 20 août 2024</p>
-                    <p><span class="credit">tags :</span> <a href="#">Plats</a>, <a href="#">Viande</a></p>
+                    <p><span class="credit">par :</span> <?= $article["username"] ?></p>
+                    <?php
+                    $date = DateTime::createFromFormat('Y-m-d H:i:s', $article["date"]);
+                    $formattedDate = $date ? $date->format('d/m/Y') : $article["date"];
+                    ?>
+                    <p><span class="credit">posté :</span> <?= $formattedDate ?></p>
+                    <p><span class="credit">tags :</span> <a href="viandes.php"><?= $article["tag_name"] ?></a></p>
                 </div>
                 <figure class="img-container">
-                    <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon" class="image-plat">
-                    <figcaption class="text-content">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</figcaption>
+                    <img src="./backoffice/<?= $article["image"] ?>" alt="<?= $article["title"] ?>" class="image-plat">
+                    <figcaption class="text-content"><?= $article["content"] ?></figcaption>
                 </figure>
 
                 <div class="container-info">
                     <div class="left-info">
                         <h3>Temps de préparation</h3>
-                        <p>20 minutes</p>
+                        <p><?= $article["preparation"] ?> minutes</p>
                     </div>
                     <div class="middle-info">
                         <h3>Temps de cuisson</h3>
-                        <p>40 minutes</p>
+                        <p><?= $article["cooking"] ?> minutes</p>
                     </div>
                     <div class="right-info">
                         <h3>Personnes</h3>
-                        <p>4 personnes</p>
+                        <p><?= $article["number"] ?> personnes</p>
                     </div>
                 </div>
                 <div class="container-recette">
@@ -71,7 +97,8 @@
                     </article>
                 </div>
             </article>
-        </section>
-    </main>
-    <script src="./js/plats.js"></script>
-    <?php include "./template/footer.php" ?>
+        <?php endforeach; ?>
+    </section>
+</main>
+<script src="./js/plats.js"></script>
+<?php include "./template/footer.php" ?>
