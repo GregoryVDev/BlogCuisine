@@ -31,47 +31,38 @@ $articles_tags = $query_article->fetchall(PDO::FETCH_ASSOC);
         <h1>Viandes</h1>
 
         <div id="article-container" class="container-produit">
-            <?php foreach ($articles_tags as $article) : ?>
-                <article class="produit">
-                    <figure class="flex-row">
-                        <img src="./backoffice/<?= $article["image"] ?>" alt="<?= $article["title"] ?>">
-                        <figcaption>
-                            <div class="container-tags">
-                                <a href="#"><?= $article["category_name"] ?></a>
-                            </div>
-                            <h2><a href="#"><?= $article["title"] ?></a></h2>
-                            <p class="text"><?= $article["content"] ?></p>
-                            <div class="container-credit">
-                                <?php
-                                $date = DateTime::createFromFormat('Y-m-d H:i:s', $article["date"]);
-                                $formattedDate = $date ? $date->format('d/m/Y') : $article["date"];
-                                ?>
-                                <p><span class="credit">posté :</span> <?= $formattedDate ?></p>
-                                <p><span class="credit">tags :</span> <a href="#"><?= $article["tag_name"] ?></a></p>
-                                <p><span class="credit">par :</span> <?= $article["username"] ?></p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </article>
-            <?php endforeach; ?>
-            <article class="produit">
-                <figure class="row-reverse">
-                    <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
-                    <figcaption>
-                        <div class="container-tags">
-                            <a href="#">Plats</a>
-                            <a href="#">Viande</a>
-                        </div>
-                        <h2><a href="#">Boeuf Bourguignon au vin</a></h2>
-                        <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</p>
-                        <div class="container-credit">
-                            <p><span class="credit">posté :</span> 20 août 2024</p>
-                            <p><span class="credit">tags :</span> <a href="#">Plats</a>, <a href="#">Viande</a></p>
-                            <p><span class="credit">par :</span> Grégory</p>
-                        </div>
-                    </figcaption>
-                </figure>
-            </article>
+            <div id="article-container" class="container-produit">
+                <?php
+                $isRowReverse = false; // Variable pour alterner entre les classes
+                foreach ($articles_tags as $article) :
+                ?>
+                    <article class="produit">
+                        <figure class="<?= $isRowReverse ? 'row-reverse' : 'flex-row' ?>">
+                            <img src="./backoffice/<?= $article["image"] ?>" alt="<?= $article["title"] ?>">
+                            <figcaption>
+                                <div class="container-tags">
+                                    <a href="#"><?= $article["category_name"] ?></a>
+                                </div>
+                                <h2><a href="#"><?= $article["title"] ?></a></h2>
+                                <p class="text"><?= $article["content"] ?></p>
+                                <div class="container-credit">
+                                    <?php
+                                    $date = DateTime::createFromFormat('Y-m-d H:i:s', $article["date"]);
+                                    $formattedDate = $date ? $date->format('d/m/Y') : $article["date"];
+                                    ?>
+                                    <p><span class="credit">posté :</span> <?= $formattedDate ?></p>
+                                    <p><span class="credit">tags :</span> <a href="#"><?= $article["tag_name"] ?></a></p>
+                                    <p><span class="credit">par :</span> <?= $article["username"] ?></p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <?php
+                    // Alterne la variable pour changer la classe à la prochaine itération
+                    $isRowReverse = !$isRowReverse;
+                    ?>
+                <?php endforeach; ?>
+            </div>
 
             <!-- Pagination -->
             <div id="pagination" class="container-pages">
