@@ -42,9 +42,13 @@ $articles_tags = $query_article->fetchall(PDO::FETCH_ASSOC);
                             <h2><a href="#"><?= $article["title"] ?></a></h2>
                             <p class="text"><?= $article["content"] ?></p>
                             <div class="container-credit">
-                                <p><span class="credit">posté :</span> <?= $article["date"] ?></p>
+                                <?php
+                                $date = DateTime::createFromFormat('Y-m-d H:i:s', $article["date"]);
+                                $formattedDate = $date ? $date->format('d/m/Y') : $article["date"];
+                                ?>
+                                <p><span class="credit">posté :</span> <?= $formattedDate ?></p>
                                 <p><span class="credit">tags :</span> <a href="#"><?= $article["tag_name"] ?></a></p>
-                                <p><span class="credit">par :</span> Grégory</p>
+                                <p><span class="credit">par :</span> <?= $article["username"] ?></p>
                             </div>
                         </figcaption>
                     </figure>
