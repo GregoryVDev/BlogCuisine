@@ -3,12 +3,19 @@
 // Attend que la page HTML soit chargé avant d'executer la function
 document.addEventListener("DOMContentLoaded", function () {
   // On définit combien d'articles on veut afficher par page (limité à 2 par page)
-  const articlesPerPage = 2;
+  const articlesPerPage = 4;
   // On sélectionne tous les éléments avec la classe .produit à l'intérieur de l'élément qui a l'ID #article-container. On récupère tous les articles
   const articles = document.querySelectorAll("#article-container .produit");
   // On calcule le nombre total de pages en divisant le nombre total d'articles et Math.ceil permet d'arrondir supérieurement chaque pour qu'il y ait assez de pages pour chaques articles
   const totalPages = Math.ceil(articles.length / articlesPerPage);
   // On garde la page actuelle. Par défaut, on est à la première page de la pagination
+
+  const paginationElement = document.getElementById("pagination");
+  if (articles.length < 4) {
+    paginationElement.style.display = "none";
+    return; // On arrête le script ici
+  }
+
   let currentPage = 1;
 
   function showPage(page) {
