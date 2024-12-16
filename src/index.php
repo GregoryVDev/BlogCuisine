@@ -4,6 +4,15 @@ session_start();
 
 require_once("./connect.php");
 
+$sql = "SELECT * FROM article";
+$query = $db->prepare($sql);
+$query->execute();
+
+$article = $query->fetchall(PDO::FETCH_ASSOC);
+
+
+
+
 ?>
 <?php include "./template/header.php" ?>
 <main>
