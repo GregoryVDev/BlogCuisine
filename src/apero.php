@@ -2,7 +2,7 @@
 <main>
     <section id="illustration-apero"></section>
     <section id="articles">
-        <h2>Apéro</h2>
+        <h1>Apéro</h1>
 
         <div id="article-container" class="container-produit">
             <article class="produit">
