@@ -2,6 +2,8 @@
 
 session_start();
 
+require_once("./connect.php");
+
 ?>
 <?php include "./template/header.php" ?>
 <main>
