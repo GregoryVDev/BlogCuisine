@@ -72,13 +72,29 @@ if (!$article) {
                 <aside>
                     <h3>Ingrédients</h3>
                     <ul>
-                        <li><?= nl2br(htmlspecialchars($article["ingredients"])) ?></li>
+                        <?php
+                        $ingredients = $article["ingredients"];
+                        $ingredients_array = explode("\n", $ingredients);
+
+                        foreach ($ingredients_array as $ingredient) {
+                            $ingredient = trim($ingredient);
+                            echo "<li>" . htmlspecialchars($ingredient) . "</li>";
+                        }
+                        ?>
                     </ul>
                 </aside>
                 <article class="instruction">
                     <h3>Instructions</h3>
                     <ol>
-                        <li><?= nl2br(htmlspecialchars($article["instruction"])) ?></li>
+                        <?php
+                        $instruction = $article["instruction"];
+                        $instruction_array = explode("\n", $instruction);
+
+                        foreach ($instruction_array as $instruction) {
+                            $instruction = trim($instruction);
+                            echo "<li>" . htmlspecialchars($instruction) . "</li>";
+                        }
+                        ?>
                     </ol>
                 </article>
             </div>
