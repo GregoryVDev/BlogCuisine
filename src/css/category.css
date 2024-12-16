@@ -28,6 +28,7 @@
   padding: 20px;
   width: 150px;
   background-color: var(--color5);
+  font-size: 28px;
   border: none;
   text-decoration: none;
   cursor: pointer;
@@ -52,6 +53,7 @@
   padding: 20px;
   width: 170px;
   background-color: var(--color5);
+  font-size: 28px;
   border: none;
   text-decoration: none;
   cursor: pointer;
@@ -76,6 +78,7 @@
   padding: 20px;
   width: 150px;
   background-color: var(--color5);
+  font-size: 28px;
   border: none;
   text-decoration: none;
   cursor: pointer;

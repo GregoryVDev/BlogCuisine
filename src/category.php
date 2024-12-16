@@ -83,7 +83,7 @@ $tags = $query_tags->fetchall(PDO::FETCH_ASSOC);
                         $link = "aperos.php";
                     }
             ?>
-                    <button><a href="<?= $link; ?>"><?= $tag["tag_name"] ?></a></button>
+                    <a href="<?= $link; ?>"><button><?= $tag["tag_name"] ?></button></a>
                 <?php } ?>
             <?php } ?>
         </div>
@@ -101,7 +101,7 @@ $tags = $query_tags->fetchall(PDO::FETCH_ASSOC);
                         $link = "marins.php";
                     }
             ?>
-                    <button><a href="<?= $link; ?>"><?= $tag["tag_name"] ?></a></button>
+                    <a href="<?= $link; ?>"><button><?= $tag["tag_name"] ?></button></a>
                 <?php } ?>
             <?php } ?>
         </div>
@@ -117,7 +117,7 @@ $tags = $query_tags->fetchall(PDO::FETCH_ASSOC);
                         $link = "dessertschauds.php";
                     }
             ?>
-                    <button><a href="<?= $link; ?>"><?= $tag["tag_name"] ?></a></button>
+                    <a href="<?= $link; ?>"><button><?= $tag["tag_name"] ?></button></a>
                 <?php } ?>
             <?php } ?>
         </div>
