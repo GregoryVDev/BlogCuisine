@@ -13,6 +13,7 @@ $sql_article = "SELECT a.article_id, c.category_name, t.tag_name, a.username, a.
     FROM article a 
     LEFT JOIN tags t ON a.tag_id = t.tag_id 
     LEFT JOIN categorie c ON a.category_id = c.category_id
+    WHERE t.tag_name = 'viandes'
     ORDER BY a.date DESC";
 
 
