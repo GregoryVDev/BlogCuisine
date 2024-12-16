@@ -71,11 +71,15 @@ if (!$article) {
             <div class="container-recette">
                 <aside>
                     <h3>Ingrédients</h3>
-                    <p><?= nl2br(htmlspecialchars($article["ingredients"])) ?></p>
+                    <ul>
+                        <li><?= nl2br(htmlspecialchars($article["ingredients"])) ?></li>
+                    </ul>
                 </aside>
                 <article class="instruction">
                     <h3>Instructions</h3>
-                    <p><?= nl2br(htmlspecialchars($article["instruction"])) ?></p>
+                    <ol>
+                        <li><?= nl2br(htmlspecialchars($article["instruction"])) ?></li>
+                    </ol>
                 </article>
             </div>
         </article>
