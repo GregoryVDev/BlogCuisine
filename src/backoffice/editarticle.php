@@ -6,6 +6,7 @@ require_once("../connect.php");
 
 if (!isset($_SESSION["user_cook"])) {
     header("Location: ../../../login.php");
+    exit();
 }
 
 if (isset($_GET["id"])) {

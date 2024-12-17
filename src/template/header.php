@@ -37,11 +37,12 @@
             </ul>
         </nav>
         <div class="container-img">
-            <img src="../img/logos/gregory-trans.png" alt="">
+            <img src="../img/logos/gregory-trans.png" alt="Logo du site">
         </div>
         <h1>La Cuisine Familiale</h1>
         <h2>Bienvenue dans la famille</h2>
         <div class="container-search">
+            <form action="traitement_search.php" method="GET" id="searchForm"></form>
             <img src="../img/logos/search.svg" alt="Recherche">
             <input type="search" name="search" id="search" placeholder="Nom de la recette">
         </div>
