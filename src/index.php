@@ -53,7 +53,11 @@ $articles_tags = $query_article->fetchall(PDO::FETCH_ASSOC);
                         <img src="./backoffice/<?= $recipes["image"] ?>" alt="<?= $recipes["image"] ?>">
                         <figcaption>
                             <div class="container-tags">
-                                <a href="<?= strtolower(str_replace(' ', '', subject: $recipes["tag_name"])) ?>.php"><?= $recipes["tag_name"] ?></a>
+                                <a href="<?= strtolower(urlencode(str_replace(
+                                                ['é', 'è', ' '],  // Caractères à remplacer
+                                                ['e', 'e', ''],   // Remplacements : 'é' -> 'e', 'è' -> 'e', et espace -> ''
+                                                $recipes["tag_name"] // La chaîne à modifier
+                                            ))) ?>.php"><?= $recipes["tag_name"] ?></a>
                             </div>
                             <h2><a href="detail.php?id=<?= $recipes["article_id"] ?>"><?= $recipes["title"] ?></a></h2>
                             <p class="text"><?= substr($recipes["content"], 0, 100) . "..."; ?></p>
@@ -63,7 +67,12 @@ $articles_tags = $query_article->fetchall(PDO::FETCH_ASSOC);
                                 $formattedDate = $date ? $date->format('d/m/Y') : $recipes["date"];
                                 ?>
                                 <p><span class="credit">posté :</span> <?= $formattedDate ?></p>
-                                <p><span class="credit">tags :</span> <a href="<?= strtolower($recipes["tag_name"]) ?>.php"><?= $recipes["tag_name"] ?></a></p>
+                                <p><span class="credit">tags :</span> <a href="<?= strtolower(urlencode(str_replace(
+                                                                                    ['é', 'è', ' '],  // Caractères à remplacer
+                                                                                    ['e', 'e', ''],   // Remplacements : 'é' -> 'e', 'è' -> 'e', et espace -> ''
+                                                                                    $recipes["tag_name"] // La chaîne à modifier
+                                                                                ))) ?>.php"><?= $recipes["tag_name"] ?></a>
+                                    </a></p>
                                 <p><span class="credit">par :</span> <?= $recipes["username"] ?></p>
                             </div>
                         </figcaption>

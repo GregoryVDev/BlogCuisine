@@ -14,7 +14,7 @@
                 <ul>
                     <li><a href="entreesfroides.php">Froides</a></li>
                     <li><a href="entreeschaudes.php">Chaudes</a></li>
-                    <li><a href="apero.php">Apéros</a></li>
+                    <li><a href="aperos.php">Apéros</a></li>
                 </ul>
             </div>
             <div class="container-plats">
