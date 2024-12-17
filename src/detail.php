@@ -28,7 +28,7 @@ $article = $query_article->fetch(PDO::FETCH_ASSOC);
 
 // Vérifier si un article a été trouvé
 if (!$article) {
-    die("Article introuvable.");
+    header("Location: ../../index.php");
 }
 ?>
 
