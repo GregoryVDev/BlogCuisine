@@ -32,8 +32,8 @@ if (!empty($_POST)) {
         }
 
         $_SESSION["user_cook"] = [
-            "user_id" => $user["id"],
-            "name" => $user["name"],
+            "user_id" => $user["family_id"],
+            "name" => $user["username"],
             "email" => $user["email"]
         ];
 

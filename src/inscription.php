@@ -8,9 +8,9 @@ function validateEmail($email)
 if (!empty($_POST)) {
 
 
-    if (isset($_POST["name"], $_POST["email"], $_POST["pass"], $_POST["pass2"]) && !empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["pass"]) && !empty($_POST["pass2"])) {
+    if (isset($_POST["username"], $_POST["email"], $_POST["pass"], $_POST["pass2"]) && !empty($_POST["username"]) && !empty($_POST["email"]) && !empty($_POST["pass"]) && !empty($_POST["pass2"])) {
 
-        $name = strip_tags($_POST["name"]);
+        $username = strip_tags($_POST["username"]);
 
         if (!validateEmail($_POST["email"])) {
             die("L'adresse email est incorrect");
@@ -30,11 +30,11 @@ if (!empty($_POST)) {
 
         require_once("./connect.php");
 
-        $sql = "INSERT INTO users (name, email, pass) VALUES (:name, :email,'$pass')";
+        $sql = "INSERT INTO users (username, email, pass) VALUES (:username, :email,'$pass')";
 
         $query = $db->prepare($sql);
 
-        $query->bindValue(":name", $name);
+        $query->bindValue(":username", $username);
         $query->bindValue(":email", $_POST["email"]);
 
         $query->execute();
@@ -67,7 +67,7 @@ if (!empty($_POST)) {
             <h1>Inscription</h1>
             <div class="container-name">
                 <label for="name">Prénom :</label>
-                <input type="text" class="form-input" name="name" id="name" placeholder="Prénom">
+                <input type="text" class="form-input" name="username" id="name" placeholder="Prénom">
             </div>
             <div class="container-email">
                 <label for="email">Email :</label>

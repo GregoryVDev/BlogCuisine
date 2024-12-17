@@ -4,32 +4,32 @@
             <div class="container-accueil">
                 <h3>Accueil</h3>
                 <ul>
-                    <li><a href="#">Catégories</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="category.php">Catégories</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
 
             <div class="container-entrees">
                 <h3>Entrées</h3>
                 <ul>
-                    <li><a href="#">Froides</a></li>
-                    <li><a href="#">Chaudes</a></li>
-                    <li><a href="#">Apéros</a></li>
+                    <li><a href="entreesfroides.php">Froides</a></li>
+                    <li><a href="entreeschaudes.php">Chaudes</a></li>
+                    <li><a href="apero.php">Apéros</a></li>
                 </ul>
             </div>
             <div class="container-plats">
                 <h3>Plats</h3>
                 <ul>
-                    <li><a href="#">Viandes</a></li>
-                    <li><a href="#">Poissons</a></li>
-                    <li><a href="#">Féculents</a></li>
+                    <li><a href="viandes.php">Viandes</a></li>
+                    <li><a href="marins.php">Poissons</a></li>
+                    <li><a href="garnitures.php">Garnitures</a></li>
                 </ul>
             </div>
             <div class="container-desserts">
                 <h3>Desserts</h3>
                 <ul>
-                    <li><a href="#">Froids</a></li>
-                    <li><a href="#">Chauds</a></li>
+                    <li><a href="dessertsfroids.php">Froids</a></li>
+                    <li><a href="dessertschauds.php">Chauds</a></li>
                 </ul>
             </div>
         </div>
