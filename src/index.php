@@ -53,10 +53,10 @@ $articles_tags = $query_article->fetchall(PDO::FETCH_ASSOC);
                         <img src="./backoffice/<?= $recipes["image"] ?>" alt="<?= $recipes["image"] ?>">
                         <figcaption>
                             <div class="container-tags">
-                                <a href="<?= strtolower($recipes["tag_name"]) ?>.php"><?= $recipes["tag_name"] ?></a>
+                                <a href="<?= strtolower(str_replace(' ', '', subject: $recipes["tag_name"])) ?>.php"><?= $recipes["tag_name"] ?></a>
                             </div>
                             <h2><a href="detail.php?id=<?= $recipes["article_id"] ?>"><?= $recipes["title"] ?></a></h2>
-                            <p class="text"><?= $recipes["content"] ?></p>
+                            <p class="text"><?= substr($recipes["content"], 0, 100) . "..."; ?></p>
                             <div class="container-credit">
                                 <?php
                                 $date = DateTime::createFromFormat('Y-m-d H:i:s', $recipes["date"]);

@@ -261,8 +261,8 @@ section h2 {
 
 .container-tags a {
   text-align: center;
-  width: 100px;
-  padding: 5px;
+  width: 150px;
+  padding: 10px;
   background: var(--color5);
   text-decoration: none;
   font-size: var(--fsize4);
@@ -285,7 +285,7 @@ figcaption {
 
 .produit figcaption .text {
   font-family: var(--PlayRegular);
-  padding: 20px;
+  padding: 10px;
   margin-bottom: 10px;
 }
 
