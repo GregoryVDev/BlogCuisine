@@ -10,8 +10,21 @@ $query->execute();
 
 $article = $query->fetchall(PDO::FETCH_ASSOC);
 
+$sql_article = "SELECT * FROM article ORDER BY article_id DESC LIMIT 8";
+$query_article = $db->prepare($sql_article);
+$query_article->execute();
 
+$articles = $query_article->fetchall(PDO::FETCH_ASSOC);
 
+$sql_article = "SELECT a.article_id, c.category_name, t.tag_name, a.username, a.title, a.cooking, a.preparation, a.content, a.date, a.ingredients, a.instruction, a.image 
+    FROM article a 
+    LEFT JOIN tags t ON a.tag_id = t.tag_id 
+    LEFT JOIN categorie c ON a.category_id = c.category_id
+    ORDER BY a.date DESC";
+
+$query_article = $db->prepare($sql_article);
+$query_article->execute();
+$articles_tags = $query_article->fetchall(PDO::FETCH_ASSOC);
 
 ?>
 <?php include "./template/header.php" ?>
@@ -31,61 +44,36 @@ $article = $query->fetchall(PDO::FETCH_ASSOC);
     <section id="last">
         <h3>Les derniers articles publiés</h3>
         <div id="article-container" class="container-produit">
-            <article class="produit">
-                <figure class="flex-row">
-                    <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
-                    <figcaption>
-                        <div class="container-tags">
-                            <a href="vegetaux.php">Légumes</a>
-                            <a href="viandes.php">Viande</a>
-                        </div>
-                        <h2><a href="#">Boeuf Bourguignon au vin</a></h2>
-                        <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</p>
-                        <div class="container-credit">
-                            <p><span class="credit">posté :</span> 20 août 2024</p>
-                            <p><span class="credit">tags :</span> <a href="#">Légumes</a>, <a href="#">Viande</a></p>
-                            <p><span class="credit">par :</span> Grégory</p>
-                        </div>
-                    </figcaption>
-                </figure>
-            </article>
-
-            <article class="produit">
-                <figure class="row-reverse">
-                    <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
-                    <figcaption>
-                        <div class="container-tags">
-                            <a href="#">Légumes</a>
-                            <a href="#">Viande</a>
-                        </div>
-                        <h2><a href="#">Boeuf Bourguignon au vin</a></h2>
-                        <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</p>
-                        <div class="container-credit">
-                            <p><span class="credit">posté :</span> 20 août 2024</p>
-                            <p><span class="credit">tags :</span> <a href="#">Légumes</a>, <a href="#">Viande</a></p>
-                            <p><span class="credit">par :</span> Grégory</p>
-                        </div>
-                    </figcaption>
-                </figure>
-            </article>
-            <article class="produit">
-                <figure class="flex-row">
-                    <img src="./img/plats/boeuf-bourguignon.jpg" alt="Boeuf Bourguignon">
-                    <figcaption>
-                        <div class="container-tags">
-                            <a href="#">Légumes</a>
-                            <a href="#">Viande</a>
-                        </div>
-                        <h2><a href="#">Boeuf Bourguignon au vin</a></h2>
-                        <p class="text">Le bœuf bourguignon est un plat traditionnel français, originaire de la région Bourgogne...</p>
-                        <div class="container-credit">
-                            <p><span class="credit">posté :</span> 20 août 2024</p>
-                            <p><span class="credit">tags :</span> <a href="#">Légumes</a>, <a href="#">Viande</a></p>
-                            <p><span class="credit">par :</span> Grégory</p>
-                        </div>
-                    </figcaption>
-                </figure>
-            </article>
+            <?php
+            $isRowReverse = false; // Variable pour alterner entre les classes
+            foreach ($articles_tags as $recipes) :
+            ?>
+                <article class="produit">
+                    <figure class="<?= $isRowReverse ? 'row-reverse' : 'flex-row' ?>">
+                        <img src="./backoffice/<?= $recipes["image"] ?>" alt="<?= $recipes["image"] ?>">
+                        <figcaption>
+                            <div class="container-tags">
+                                <a href="<?= strtolower($recipes["tag_name"]) ?>.php"><?= $recipes["tag_name"] ?></a>
+                            </div>
+                            <h2><a href="detail.php?id=<?= $recipes["article_id"] ?>"><?= $recipes["title"] ?></a></h2>
+                            <p class="text"><?= $recipes["content"] ?></p>
+                            <div class="container-credit">
+                                <?php
+                                $date = DateTime::createFromFormat('Y-m-d H:i:s', $recipes["date"]);
+                                $formattedDate = $date ? $date->format('d/m/Y') : $recipes["date"];
+                                ?>
+                                <p><span class="credit">posté :</span> <?= $formattedDate ?></p>
+                                <p><span class="credit">tags :</span> <a href="<?= strtolower($recipes["tag_name"]) ?>.php"><?= $recipes["tag_name"] ?></a></p>
+                                <p><span class="credit">par :</span> <?= $recipes["username"] ?></p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </article>
+                <?php
+                // Alterne la variable pour changer la classe à la prochaine itération
+                $isRowReverse = !$isRowReverse;
+                ?>
+            <?php endforeach; ?>
         </div>
 
         <!-- Pagination -->

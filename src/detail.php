@@ -37,7 +37,7 @@ if (!$article) {
     <section class="detail">
         <article class="detail-article">
             <div class="container-detail">
-                <a href="viandes.php"><?= htmlspecialchars($article["category_name"]) ?></a>
+                <a href="<?= strtolower($article["tag_name"]) ?>.php"><?= htmlspecialchars($article["tag_name"]) ?></a>
             </div>
             <h2><?= htmlspecialchars($article["title"]) ?></h2>
             <div class="credit-detail">
