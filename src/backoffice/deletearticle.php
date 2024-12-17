@@ -4,11 +4,10 @@ session_start();
 
 require_once("../connect.php");
 
-// Vérifier si l'utilisateur est connecté
-// if (!isset($_SESSION["user_cook"])) {
-//     header("Location: login.php");
-//     exit();
-// }
+if (!isset($_SESSION["user_cook"])) {
+    header("Location: ../../../login.php");
+    exit();
+}
 
 if (isset($_GET["id"]) && !empty($_GET["id"])) {
     $article_id = strip_tags($_GET["id"]);

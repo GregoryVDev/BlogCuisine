@@ -3,9 +3,9 @@
 session_start();
 
 if (!isset($_SESSION["user_cook"])) {
-    header("Location: login.php");
+    header("Location: ../../../login.php");
+    exit();
 }
-
 require_once("../connect.php");
 
 if (isset($_SESSION["user_cook"])) {

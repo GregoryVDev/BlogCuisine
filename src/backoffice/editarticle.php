@@ -4,9 +4,9 @@ session_start();
 
 require_once("../connect.php");
 
-// if (!isset($_SESSION["user_cook"])) {
-//     header("Location: login.php");
-// }
+if (!isset($_SESSION["user_cook"])) {
+    header("Location: ../../../login.php");
+}
 
 if (isset($_GET["id"])) {
     $article_id = strip_tags($_GET["id"]);
@@ -22,9 +22,9 @@ if (isset($_GET["id"])) {
     if (!$edit) {
         header("Location: addarticle.php");
     }
-    // } else {
-    //     header("Location: ../index.php");
-    //     exit();
+} else {
+    header("Location: ../../../index.php");
+    exit();
 }
 
 // Récupération des catégories
