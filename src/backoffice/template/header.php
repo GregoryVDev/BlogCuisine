@@ -27,11 +27,11 @@
         </div>
         <nav>
             <ul>
-                <li><a href="../#home">Accueil</a></li>
+                <li><a href="../../index.php">Accueil</a></li>
                 <li class="circle"></li>
-                <li><a href="#category">Catégories</a></li>
+                <li><a href="../../category.php">Catégories</a></li>
                 <li class="circle"></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="../../index.php#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="container-img">

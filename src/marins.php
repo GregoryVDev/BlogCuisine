@@ -40,7 +40,11 @@ $articles_tags = $query_article->fetchall(PDO::FETCH_ASSOC);
                             <img src="./backoffice/<?= $article["image"] ?>" alt="<?= $article["title"] ?>">
                             <figcaption>
                                 <div class="container-tags">
-                                    <a href="#"><?= $article["category_name"] ?></a>
+                                    <a href="<?= strtolower(urlencode(str_replace(
+                                                    ['é', 'è', ' '],  // Caractères à remplacer
+                                                    ['e', 'e', ''],   // Remplacements : 'é' -> 'e', 'è' -> 'e', et espace -> ''
+                                                    $article["tag_name"] // La chaîne à modifier
+                                                ))) ?>.php"><?= $article["tag_name"] ?></a>
                                 </div>
                                 <h2><a href="detail.php?id=<?= $article["article_id"] ?>"><?= $article["title"] ?></a></h2>
                                 <p class="text"><?= $article["content"] ?></p>
