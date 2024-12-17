@@ -54,7 +54,11 @@ $articles_tags = $query_article->fetchall(PDO::FETCH_ASSOC);
                                     $formattedDate = $date ? $date->format('d/m/Y') : $article["date"];
                                     ?>
                                     <p><span class="credit">posté :</span> <?= $formattedDate ?></p>
-                                    <p><span class="credit">tags :</span> <a href="#"><?= $article["tag_name"] ?></a></p>
+                                    <p><span class="credit">tags :</span> <a href="<?= strtolower(urlencode(str_replace(
+                                                                                        ['é', 'è', ' '],  // Caractères à remplacer
+                                                                                        ['e', 'e', ''],   // Remplacements : 'é' -> 'e', 'è' -> 'e', et espace -> ''
+                                                                                        $article["tag_name"] // La chaîne à modifier
+                                                                                    ))) ?>.php"><?= $article["tag_name"] ?></a></p>
                                     <p><span class="credit">par :</span> <?= $article["username"] ?></p>
                                 </div>
                             </figcaption>

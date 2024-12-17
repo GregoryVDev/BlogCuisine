@@ -71,8 +71,7 @@ $articles_tags = $query_article->fetchall(PDO::FETCH_ASSOC);
                                                                                     ['é', 'è', ' '],  // Caractères à remplacer
                                                                                     ['e', 'e', ''],   // Remplacements : 'é' -> 'e', 'è' -> 'e', et espace -> ''
                                                                                     $recipes["tag_name"] // La chaîne à modifier
-                                                                                ))) ?>.php"><?= $recipes["tag_name"] ?></a>
-                                    </a></p>
+                                                                                ))) ?>.php"><?= $recipes["tag_name"] ?></a></p>
                                 <p><span class="credit">par :</span> <?= $recipes["username"] ?></p>
                             </div>
                         </figcaption>
