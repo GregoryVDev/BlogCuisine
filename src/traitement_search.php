@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 
     $search = "%$search%";
 
-    $sql = "SELECT article_id FROM article WHERE title LIKE :search";
+    $sql = "SELECT article_id FROM article WHERE title OR username LIKE :search";
     $query = $db->prepare($sql);
     $query->bindValue(":search", $search);
     $query->execute();

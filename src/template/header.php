@@ -52,7 +52,7 @@
                     <li>
                         <a href="bonbon.php">
                             <span> bonbon</span>
-                            <img src="../img/logos/gregelise.png">
+                            <img src="../img/logos/gregory.png">
                         </a>
                     </li>
                 </ul>
