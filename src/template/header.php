@@ -45,15 +45,6 @@
             <form action="traitement_search.php" method="GET" id="searchForm">
                 <img src="../img/logos/search.svg" alt="Recherche">
                 <input type="search" name="search" id="search" placeholder="Nom de la recette">
-                <div id="dropdown">
-                    <a href="#about">About</a>
-                    <a href="#base">Base</a>
-                    <a href="#blog">Blog</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#custom">Custom</a>
-                    <a href="#support">Support</a>
-                    <a href="#tools">Tools</a>
-                </div>
             </form>
         </div>
     </header>
