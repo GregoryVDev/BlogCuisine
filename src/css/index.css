@@ -1,3 +1,86 @@
+.container-search:focus-within .dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown {
+  position: absolute;
+  top: 85px;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-top: 1px;
+  display: none;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.dropdown div {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdown div:hover {
+  background-color: #f0f0f0;
+}
+
+/* NAVBAR */
+
+.navbar-top {
+  background-color: var(--color4);
+  padding: 10px;
+}
+
+.container-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.navbar-top img {
+  height: 24px;
+}
+
+.navbar-top .dr {
+  border: 1px solid #f5f5f5;
+}
+
+.circle {
+  height: 5px;
+  width: 5px;
+  display: flex;
+  border-radius: 50%;
+  background-color: var(--color2);
+}
+
+nav {
+  margin-top: 30px;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--color1);
+  font-size: var(--fsize4);
+}
+
+nav ul li a:hover {
+  color: var(--color4);
+}
+
 /* HEADER */
 
 .container-img {
@@ -51,6 +134,7 @@ header a:hover {
   position: absolute;
   left: 10px;
   bottom: 55px;
+  /* bottom: 145px; */
 }
 
 #search {
