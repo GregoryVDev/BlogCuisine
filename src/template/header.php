@@ -46,5 +46,16 @@
                 <img src="../img/logos/search.svg" alt="Recherche">
                 <input type="search" name="search" id="search" placeholder="Nom de la recette">
             </form>
+            <!-- Affichage de la liste si plusieurs résultats -->
+            <div class="dropdown">
+                <ul>
+                    <li>
+                        <a href="bonbon.php">
+                            <span> bonbon</span>
+                            <img src="../img/logos/gregelise.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
