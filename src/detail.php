@@ -46,7 +46,7 @@ if (!$article) {
                 $date = DateTime::createFromFormat('Y-m-d H:i:s', $article["date"]);
                 $formattedDate = $date ? $date->format('d/m/Y') : htmlspecialchars($article["date"]);
                 ?>
-                <p><span class="credit">posté :</span> <?= $formattedDate ?></p>
+                <p><span class="credit">posté le :</span> <?= $formattedDate ?></p>
                 <p><span class="credit">tags :</span> <a href="viandes.php"><?= htmlspecialchars($article["tag_name"]) ?></a></p>
             </div>
             <figure class="img-container">

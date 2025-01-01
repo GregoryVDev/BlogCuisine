@@ -212,6 +212,7 @@ aside ul li {
 .instruction ol {
   display: flex;
   flex-direction: column;
+  text-align: justify;
   gap: 20px;
 }
 

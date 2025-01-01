@@ -53,7 +53,7 @@ $articles_tags = $query_article->fetchall(PDO::FETCH_ASSOC);
                                     $date = DateTime::createFromFormat('Y-m-d H:i:s', $article["date"]);
                                     $formattedDate = $date ? $date->format('d/m/Y') : $article["date"];
                                     ?>
-                                    <p><span class="credit">posté :</span> <?= $formattedDate ?></p>
+                                    <p><span class="credit">posté le :</span> <?= $formattedDate ?></p>
                                     <p><span class="credit">tags :</span> <a href="<?= strtolower(urlencode(str_replace(
                                                                                         ['é', 'è', ' '],  // Caractères à remplacer
                                                                                         ['e', 'e', ''],   // Remplacements : 'é' -> 'e', 'è' -> 'e', et espace -> ''
