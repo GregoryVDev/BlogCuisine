@@ -116,3 +116,28 @@ document.addEventListener("DOMContentLoaded", function () {
   // On appelle la fonction showPage en mettant à jour la page actuelle
   showPage(currentPage);
 });
+
+// MODAL
+
+// Fonction pour ouvrir la modale avec l'image
+function openModal(imageSrc) {
+  var modal = document.getElementById("imageModal");
+  var modalImg = document.getElementById("modalImage");
+  modal.style.display = "flex"; // Afficher la modale (centrée)
+  modalImg.src = imageSrc; // Définir l'image dans la modale
+}
+
+// Fonction pour fermer la modale
+function closeModal(event) {
+  // Vérifier si l'on clique sur la zone autour de l'image ou sur la croix de fermeture
+  var modal = document.getElementById("imageModal");
+  if (event.target === event.currentTarget || event.target.id === "closeBtn") {
+    modal.style.display = "none"; // Fermer la modale
+  }
+}
+
+// Empêcher que la modale s'affiche par défaut lors du chargement de la page
+window.onload = function () {
+  var modal = document.getElementById("imageModal");
+  modal.style.display = "none"; // Assurer que la modale est cachée au chargement de la page
+};

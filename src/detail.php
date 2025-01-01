@@ -50,9 +50,15 @@ if (!$article) {
                 <p><span class="credit">tags :</span> <a href="viandes.php"><?= htmlspecialchars($article["tag_name"]) ?></a></p>
             </div>
             <figure class="img-container">
-                <img src="./backoffice/<?= htmlspecialchars($article["image"]) ?>" alt="<?= htmlspecialchars($article["title"]) ?>" class="image-plat">
+                <img src="./backoffice/<?= htmlspecialchars($article["image"]) ?>" alt="<?= htmlspecialchars($article["title"]) ?>" class="image-plat" id="imagePlat" onclick="openModal('./backoffice/<?= htmlspecialchars($article["image"]) ?>')">
                 <figcaption class="text-content"><?= htmlspecialchars($article["content"]) ?></figcaption>
             </figure>
+
+            <!-- Fenêtre modale -->
+            <div id="imageModal" class="modal" onclick="closeModal(event)">
+                <span class="close" id="closeBtn">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
 
             <div class="container-info">
                 <div class="left-info">

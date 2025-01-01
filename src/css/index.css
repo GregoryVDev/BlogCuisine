@@ -51,6 +51,10 @@ nav ul li a:hover {
 
 /* HEADER */
 
+header {
+  margin-bottom: 50px;
+}
+
 .container-img {
   text-align: center;
 }
