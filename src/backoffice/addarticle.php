@@ -25,7 +25,7 @@ $query_pers = $db->prepare($sql_pers);
 $query_pers->execute();
 $personne = $query_pers->fetchAll(PDO::FETCH_ASSOC);
 
-$sql = "SELECT article_id, title, username FROM article";
+$sql = "SELECT article_id, title, username FROM article ORDER BY title ASC";
 $query_article = $db->prepare($sql);
 $query_article->execute();
 $articles = $query_article->fetchAll(PDO::FETCH_ASSOC);
