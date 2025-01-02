@@ -169,8 +169,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <h3>Dashboard</h3>
 <div class="container-search">
-    <img src="../img/logos/search.svg" alt="Recherche">
-    <input type="search" name="search" id="search" placeholder="Nom de la recette">
+    <form action="traitement_recipes.php" method="GET" id="searchForm">
+        <img src="../img/logos/search.svg" alt="Recherche" style="bottom: 7px;">
+        <input type="search" name="recipes" id="search" placeholder="Rechercher une recette">
+    </form>
 </div>
 
 <table>
@@ -187,7 +189,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <tr data-page="1">
                 <td class="actions">
                     <a href="editarticle.php?id=<?= $article["article_id"] ?>" class="btn-edit">Modifier</a>
-                    <a href="" class="btn-see">Voir</a>
+                    <a href="../detail.php?id=<?= $article["article_id"] ?>" class="btn-see">Voir</a>
                     <a href="deletearticle.php?id=<?= $article["article_id"] ?>" class="btn-delete">Supprimer</a>
                 </td>
                 <td><?= $article["title"] ?></td>

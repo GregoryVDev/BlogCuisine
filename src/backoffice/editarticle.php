@@ -118,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <?php include "../backoffice/template/header.php" ?>
 <section class="illust-addarticle"></section>
-<section class="formulaire">
+<section class="formulaire" style="margin-bottom: 20px;">
     <div class="container">
         <h3>Modifier un article</h3>
         <form action="" method="POST" enctype="multipart/form-data">
@@ -184,12 +184,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </form>
     </div>
 </section>
-
-<h3>Dashboard</h3>
-<div class="container-search">
-    <img src="../img/logos/search.svg" alt="Recherche">
-    <input type="search" name="search" id="search" placeholder="Nom de la recette">
-</div>
 
 </body>
 <script src="./js/previewimage.js"></script>

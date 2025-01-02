@@ -44,7 +44,7 @@
         <div class="container-search">
             <form action="traitement_search.php" method="GET" id="searchForm">
                 <img src="../img/logos/search.svg" alt="Recherche">
-                <input type="search" name="search" id="search" placeholder="rechercher une recette">
+                <input type="search" name="search" id="search" placeholder="Rechercher une recette">
             </form>
 
             <div class="dropdown" id="dropdown" style="display: none;">

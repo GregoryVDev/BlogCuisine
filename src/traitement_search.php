@@ -23,7 +23,6 @@ if ($search === '' || strlen($search) > 50) {
 // Préparation de la requête SQL pour chercher dans la table `article`
 // La colonne `name` est filtrée avec `LIKE` pour permettre une recherche partielle
 // Limite les résultats à 10 pour éviter des réponses trop volumineuses
-//METTRE TON NOM DE TABLE ET DE COLONNE A TOI 
 $sql = $db->prepare("SELECT article_id, username, title, image FROM article WHERE title LIKE :search LIMIT 10");
 
 // Exécute la requête avec le paramètre sécurisé `:search` pour protéger contre les injections SQL
@@ -36,7 +35,6 @@ $results = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 if (count($results) === 1) {
     // Si un seul résultat est trouvé, redirige vers une page spécifique
-    // METTRE TON LIEN DE PAGE A TOI  
     echo json_encode(['redirect' => 'detail.php?id=' . $results[0]['article_id']]);
 } elseif (count($results) > 1) {
     // Si plusieurs résultats sont trouvés, les sécurise avant de les retourner
