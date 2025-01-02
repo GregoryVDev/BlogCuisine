@@ -136,12 +136,12 @@ table {
   width: 300px;
 }
 
-tbody tr:nth-child(odd) {
-  background-color: #a4b494; /* Couleur des lignes impaires */
+.odd {
+  background-color: #bddfbb; /* Couleur des lignes impaires */
 }
 
-tbody tr:nth-child(even) {
-  background-color: #bddfbb; /* Couleur des lignes paires */
+.even {
+  background-color: #a4b494; /* Couleur des lignes paires */
 }
 
 th,

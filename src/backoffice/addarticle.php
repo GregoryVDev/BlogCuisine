@@ -184,9 +184,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <th><input type="checkbox"></th>
         </tr>
     </thead>
+    <?php $i = 0; ?>
     <?php foreach ($articles as $article) { ?>
         <tbody>
-            <tr data-page="1">
+            <tr data-page="1" class="<?= $i % 2 == 0 ? 'even' : 'odd' ?>">
                 <td class="actions">
                     <a href="editarticle.php?id=<?= $article["article_id"] ?>" class="btn-edit">Modifier</a>
                     <a href="../detail.php?id=<?= $article["article_id"] ?>" class="btn-see">Voir</a>
@@ -197,6 +198,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <td><label><input type="checkbox"></label></td>
             </tr>
         </tbody>
+        <?php $i++ ?>
     <?php } ?>
     <!-- PAGINATION -->
     <div id="pagination" class="container-pages">
