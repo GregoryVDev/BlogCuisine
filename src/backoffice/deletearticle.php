@@ -1,7 +1,5 @@
 <?php
-
 session_start();
-
 require_once("../connect.php");
 
 if (!isset($_SESSION["user_cook"])) {
@@ -9,54 +7,90 @@ if (!isset($_SESSION["user_cook"])) {
     exit();
 }
 
-if (isset($_GET["id"]) && !empty($_GET["id"])) {
-    $article_id = strip_tags($_GET["id"]);
+try {
+    if (isset($_POST['article_ids']) && !empty($_POST['article_ids'])) {
+        // Suppression de plusieurs articles
+        $article_ids = $_POST['article_ids'];
 
-    try {
-        // Récupérer le chemin de l'image de l'article
+        // Commence une transaction
+        $db->beginTransaction();
+
+        // Récupère les images associées aux articles
+        $sql = "SELECT image FROM article WHERE article_id IN (" . implode(',', array_map('intval', $article_ids)) . ")";
+        $query = $db->prepare($sql);
+        $query->execute();
+        $articles = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        // Supprime les fichiers images
+        foreach ($articles as $article) {
+            $imagePath = $article['image'];
+            if (!empty($imagePath) && file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+        }
+
+        // Supprime les articles
+        $sql_delete_articles = "DELETE FROM article WHERE article_id IN (" . implode(',', array_map('intval', $article_ids)) . ")";
+        $query_delete_articles = $db->prepare($sql_delete_articles);
+        $query_delete_articles->execute();
+
+        // Commit la transaction
+        $db->commit();
+
+        echo "<script>
+        alert(" . json_encode('Les recettes et leurs images ont été supprimées avec succès.') . ");
+        window.location.href = 'addarticle.php'; 
+        </script>";
+    } elseif (isset($_GET['id'])) {
+        // Suppression d'un seul article
+        $articleId = (int) $_GET['id'];
+
+        // Commence une transaction
+        $db->beginTransaction();
+
+        // Récupère l'image associée à l'article
         $sql = "SELECT image FROM article WHERE article_id = :article_id";
         $query = $db->prepare($sql);
-        $query->bindValue(":article_id", $article_id, PDO::PARAM_INT);
+        $query->bindValue(":article_id", $articleId);
         $query->execute();
-
         $article = $query->fetch(PDO::FETCH_ASSOC);
 
         if ($article) {
-            // Supprimer l'image si elle existe
             $imagePath = $article['image'];
             if (!empty($imagePath) && file_exists($imagePath)) {
                 unlink($imagePath);
             }
 
-            // Supprimer l'article
-            $sql_delete_article = "DELETE FROM article WHERE article_id = :article_id";
-            $query_delete_article = $db->prepare($sql_delete_article);
-            $query_delete_article->bindValue(":article_id", $article_id, PDO::PARAM_INT);
-            $query_delete_article->execute();
+            // Supprime l'article
+            $sql_delete = "DELETE FROM article WHERE article_id = :article_id";
+            $query_delete = $db->prepare($sql_delete);
+            $query_delete->bindValue(":article_id", $articleId);
+            $query_delete->execute();
 
-            // Confirmation de suppression
+            // Commit la transaction
+            $db->commit();
+
             echo "<script>
-            alert(" . json_encode('La recette et ses images ont été supprimées avec succès.') . ");
+            alert('La recette et son image ont été supprimées avec succès.');
             window.location.href = 'addarticle.php'; 
             </script>";
         } else {
-            // Article non trouvé
-            echo "<script>
-            alert(" . json_encode('Erreur : Recette non trouvée.') . ");
-            window.location.href = 'addarticle.php'; 
-            </script>";
+            throw new Exception("L'article n'existe pas.");
         }
-    } catch (Exception $e) {
-        // Gestion des erreurs SQL
+    } else {
+        // Aucun ID ou données d'article reçus
         echo "<script>
-        alert(" . json_encode('Erreur SQL : ' . $e->getMessage()) . ");
+        alert(" . json_encode('Erreur : Aucun article sélectionné.') . ");
         window.location.href = 'addarticle.php'; 
         </script>";
     }
-} else {
-    // ID manquant ou vide
+} catch (Exception $e) {
+    // En cas d'erreur, rollback la transaction et afficher un message d'erreur
+    if ($db->inTransaction()) {
+        $db->rollBack();
+    }
     echo "<script>
-    alert(" . json_encode('Erreur : ID de la recette non spécifiée ou invalide.') . ");
+    alert(" . json_encode('Erreur SQL : ' . $e->getMessage()) . ");
     window.location.href = 'addarticle.php'; 
     </script>";
 }

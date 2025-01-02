@@ -181,7 +181,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <th>Action</th>
             <th>Titre</th>
             <th>Prénom</th>
-            <th><input type="checkbox"></th>
+            <th><input type="checkbox" id="selectAll"></th>
         </tr>
     </thead>
     <?php $i = 0; ?>
@@ -191,11 +191,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <td class="actions">
                     <a href="editarticle.php?id=<?= $article["article_id"] ?>" class="btn-edit">Modifier</a>
                     <a href="../detail.php?id=<?= $article["article_id"] ?>" class="btn-see">Voir</a>
-                    <a href="deletearticle.php?id=<?= $article["article_id"] ?>" class="btn-delete">Supprimer</a>
+                    <a href="deletearticle.php?id=<?= $article["article_id"] ?>"
+                        class="btn-delete"
+                        onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette recette ?');">
+                        Supprimer
+                    </a>
                 </td>
                 <td><?= $article["title"] ?></td>
                 <td><?= $article["username"] ?></td>
-                <td><label><input type="checkbox"></label></td>
+                <td><input type="checkbox" class="article-checkbox" value="<?= $article["article_id"] ?>"></td>
             </tr>
         </tbody>
         <?php $i++ ?>
@@ -206,10 +210,87 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </div>
 </table>
 <div class="container-button">
-    <button type="submit" class="delete-produits">Supprimer les articles sélectionnés</button>
+    <button type="submit" id="deleteSelected" class="delete-produits">Supprimer les articles sélectionnés</button>
 </div>
 </body>
 <script src="./js/pagination.js"></script>
 <script src="./js/previewimage.js"></script>
+<script>
+    // Sélectionne l'élément HTML de la case à cocher "Tout sélectionner" par son ID
+    const selectAllCheckbox = document.getElementById('selectAll');
+
+    // Sélectionne toutes les cases à cocher des articles par leur classe CSS
+    const articleCheckboxes = document.querySelectorAll('.article-checkbox');
+
+    // Sélectionne le bouton "Supprimer les articles sélectionnés" par son ID
+    const deleteButton = document.getElementById('deleteSelected');
+
+    // Lorsqu'une modification est apportée à la case "Tout sélectionner"
+    selectAllCheckbox.addEventListener('change', function() {
+        // Pour chaque case à cocher des articles
+        articleCheckboxes.forEach(checkbox => {
+            // Met à jour l'état de chaque case en fonction de l'état de la case "Tout sélectionner"
+            checkbox.checked = selectAllCheckbox.checked;
+        });
+    });
+
+    // Lorsqu'une case à cocher d'article est modifiée
+    articleCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            // Si une case d'article est décochée, décoche également "Tout sélectionner"
+            if (!checkbox.checked) {
+                selectAllCheckbox.checked = false;
+            } else {
+                // Si toutes les cases d'articles sont cochées, coche "Tout sélectionner"
+                const allChecked = [...articleCheckboxes].every(c => c.checked);
+                // Si toutes les cases sont cochées, coche la case "Tout sélectionner", sinon laisse la décochée
+                selectAllCheckbox.checked = allChecked;
+            }
+        });
+    });
+
+    // Lorsqu'on clique sur le bouton "Supprimer les articles sélectionnés"
+    deleteButton.addEventListener('click', function() {
+        // Crée un tableau pour stocker les IDs des articles sélectionnés
+        const selectedArticles = [];
+
+        // Pour chaque case à cocher des articles
+        articleCheckboxes.forEach(checkbox => {
+            // Si la case est cochée, ajoute son ID au tableau selectedArticles
+            if (checkbox.checked) {
+                selectedArticles.push(checkbox.value);
+            }
+        });
+
+        // Vérifie si au moins un article a été sélectionné
+        if (selectedArticles.length > 0) {
+            // Si des articles ont été sélectionnés, demande une confirmation avant de supprimer
+            if (confirm('Êtes-vous sûr de vouloir supprimer ces recettes ?')) {
+                // Crée un formulaire HTML pour envoyer les données à un fichier PHP
+                const form = document.createElement('form');
+                form.method = 'POST'; // Méthode d'envoi des données (POST)
+                form.action = 'deletearticle.php'; // Fichier PHP où les données seront envoyées
+
+                // Pour chaque article sélectionné, ajoute un champ caché dans le formulaire
+                selectedArticles.forEach(articleId => {
+                    const input = document.createElement('input');
+                    input.type = 'hidden'; // Crée un champ caché
+                    input.name = 'article_ids[]'; // Tableau pour stocker plusieurs IDs d'articles
+                    input.value = articleId; // L'ID de l'article
+                    form.appendChild(input); // Ajoute le champ caché au formulaire
+                });
+
+                // Ajoute le formulaire au corps de la page
+                document.body.appendChild(form);
+
+                // Envoie le formulaire pour supprimer les articles
+                form.submit();
+            }
+        } else {
+            // Si aucun article n'a été sélectionné, affiche une alerte
+            alert('Veuillez sélectionner au moins un article.');
+        }
+    });
+</script>
 
 </html>
